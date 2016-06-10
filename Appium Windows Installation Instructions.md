@@ -83,6 +83,8 @@
 	* Select CPU/ABI: ARM (armeabi-v7a)
 * Select Skin: Skin with dynamic hardware controls
 * Select Emulation Options: Use Host GPU
+* The setup should look like [this](https://dl.dropboxusercontent.com/u/210767372/emulator%20setup.PNG) for Intel computers.
+* The setup should look like [this](https://dl.dropboxusercontent.com/u/210767372/emulator%20setup%20amd.PNG) for AMD computers.
 * Click OK
 * Highlight EM1 in AVD menu and click Start and then Launch.
 * For Intel PC's.
@@ -91,14 +93,17 @@
 	* HAX is working and emulator runs in fast virt mode.
 
 ###Install Appium IDE
-* Download and install [here]()
+* Download, unzip and install [here](https://bitbucket.org/appium/appium.app/downloads/AppiumForWindows.zip)
 * Make note of the installation/destination path. e.g. C:\Program Files (x86)\Appium
 * Create desktop icon.
 
 ###Install Appium via NPM
 * Run `C:|> npm install -g appium-doctor`
 * Run `C:\> appium-doctor` (checks setup is correct on machine)
+	*  	Verify "info AppiumDoctor Everything looks good, bye!" is displayed.
+	* If there are things missing please go back to the install instructions or environment variable setup.
 * Run `C:\> npm install -g appium`
+	* Verify appium installed correctly by doing `C:\> appium -v`	 
 
 ###Install Sublime (We should all use same editor)
 * Download and install [64-bit](https://download.sublimetext.com/Sublime%20Text%20Build%203114%20x64%20Setup.exe) or [32-bit](https://download.sublimetext.com/Sublime%20Text%20Build%203114%20Setup.exe)
