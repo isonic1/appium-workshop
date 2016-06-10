@@ -1,7 +1,0 @@
-[caps]
-appium-version = "1.4.13"
-platformName = "ANDROID"
-deviceName = "android"
-
-[appium_lib]
-wait = 30
