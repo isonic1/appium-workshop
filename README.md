@@ -11,6 +11,7 @@
 
 ###Install Ruby Gems Dependencies
 * Goto `cd appium-workshop`
+* Install bundler `gem install bundler`
 * Run `bundle install`
 
 ###Run the sample test
