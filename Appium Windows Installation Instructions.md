@@ -1,11 +1,11 @@
 #Appium Windows Installation
 
 ###Get Processor & CPU type.
-* Goto Control Panel\System and Security\System 
+* Goto Control Panel\System and Security\System
 * Processor: Intel or AMD
 * System type: 64-bit x64-based or 32-bit x86-based
 
-###Install JAVA 
+###Install JAVA
 * Open CMD and check java version: `c:\> java -version`
 	* If the version is less than 1.8 or the command is not recognized you need to install java.
 	* If the version is 1.8 or greater then go to Ruby install.
@@ -29,7 +29,7 @@
 
 ###Add Environment Variables
 * Goto Control Panel\System and Security\System > Advanced system > Edit Variables...
-* Under "User variables for **your_user_name**" 
+* Under "User variables for **your_user_name**"
 * Highlight the Path variable.
 	* Click Edit > New
 	* Add path for sdk\tools. e.g. C:\Users\justin\AppData\Local\Android\sdk\tools
@@ -52,7 +52,7 @@
 	* Click OK
 * See example [here](https://dl.dropboxusercontent.com/u/210767372/Environment%20Variables.PNG) for environment variable.
 * See example [here](https://dl.dropboxusercontent.com/u/210767372/User%20Path%20Env%20Variables.PNG) for Path variables.
-* Close all CMD's and **RESTART PC!** 
+* Close all CMD's and **RESTART PC!**
 
 ###Test Environment Variables
 * Run `C:\> java -version` in CMD. You should see something close to this `java version "1.8.0_92"` returned.
@@ -62,7 +62,7 @@
 * Run `c:\> npm`. You should see the npm menu options.
 * If any of the above is not working check to make sure the install locations are correct and reflected correctly in the path environment variable.
 
-###Update Android SDK 
+###Update Android SDK
 * Run `c:\> android sdk` in CMD.
 * Install or update by selecting everything you see marked as installed [here](https://dl.dropboxusercontent.com/u/210767372/SDK%20Manager%201.PNG) and [here](https://dl.dropboxusercontent.com/u/210767372/SDK%20Manager%202.PNG) for API Level 23 and more.
 * Click the Install .. packages...
@@ -98,12 +98,12 @@
 * Create desktop icon.
 
 ###Install Appium via NPM
-* Run `C:|> npm install -g appium-doctor`
+* Run `C:\> npm install -g appium-doctor`
 * Run `C:\> appium-doctor` (checks setup is correct on machine)
 	*  	Verify "info AppiumDoctor Everything looks good, bye!" is displayed.
 	* If there are things missing please go back to the install instructions or environment variable setup.
 * Run `C:\> npm install -g appium`
-	* Verify appium installed correctly by doing `C:\> appium -v`	 
+	* Verify appium installed correctly by doing `C:\> appium -v`
 
 ###Install Sublime (We should all use same editor)
 * Download and install [64-bit](https://download.sublimetext.com/Sublime%20Text%20Build%203114%20x64%20Setup.exe) or [32-bit](https://download.sublimetext.com/Sublime%20Text%20Build%203114%20Setup.exe)
@@ -112,4 +112,3 @@
 * TBD
 
 
-	
