@@ -91,6 +91,7 @@
 	* Verify avd output on startup includes:
 	* Hax is enabled
 	* HAX is working and emulator runs in fast virt mode.
+	* Verify emulator fully starts and you see the android home/desktop screen.
 
 ###Install Appium IDE
 * Download, unzip and install [here](https://bitbucket.org/appium/appium.app/downloads/AppiumForWindows.zip)
