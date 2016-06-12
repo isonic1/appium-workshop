@@ -2,7 +2,7 @@
 
 ###Install Appium Dependencies
 * Follow instruction [here](https://github.com/isonic1/appium-workshop/blob/master/Appium%20Windows%20Installation%20Instructions.md) for Windows.
-* Follow instruction [here](https://github.com/isonic1/appium-workshop/blob/master/Appium%20Mac%20Installation%20Instructions.md)for mac.
+* Follow instruction [here](https://github.com/isonic1/appium-workshop/blob/master/Appium%20Mac%20Installation%20Instructions.md) for mac.
 
 ###Clone or download this repo.
 * Unzip the repo if you downloaded it.
