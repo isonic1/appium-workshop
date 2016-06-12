@@ -19,15 +19,6 @@
 * Download and install [64-bit](http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.2.4-x64.exe) or [32-bit](http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.2.4.exe)
 * Make note of the installation/destination path! You will need this later. e.g. `c:\Ruby22-x64\bin`
 
-###Install Ruby Development Kit
-* Download and install [32-bit](http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe) or [64-bit](http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe)
-* Extract the files to `c:\ruby-dev-kit`.
-* Open CMD and goto `cd c:\ruby-dev-kit`
-* Run `ruby dk.rb init`
-* Run `ruby dk.rb install`
-* Test the installation by running `gem install json --platform=ruby` in CMD. You should see "1 gem installed" if all goes well.
-* Find more Devkit installation information [here](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit).
-
 ###Install Node (We need this for paralleization)
 * Download and install [64-bit](https://nodejs.org/dist/v4.4.5/node-v4.4.5-x64.msi) or [32-bit](https://nodejs.org/dist/v4.4.5/node-v4.4.5-x86.msi)
 * Make note of the **NPM** installation/destination path! You will need this later. e.g. C:\Users\justin\AppData\Roaming\npm
@@ -69,6 +60,15 @@
 * Run `c:\> emulator -help`. You should see menu options for android emulator manager.
 * Run `c:\> npm`. You should see the npm menu options.
 * If any of the above is not working check to make sure the install locations are correct and reflected correctly in the path environment variable.
+
+###Install Ruby Development Kit
+* Download and install [32-bit](http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe) or [64-bit](http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe)
+* Extract the files to `c:\ruby-dev-kit`.
+* Open CMD and goto `cd c:\ruby-dev-kit`
+* Run `ruby dk.rb init`
+* Run `ruby dk.rb install`
+* Test the installation by running `gem install json --platform=ruby` in CMD. You should see "1 gem installed" if all goes well.
+* Find more Devkit installation information [here](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit).
 
 ###Update Android SDK
 * Run `c:\> android sdk` in CMD.
