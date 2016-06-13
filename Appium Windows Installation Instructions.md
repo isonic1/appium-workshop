@@ -15,7 +15,7 @@
 ###Install Ruby
 * Open CMD and check ruby version: `c:\> ruby -v`
 	* If the version is less than 2.2 or the command is not recognized you need to install ruby.
-	* If the version is 2.2 or greater then go to Android SDK install.
+	* If the version is 2.2 or greater then go to Node install.
 * Download and install [64-bit](http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.2.4-x64.exe) or [32-bit](http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.2.4.exe)
 * Make note of the installation/destination path! You will need this later. e.g. `c:\Ruby22-x64\bin`
 
