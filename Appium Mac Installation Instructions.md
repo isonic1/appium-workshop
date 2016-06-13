@@ -11,7 +11,7 @@
 * See additional install instructions [here](https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Installation.md#installation) for further details.
 * Test install by running `$ brew --version`. You should see something like Homebrew 0.9.5 (git revision 39da; last commit 2016-03-22).
 
-###Install JAVA 
+###Install JAVA
 * Open a terminal and check java version: `$ java -version`
 	* If the version is less than 1.8 or the command is not recognized you need to install java.
 	* If the version is 1.8 or greater then go to Ruby install.
@@ -29,9 +29,9 @@
 * Test install by running `$ npm --version`. Verify version 3.7.3 or greater is returned.
 
 ###Install Android SDK
-* Click [here](https://dl.google.com/android/android-sdk_r24.4.1-windows.zip) to download and unzip.
+* Click [here](https://dl.google.com/android/android-sdk_r24.4.1-macosx.zip) to download and unzip.
 * Move the `android-sdk-macosx` from ~\Downloads to a better place. e.g. /Users/justin/Library/android-sdk-macosx/sdk
-* Make note of where you moved it! You will need this later. 
+* Make note of where you moved it! You will need this later.
 
 ###Add Environment Variables
 * Determine which shell you use. Open a terminal and run `$ echo $SHELL`.
@@ -49,7 +49,7 @@
 * Run `$ emulator -help`. You should see menu options for android emulator manager.
 * If any of the above is not working check to make sure the install locations are correct and reflected correctly in the path environment variable.
 
-###Update Android SDK 
+###Update Android SDK
 * Run `$ android sdk` in terminal.
 * Install or update by selecting everything you see marked as installed [here](https://dl.dropboxusercontent.com/u/210767372/SDK%20Manager%201.PNG) and [here](https://dl.dropboxusercontent.com/u/210767372/SDK%20Manager%202.PNG) for API Level 23 and more.
 * Note: You do not need the Android N (API 23, N preview) so uncheck it if it's selected.
@@ -84,7 +84,7 @@
 	* If there are things missing please go back to the install instructions or environment variable setup.
 * Run `$ npm install -g appium`
 	* Verify appium installed correctly by doing `C:\> appium -v`
-	
+
 ###Install Sublime (We should all use same editor)
 * Download and install [here](https://download.sublimetext.com/Sublime%20Text%20Build%203114.dmg)
 
