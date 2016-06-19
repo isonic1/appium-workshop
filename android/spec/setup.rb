@@ -50,6 +50,6 @@ end
 def attach_report_files example
   example.attach_file("Hub Log: #{ENV["UDID"]}", File.new("#{ENV["PROJECT_DIR"]}/output/hub.log")) unless ENV["THREADS"].nil?
   dir = Dir.entries("#{ENV["PROJECT_DIR"]}/output/").grep(/#{ENV["UDID"]}/)
-  files = dir.map { |file| { name: file.match(/(.*)-/)[1], file: file } }
+  files = dir.map { |file| { name: file.match(/(.*)-/)[1], file: "#{ENV["PROJECT_DIR"]}/output/#{file}" } }
   files.each { |file| example.attach_file(file[:name], File.new(file[:file])) } unless files.empty?
 end
