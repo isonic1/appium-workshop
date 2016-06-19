@@ -48,7 +48,7 @@
 * Add JAVA_HOME variable.
 	* Click the New... button.
 	* Set name: JAVA_HOME
-	* Set value: C:\Program Files\Java\jdk1.8.0_92\bin (change this to your java\bin path)
+	* Set value: C:\Program Files\Java\jdk1.8.0_92
 	* Click OK
 * See example [here](https://dl.dropboxusercontent.com/u/210767372/Environment%20Variables.PNG) for environment variable.
 * See example [here](https://dl.dropboxusercontent.com/u/210767372/User%20Path%20Env%20Variables.PNG) for Path variables.
@@ -121,6 +121,16 @@
 * Download and install [64-bit](https://download.sublimetext.com/Sublime%20Text%20Build%203114%20x64%20Setup.exe) or [32-bit](https://download.sublimetext.com/Sublime%20Text%20Build%203114%20Setup.exe)
 
 ###Install Allure Report Framework
-* TBD
-
+* Download and unzip allure [here](https://github.com/allure-framework/allure-core/releases/download/allure-core-1.4.23/allure-commandline.zip)
+* Create a allure directory directory. Run `mkdir C:\allure`
+* Move all allure folders/files from Downloads to C:\allure.
+* Add environment variable for allure.
+	* Goto Control Panel\System and Security\System > Advanced system > Edit Variables...
+	* Under "User variables for **your_user_name**"
+	* Highlight the Path variable.
+	* Click Edit > New
+	* Add path for allure executables. e.g. C:\allure\bin
+	* Click OK
+* Close shell windows and open a new one.
+* Test allure works. Run `C:\ allure` in shell. You should get allure menu options returned.
 
