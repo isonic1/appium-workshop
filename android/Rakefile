@@ -47,6 +47,7 @@ def setup_output_dir
     system "mkdir output >> /dev/null 2>&1"
     `rm ./output/*  >> /dev/null 2>&1`
   elsif OS.windows?
-
+    Dir.entries("#{Dir.pwd}/output/").map { |f| f if f.include? "log" or f.include? "png" }.compact
+    files.each { |f| File.delete "#{Dir.pwd}/output/#{f}" }
   end
 end
