@@ -34,7 +34,7 @@ def kill_process process
     `ps -ef | grep #{process} | awk '{print $2}' | xargs kill >> /dev/null 2>&1`
   elsif OS.windows?
     pid = (`Wmic process where (Name like '%#{process}%') get ProcessId`).split.last
-    system("taskkill /f /pid #{pid}")
+    system("taskkill /f /pid #{pid}") unless pid.nil? || pid.empty?
   end
 end
 
@@ -47,7 +47,11 @@ def appium_server_start(**options)
   command << " --log #{Dir.pwd}/output/#{options[:log]}" if options.key?(:log)
   command << " --tmp /tmp/#{options[:tmp]}" if options.key?(:tmp)
   Dir.chdir('.') {
-    pid = spawn(command, :out=>"/dev/null")
+    if OS.mac?
+      pid = spawn(command, :out=>"/dev/null")
+    elsif OS.windows?
+      pid = spawn("#{command} > NUL")
+    end
     puts 'Waiting for Appium to start up...'
     sleep 10
     if pid.nil?
@@ -85,17 +89,25 @@ def start_hub
   sleep 3 #wait for hub to start...
 end
 
-def start_single_appium platform
-  kill_process "appium"
-  devices = get_android_devices(platform)[0]
+def start_single_appium
+  if OS.mac?
+    kill_process "appium"
+  elsif OS.windows?
+    kill_process "node.exe"
+  end
+  devices = get_android_devices[0]
   save_device_data [devices]
   appium_server_start udid: devices[:udid], log: "appium-#{devices[:udid]}.log"
 end
 
-def launch_hub_and_nodes platform
-  kill_process "appium"
+def launch_hub_and_nodes
+  if OS.mac?
+    kill_process "appium"
+  elsif OS.windows?
+    kill_process "node.exe"
+  end
   start_hub #comment out or remove if you already have a hub running.
-  devices = get_android_devices(platform)
+  devices = get_android_devices
   save_device_data devices
   ENV["THREADS"] = devices.size.to_s
   Parallel.map_with_index(devices, in_processes: devices.size) do |device, index|
