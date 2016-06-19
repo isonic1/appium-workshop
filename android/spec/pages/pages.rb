@@ -1,1 +1,1 @@
-require_relative 'landing'
+require_relative 'home'

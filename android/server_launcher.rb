@@ -6,7 +6,11 @@ def get_android_devices
   devs = (`adb devices`).split("\n").select { |x| x.include? "\tdevice" }.map.each_with_index { |d,i| { platform: "android", name: "android", udid: d.split("\t")[0], thread: i + 1 } }
   devices = devs.map { |x| x.merge(get_android_device_data(x[:udid]))}
   ENV["DEVICES"] = JSON.generate(devices)
-  devices
+  if devices.nil?
+    []
+  else
+    devices
+  end
 end
 
 def get_android_device_data udid
@@ -20,6 +24,10 @@ def get_android_device_data udid
 end
 
 def save_device_data dev_array
+  if dev_array.nil?
+    puts "No connected devices..."
+    abort
+  end
   dev_array.each do |device|
     device.each do |k,v|
       open("output/specs-#{device[:udid]}.log", 'a') do |file|
@@ -33,8 +41,9 @@ def kill_process process
   if OS.mac?
     `ps -ef | grep #{process} | awk '{print $2}' | xargs kill >> /dev/null 2>&1`
   elsif OS.windows?
-    pid = (`Wmic process where (Name like '%#{process}%') get ProcessId`).split.last
-    system("taskkill /f /pid #{pid}") unless pid.nil? || pid.empty?
+    pids = (`Wmic process where (Name like '%#{process}%') get ProcessId`).split
+    pids.shift
+    pids.each { |pid| system("taskkill /f /pid #{pid}") } unless pids.empty?
   end
 end
 
@@ -84,8 +93,13 @@ def generate_node_config(file_name, appium_port, device)
 end
 
 def start_hub
-  kill_process "selenium"
-  spawn("java -jar selenium-server-standalone-2.53.0.jar -role hub -log #{Dir.pwd}/output/hub.log &", :out=>"/dev/null")
+  if OS.mac?
+    kill_process "selenium"
+    spawn("java -jar selenium-server-standalone-2.53.0.jar -role hub -log #{Dir.pwd}/output/hub.log &", :out=>"/dev/null")
+  elsif OS.windows?
+    kill_process "java.exe"
+    spawn("java -jar selenium-server-standalone-2.53.0.jar -role hub -log #{Dir.pwd}/output/hub.log > NUL")
+  end
   sleep 3 #wait for hub to start...
 end
 
