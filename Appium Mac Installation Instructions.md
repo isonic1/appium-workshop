@@ -75,7 +75,7 @@
 	* Verify emulator fully starts and you see the android home/desktop screen.
 
 ###Install Appium IDE
-* Download and install Appium IDE [here](https://bitbucket.org/appium/appium.app/downloads/appium-1.4.13.dmg)
+* Download and install Appium IDE [here](https://bitbucket.org/appium/appium.app/downloads/appium.dmg)
 
 ###Install Appium via NPM
 * Run `$ npm install -g appium-doctor`

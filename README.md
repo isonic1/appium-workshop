@@ -12,7 +12,7 @@
 ###Install Ruby Gems Dependencies
 * Goto `cd appium-workshop`
 * Install bundler `gem install bundler`
-* Run `bundle install`
+* Install appium_lib `gem install appium_lib`
 
 ###Run the sample test
 * Double click the Appium icon on windows desktop or run from applications folder for mac.
