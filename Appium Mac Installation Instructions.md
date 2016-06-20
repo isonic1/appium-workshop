@@ -8,6 +8,7 @@
 ####Install Homebrew
  * Open a terminal and run `$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 `
+
 * See additional install instructions [here](https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Installation.md#installation) for further details.
 * Test install by running `$ brew --version`. You should see something like Homebrew 0.9.5 (git revision 39da; last commit 2016-03-22).
 
@@ -41,11 +42,11 @@
 	* export JAVA_HOME=$(/usr/libexec/java_home)
 	* Add the Android sdk paths to your existing PATH=$PATH variable. e.g. :/Users/**your-user-name**/Library/android-sdk-macosx/sdk/tools:/Users/**your-user-name**/Library/android-sdk-macosx/sdk/platform-tools:/Users/**your-user-name**/Library/android-sdk-macosx/sdk/build-tools:
 * Save profile. `Press shift + :` type `wq!` and press enter.
+* Close all your terminals and open a new one.
 
 ###Test Environment Variables
 * Run `$ java -version` in CMD. You should see something close to this `java version "1.8.0_92"` returned.
 * Run `$ ruby -v` in CMD. You should see something close to this `ruby 2.2.4p230 (2015-12-16 revision 53155)`.
-* Run `$ adb` in CMD. You should see this `Android Debug Bridge version 1.0.32` and additional menu options.
 * Run `$ emulator -help`. You should see menu options for android emulator manager.
 * If any of the above is not working check to make sure the install locations are correct and reflected correctly in the path environment variable.
 
@@ -55,6 +56,11 @@
 * Note: You do not need the Android N (API 23, N preview) so uncheck it if it's selected.
 * Click the Install .. packages...
 * Accept the license for each package and then click the Install button.
+
+###Test ADB is installed.
+This was installed when you selected platform-tools during the sdk update.
+
+* Run `$ adb` in CMD. You should see this `Android Debug Bridge version 1.0.32` and additional menu options.
 
 ###Create Android Emulator
 * Install the Intel HAXM Accellerator software [here](https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager-end-user-license-agreement-macosx)

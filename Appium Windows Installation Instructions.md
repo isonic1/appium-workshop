@@ -122,7 +122,7 @@
 
 ###Install Allure Report Framework
 * Download and unzip allure [here](https://github.com/allure-framework/allure-core/releases/download/allure-core-1.4.23/allure-commandline.zip)
-* Create a allure directory directory. Run `mkdir C:\allure`
+* Create a allure directory. Run `mkdir C:\allure`
 * Move all allure folders/files from Downloads to C:\allure.
 * Add environment variable for allure.
 	* Goto Control Panel\System and Security\System > Advanced system > Edit Variables...
@@ -133,4 +133,5 @@
 	* Click OK
 * Close shell windows and open a new one.
 * Test allure works. Run `C:\ allure` in shell. You should get allure menu options returned.
+* Click [here](http://wiki.qatools.ru/display/AL/Allure+Commandline) for more install information.
 
