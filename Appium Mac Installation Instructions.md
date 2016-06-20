@@ -22,7 +22,7 @@
 * Open a terminal and check ruby version: `$ ruby -v`
 	* If the version is less than 2.2 or the command is not recognized you need to install ruby.
 	* run `$ \curl -sSL https://get.rvm.io | bash -s stable --ruby` in terminal. This will install RVM (Ruby Version Manager) and install the latest Ruby version.
-	* Run `$ rvm list` and see which ruby version was installed. Not the version number for next step.
+	* Run `$ rvm list` and see which ruby version was installed. Note the version number for next step.
 	* Run `rvm --default use 2.2.?` to set the version as default. e.g. 2.2.4 instead of 2.2.?
 
 ###Install Node (We need this for paralleization)
@@ -89,7 +89,7 @@ This was installed when you selected platform-tools during the sdk update.
 	*  	Verify "info AppiumDoctor Everything looks good, bye!" is displayed.
 	* If there are things missing please go back to the install instructions or environment variable setup.
 * Run `$ npm install -g appium`
-	* Verify appium installed correctly by doing `C:\> appium -v`
+	* Verify appium installed correctly by doing `$ appium -v`
 
 ###Install Sublime (We should all use same editor)
 * Download and install [here](https://download.sublimetext.com/Sublime%20Text%20Build%203114.dmg)
