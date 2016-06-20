@@ -98,3 +98,4 @@ This was installed when you selected platform-tools during the sdk update.
 * Open terminal and run:
 	* `$ brew tap qatools/formulas`
 	* `$ brew install allure-commandline`
+* Test allure works. Run `$ allure` in terminal. Verify you see allure menu options after.
