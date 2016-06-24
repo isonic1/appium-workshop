@@ -26,8 +26,7 @@ def initialize_appium
   caps[:caps][:deviceName] = device.fetch("name", caps[:caps][:deviceName])
   caps[:caps][:app] = ENV["APP_PATH"]
   caps[:appium_lib][:server_url] = ENV["SERVER_URL"]
-  @driver = Appium::Driver.new(caps).start_driver
-  Appium.promote_appium_methods RSpec::Core::ExampleGroup
+  Appium::Driver.new(caps).start_driver
   Appium.promote_appium_methods Object
 
   require_relative "helpers"
@@ -35,7 +34,7 @@ def initialize_appium
 end
 
 def quit_appium
-  @driver.driver_quit
+  driver_quit
 end
 
 def allure_report_setup

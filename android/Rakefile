@@ -17,9 +17,6 @@ def task_setup app, args
   ENV["PROJECT_DIR"] = Dir.pwd
   ENV["APP_PATH"] = app
 
-  ENV['SAUCE_USERNAME'] = nil
-  ENV['SAUCE_ACCESS_KEY'] = nil
-
   if args[:type] == "single"
     start_single_appium
   elsif ['dist', 'parallel'].include? args[:type]
