@@ -7,7 +7,8 @@ def get_android_devices
   devices = devs.map { |x| x.merge(get_android_device_data(x[:udid]))}
   ENV["DEVICES"] = JSON.generate(devices)
   if devices.nil?
-    []
+    puts "\nAborting...Connect at least one device or emulator!\n"
+    abort
   else
     devices
   end
