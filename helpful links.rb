@@ -2,3 +2,8 @@
 * https://github.com/appium/ruby_console/blob/master/osx.md
 * https://github.com/grosser/parallel
 * https://github.com/grosser/parallel_tests
+* https://saucelabs.com/resources/articles/appium-bootcamp-chapter-1
+* http://rspec.info/
+* https://github.com/appium/sample-code/tree/master/sample-code/examples/ruby
+* http://allure.qatools.ru/
+* https://github.com/isonic1/appium-mobile-grid

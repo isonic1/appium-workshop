@@ -10,9 +10,13 @@
 * Move the project to `~/appium-workshop` for mac.
 
 ###Install Ruby Gems Dependencies
+* Open a terminal or shell window.
 * Goto `cd appium-workshop`
 * Install bundler `gem install bundler`
 * Install appium_lib `gem install appium_lib`
+* Install appium_console `gem install appium_console -v 1.0.4`
+* Install rspec `gem install rspec`
+* Install os `gem install os`
 
 ###Run the sample test
 * Double click the Appium icon on windows desktop or run from applications folder for mac.

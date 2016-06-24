@@ -11,10 +11,14 @@ RSpec.configure do |config|
   end
 
   config.before :each do |e|
+    helper.start_video_record ENV["UDID"]
+    helper.start_logcat ENV["UDID"]
   end
 
   config.after :each do |e|
-    @driver.screenshot "#{ENV["PROJECT_DIR"]}/output/screenshot-#{ENV["UDID"]}.png"
+    helper.stop_video_record ENV["UDID"]
+    helper.stop_logcat
+    screenshot "#{ENV["PROJECT_DIR"]}/output/screenshot-#{ENV["UDID"]}.png"
     attach_report_files e
   end
 

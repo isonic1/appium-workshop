@@ -21,7 +21,7 @@ end
 
 def initialize_appium
   device = get_device_data
-  caps = Appium.load_appium_txt file: File.join(File.dirname(__FILE__), "appium.txt")
+  caps = Appium.load_appium_txt file: File.join(File.dirname(__FILE__), "../appium.txt")
   caps[:caps][:udid] = device.fetch("udid", nil)
   caps[:caps][:deviceName] = device.fetch("name", caps[:caps][:deviceName])
   caps[:caps][:app] = ENV["APP_PATH"]

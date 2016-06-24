@@ -1,17 +1,11 @@
 class Locators
 
-  attr_accessor :driver
-
-  def initialize(driver)
-    @driver = driver
+  def fe locator
+    find_element locator
   end
 
-  def fe(locator)
-    driver.find_element locator
-  end
-
-  def fa(locator)
-    driver.find_elements locator
+  def fa locator
+    find_elements locator
   end
 
   def click locator

@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe "Validate Home Page" do
+describe "Home Page" do
 
   before :each do
-    @home = Home.new(@driver)
+    @home = Home.new
   end
 
   it 'Home Page Displays Correct Text' do
