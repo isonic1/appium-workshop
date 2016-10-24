@@ -54,7 +54,7 @@
 ###Update Android SDK
 * Run `$ android sdk` in terminal.
 * Install or update by selecting everything you see marked as installed [here](https://dl.dropboxusercontent.com/u/210767372/SDK%20Manager%201.PNG) and [here](https://dl.dropboxusercontent.com/u/210767372/SDK%20Manager%202.PNG) for API Level 23.
-* Note: You do not need the Android N (API 23, N preview) so uncheck it if it's selected.
+* Note: We are using ***API Level 23*** for this workshop!
 * Click the Install .. packages...
 * Accept the license for each package and then click the Install button.
 

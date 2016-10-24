@@ -72,7 +72,8 @@
 
 ###Update Android SDK
 * Run `c:\> android sdk` in CMD.
-* Install or update by selecting everything you see marked as installed [here](https://dl.dropboxusercontent.com/u/210767372/SDK%20Manager%201.PNG) and [here](https://dl.dropboxusercontent.com/u/210767372/SDK%20Manager%202.PNG) for API Level 23 and more.
+* Install or update by selecting everything you see marked as installed [here](https://dl.dropboxusercontent.com/u/210767372/SDK%20Manager%201.PNG) and [here](https://dl.dropboxusercontent.com/u/210767372/SDK%20Manager%202.PNG) for API Level 23.
+* Note: We are using ***API Level 23*** for this workshop!
 * Click the Install .. packages...
 * Accept the license for each package and then click the Install button.
 
