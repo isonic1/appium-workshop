@@ -1,6 +1,6 @@
 #Appium Mac Installation
 
-###Install Xcode or Upgrade to 7.3
+###Install Xcode or Upgrade to 8.0
 * Goto the Mac Appstore and search for Xcode and click the Get button.
 * After installation, install the Commandline Tools.
 * Open a terminal and run `$ xcode-select --install`
@@ -16,7 +16,8 @@
 * Open a terminal and check java version: `$ java -version`
 	* If the version is less than 1.8 or the command is not recognized you need to install java.
 	* If the version is 1.8 or greater then go to Ruby install.
-* Download and install [here](http://download.oracle.com/otn-pub/java/jdk/8u91-b14/jdk-8u91-macosx-x64.dmg)
+* Go [here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+* Download and install jdk-8u112-macosx-x64.dmg
 
 ###Install Ruby
 * Open a terminal and check ruby version: `$ ruby -v`
@@ -31,16 +32,16 @@
 
 ###Install Android SDK
 * Click [here](https://dl.google.com/android/android-sdk_r24.4.1-macosx.zip) to download and unzip.
-* Move the `android-sdk-macosx` from ~\Downloads to a better place. e.g. /Users/justin/Library/android-sdk-macosx/sdk
+* Move the `android-sdk-macosx` from ~\Downloads to a better place. e.g. /Users/justin/android-sdk-macosx/sdk
 * Make note of where you moved it! You will need this later.
 
 ###Add Environment Variables
 * Determine which shell you use. Open a terminal and run `$ echo $SHELL`.
 * Based on your shell, you need to edit your profile. e.g. `$ vi ~/.bash_profile or ~/.profile or ~/.zshrc`.
 * Add the following variables.
-	* export ANDROID_HOME=/Users/**your-user-name**/Library/android-sdk-macosx/sdk
+	* export ANDROID_HOME=/Users/**your-user-name**/android-sdk-macosx/sdk
 	* export JAVA_HOME=$(/usr/libexec/java_home)
-	* Add the Android sdk paths to your existing PATH=$PATH variable. e.g. :/Users/**your-user-name**/Library/android-sdk-macosx/sdk/tools:/Users/**your-user-name**/Library/android-sdk-macosx/sdk/platform-tools:/Users/**your-user-name**/Library/android-sdk-macosx/sdk/build-tools:
+	* Add the Android sdk paths to your existing PATH=$PATH variable. e.g. :/Users/**your-user-name**/android-sdk-macosx/sdk/tools:/Users/**your-user-name**/android-sdk-macosx/sdk/platform-tools:/Users/**your-user-name**/android-sdk-macosx/sdk/build-tools:
 * Save profile. `Press shift + :` type `wq!` and press enter.
 * Close all your terminals and open a new one.
 
@@ -52,7 +53,7 @@
 
 ###Update Android SDK
 * Run `$ android sdk` in terminal.
-* Install or update by selecting everything you see marked as installed [here](https://dl.dropboxusercontent.com/u/210767372/SDK%20Manager%201.PNG) and [here](https://dl.dropboxusercontent.com/u/210767372/SDK%20Manager%202.PNG) for API Level 23 and more.
+* Install or update by selecting everything you see marked as installed [here](https://dl.dropboxusercontent.com/u/210767372/SDK%20Manager%201.PNG) and [here](https://dl.dropboxusercontent.com/u/210767372/SDK%20Manager%202.PNG) for API Level 23.
 * Note: You do not need the Android N (API 23, N preview) so uncheck it if it's selected.
 * Click the Install .. packages...
 * Accept the license for each package and then click the Install button.
