@@ -5,6 +5,10 @@
 * Processor: Intel or AMD
 * System type: 64-bit x64-based or 32-bit x86-based
 
+***If you have AMD chipped PC***
+* Follow the instructions [here](https://docs.genymotion.com/Content/01_Get_Started/Installation.htm) to install Genymotion emulator. Choose either 64-bit or 32-bit.
+* Or... bring your own android device to the workshop and a micro-usb cable.
+
 ###Install JAVA
 * Open CMD and check java version: `c:\> java -version`
 	* If the version is less than 1.8 or the command is not recognized you need to install java.
@@ -91,12 +95,9 @@
 * Select Target: Android 6.0 API Level 23
 * For Intel PC's.
 	* Select CPU/ABI: Intel Atom (x86)
-* For AMD PC's.
-	* Select CPU/ABI: ARM (armeabi-v7a)
 * Select Skin: Skin with dynamic hardware controls
 * Select Emulation Options: Use Host GPU
 * The setup should look like [this](https://dl.dropboxusercontent.com/u/210767372/emulator%20setup.PNG) for Intel computers.
-* The setup should look like [this](https://dl.dropboxusercontent.com/u/210767372/emulator%20setup%20amd.PNG) for AMD computers.
 * Click OK
 * Highlight EM1 in AVD menu and click Start and then Launch.
 * For Intel PC's.
