@@ -48,6 +48,16 @@ def kill_process process
   end
 end
 
+def kill_processes
+    if OS.mac?
+    kill_process "appium"
+    kill_process "selenium"
+  elsif OS.windows?
+    kill_process "node.exe"
+    kill_process "java.exe"
+  end
+end
+
 def appium_server_start(**options)
   command = 'appium'
   command << " --nodeconfig #{options[:config]}" if options.key?(:config)
@@ -95,32 +105,22 @@ end
 
 def start_hub
   if OS.mac?
-    kill_process "selenium"
     spawn("java -jar selenium-server-standalone-2.53.0.jar -role hub -log #{Dir.pwd}/output/hub.log &", :out=>"/dev/null")
   elsif OS.windows?
-    kill_process "java.exe"
     spawn("java -jar selenium-server-standalone-2.53.0.jar -role hub -log #{Dir.pwd}/output/hub.log > NUL")
   end
   sleep 3 #wait for hub to start...
 end
 
 def start_single_appium
-  if OS.mac?
-    kill_process "appium"
-  elsif OS.windows?
-    kill_process "node.exe"
-  end
+  kill_processes
   devices = get_android_devices[0]
   save_device_data [devices]
   appium_server_start udid: devices[:udid], log: "appium-#{devices[:udid]}.log"
 end
 
 def launch_hub_and_nodes
-  if OS.mac?
-    kill_process "appium"
-  elsif OS.windows?
-    kill_process "node.exe"
-  end
+  kill_processes
   start_hub #comment out or remove if you already have a hub running.
   devices = get_android_devices
   save_device_data devices

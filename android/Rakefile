@@ -11,7 +11,7 @@ def task_setup app, args
     puts "Invalid run type!\nChoose: #{types}"
     abort
   end
-
+  
   setup_output_dir
 
   ENV["PROJECT_DIR"] = Dir.pwd
@@ -40,6 +40,7 @@ def android_app
 end
 
 def setup_output_dir
+  kill_processes
   if OS.mac?
     system "mkdir output >> /dev/null 2>&1"
     `rm ./output/*  >> /dev/null 2>&1`

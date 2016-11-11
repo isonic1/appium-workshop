@@ -14,7 +14,7 @@
 	* If the version is less than 1.8 or the command is not recognized you need to install java.
 	* If the version is 1.8 or greater then go to Ruby install.
 * Download and install [64-bit](http://download.oracle.com/otn-pub/java/jdk/8u91-b15/jdk-8u91-windows-x64.exe) or [32-bit](http://download.oracle.com/otn-pub/java/jdk/8u91-b15/jdk-8u91-windows-i586.exe)
-* Make note of the installation/destination path! You will need this later. e.g. `C:\Program Files\Java\jdk1.8.0_92\bin`
+* Make note of the installation/destination path! You will need this later. e.g. `C:\Program Files\Java\jdk1.8.0_92`
 
 ###Install Ruby
 * Open CMD and check ruby version: `c:\> ruby -v`
@@ -71,8 +71,9 @@
 * Open CMD and goto `cd c:\ruby-dev-kit`
 * Run `ruby dk.rb init`
 * Run `ruby dk.rb install`
-* Test the installation by running `gem install json --platform=ruby` in CMD. You should see "1 gem installed" if all goes well.
+* Test the installation by running `gem install json --platform=ruby --source http://rubygems.org` in CMD. You should see "1 gem installed" if all goes well.
 * Find more Devkit installation information [here](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit).
+
 
 ###Update Android SDK
 * Run `c:\> android sdk` in CMD.
@@ -118,6 +119,12 @@
 	* If there are things missing please go back to the install instructions or environment variable setup.
 * Run `C:\> npm install -g appium`
 	* Verify appium installed correctly by doing `C:\> appium -v`
+
+* Note: You might get an error when install appium with NPM. If so, open a powershell window as administrator. e.g. search for powershell in start menu, then right click powershell and select run as administrator.
+	* In powershell run: `Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force`
+	* Run: `npm install -g npm-windows-upgrade`
+	* Run: `npm-windows-upgrade`
+	* Run: `npm install -g appium`
 
 ###Install Sublime (We should all use same editor)
 * Download and install [64-bit](https://download.sublimetext.com/Sublime%20Text%20Build%203114%20x64%20Setup.exe) or [32-bit](https://download.sublimetext.com/Sublime%20Text%20Build%203114%20Setup.exe)

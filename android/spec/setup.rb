@@ -1,6 +1,8 @@
 require_relative './pages/pages'
 require 'bundler'
 Bundler.require(:test)
+require 'pathname'
+
 include Faker
 
 def thread
