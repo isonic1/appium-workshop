@@ -22,3 +22,6 @@
 * Open CMD or terminal and goto `cd C:\Users\your_user_name\appium-workshop\example` or `cd ~/appium-workshop/example`.
 * Then run `ruby test-appium.rb`
 * You should see "YAY! ALL LOOKS GOOD!!!!" if everything worked correctly.
+
+###Workshop Slides
+* Open the interactive workshop slides [here](http://slides.com/justinison/deck)

@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     allure-rspec (0.7.7)
       allure-ruby-adaptor-api (= 0.6.10)
@@ -89,4 +89,4 @@ DEPENDENCIES
   sauce_whisk
 
 BUNDLED WITH
-   1.11.2
+   1.13.1

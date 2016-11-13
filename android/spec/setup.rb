@@ -24,8 +24,18 @@ end
 def initialize_appium
   device = get_device_data
   caps = Appium.load_appium_txt file: File.join(File.dirname(__FILE__), "../appium.txt")
-  caps[:caps][:udid] = device.fetch("udid", nil)
-  caps[:caps][:deviceName] = device.fetch("name", caps[:caps][:deviceName])
+  if ENV['ENV'] == 'sauce'
+    caps[:caps][:appiumVersion] = '1.5.3'
+    caps[:caps][:platformVersion] = '5.1'
+    caps[:caps][:deviceName] = "Android Emulator"
+    caps[:caps][:name] = self.class.metadata[:full_description].strip
+  else
+    caps[:caps][:udid] = device.fetch("udid", nil)
+    caps[:caps][:deviceName] = device.fetch("name", caps[:caps][:deviceName])
+  end
+  puts ENV['SAUCE_USERNAME']
+  puts ENV['SAUCE_ACCESS_KEY']
+  puts "My app path: #{ENV["APP_PATH"]}"
   caps[:caps][:app] = ENV["APP_PATH"]
   caps[:appium_lib][:server_url] = ENV["SERVER_URL"]
   Appium::Driver.new(caps).start_driver
