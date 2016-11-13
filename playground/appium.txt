@@ -1,10 +1,9 @@
 [caps]
 platformName = "ANDROID"
 deviceName = "android"
-app = "/Users/justin/repos/appium-workshop/playground/app-debug.apk"
+app = "/Users/<your name>/appium-workshop/playground/app-debug.apk"
 appPackage = ""
 
 [appium_lib]
-wait = 30
 sauce_username = false
 sauce_access_key = false
