@@ -6,7 +6,7 @@ caps[:caps][:platformName] = "ANDROID"
 caps[:caps][:deviceName] = "android"
 caps[:caps][:app] = "#{Dir.pwd}/NotesList.apk"
 
-driver = Appium::Driver.new(caps).start_driver
+Appium::Driver.new(caps).start_driver
 Appium.promote_appium_methods Object
 
 if driver.find_element(:id, 'android:id/action_bar_title').text == "Notes"

@@ -1,14 +1,14 @@
 #Appium Mac Installation
 
-###Install Xcode or Upgrade to 8.0
+***>>>>>> Never EVER EVER EVER sudo install anything!!! It will make all our lives easier, trust me! <<<<<<***
+
+###Install Xcode or Upgrade to 8.0 +
 * Goto the Mac Appstore and search for Xcode and click the Get button.
 * After installation, install the Commandline Tools.
 * Open a terminal and run `$ xcode-select --install`
 
 ####Install Homebrew
- * Open a terminal and run `$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-`
-
+* Open a terminal and run `$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 * See additional install instructions [here](https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Installation.md#installation) for further details.
 * Test install by running `$ brew --version`. You should see something like Homebrew 0.9.5 (git revision 39da; last commit 2016-03-22).
 
@@ -19,7 +19,9 @@
 * Go [here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * Download and install jdk-8u112-macosx-x64.dmg
 
-###Install Ruby
+###Install Ruby 
+***DO NOT use the base OSX Ruby. Install either RVM (below instructions) or RBENV.
+
 * Open a terminal and check ruby version: `$ ruby -v`
 	* If the version is less than 2.2 or the command is not recognized you need to install ruby.
 	* run `$ \curl -sSL https://get.rvm.io | bash -s stable --ruby` in terminal. This will install RVM (Ruby Version Manager) and install the latest Ruby version.

@@ -74,7 +74,6 @@
 * Test the installation by running `gem install json --platform=ruby --source http://rubygems.org` in CMD. You should see "1 gem installed" if all goes well.
 * Find more Devkit installation information [here](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit).
 
-
 ###Update Android SDK
 * Run `c:\> android sdk` in CMD.
 * Install or update by selecting everything you see marked as installed [here](https://dl.dropboxusercontent.com/u/210767372/SDK%20Manager%201.PNG) and [here](https://dl.dropboxusercontent.com/u/210767372/SDK%20Manager%202.PNG) for API Level 23.

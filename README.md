@@ -13,7 +13,7 @@
 * Open a terminal or shell window.
 * Goto `cd appium-workshop`
 * Install bundler `gem install bundler`
-* Run: bundle install
+* Run: `bundle install`
 
 ###Run the sample test
 * Double click the Appium icon on windows desktop or run from applications folder for mac.
