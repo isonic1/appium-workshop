@@ -12,6 +12,9 @@
 * See additional install instructions [here](https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Installation.md#installation) for further details.
 * Test install by running `$ brew --version`. You should see something like Homebrew 0.9.5 (git revision 39da; last commit 2016-03-22).
 
+####Install Carthage
+* Open a terminal and run `$ brew install carthage`
+
 ###Install JAVA
 * Open a terminal and check java version: `$ java -version`
 	* If the version is less than 1.8 or the command is not recognized you need to install java.
@@ -28,7 +31,7 @@
 	* Run `$ rvm list` and see which ruby version was installed. Note the version number for next step.
 	* Run `rvm --default use 2.2.?` to set the version as default. e.g. 2.2.4 instead of 2.2.?
 
-###Install Node (We need this for paralleization)
+###Install Node (We need this for parallelization)
 * Open a terminal and run `$ brew install node`.
 * Test install by running `$ npm --version`. Verify version 3.7.3 or greater is returned.
 
