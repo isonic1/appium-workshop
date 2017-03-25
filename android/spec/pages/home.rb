@@ -10,6 +10,6 @@ class Home < Common
 
   def home_page_text
     page_displayed?
-    text HOME_PAGE_TEXT
+    get_text HOME_PAGE_TEXT
   end
 end

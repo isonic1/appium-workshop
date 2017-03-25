@@ -12,7 +12,7 @@ class Locators
     fe(locator).click
   end
 
-  def text locator
+  def get_text locator
     fe(locator).text
   end
 

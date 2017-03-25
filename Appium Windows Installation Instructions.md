@@ -111,6 +111,11 @@
 * Make note of the installation/destination path. e.g. C:\Program Files (x86)\Appium
 * Create desktop icon.
 
+###Install New Appium IDE (Beta)
+* Download and install New Appium IDE [here](https://github.com/appium/appium-desktop/releases/download/v1.0.0-beta.5/appium-desktop-Setup-1.0.0-beta.5.exe)
+* Make note of the installation/destination path. e.g. C:\Program Files (x86)\Appium2
+* Create desktop icon.
+
 ###Install Appium via NPM
 * Run `C:\> npm install -g appium-doctor`
 * Run `C:\> appium-doctor` (checks setup is correct on machine)

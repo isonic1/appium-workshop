@@ -33,9 +33,6 @@ def initialize_appium
     caps[:caps][:udid] = device.fetch("udid", nil)
     caps[:caps][:deviceName] = device.fetch("name", caps[:caps][:deviceName])
   end
-  puts ENV['SAUCE_USERNAME']
-  puts ENV['SAUCE_ACCESS_KEY']
-  puts "My app path: #{ENV["APP_PATH"]}"
   caps[:caps][:app] = ENV["APP_PATH"]
   caps[:appium_lib][:server_url] = ENV["SERVER_URL"]
   Appium::Driver.new(caps).start_driver

@@ -12,14 +12,14 @@ class Common < Locators
   end
 
   def page_title_text
-    text TOOLBAR_TITLE
+    get_text TOOLBAR_TITLE
   end
 
   def popup_title
-    text POPUP_ALERT_TITLE
+    get_text POPUP_ALERT_TITLE
   end
 
   def popup_message
-    text POPUP_ALERT_MESSAGE
+    get_text POPUP_ALERT_MESSAGE
   end
 end

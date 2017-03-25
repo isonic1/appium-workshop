@@ -89,6 +89,10 @@ This was installed when you selected platform-tools during the sdk update.
 ###Install Appium IDE
 * Download and install Appium IDE [here](https://bitbucket.org/appium/appium.app/downloads/appium.dmg)
 
+###Install New Appium IDE (Beta)
+* Download and install New Appium IDE [here](https://github.com/appium/appium-desktop/releases/download/v1.0.0-beta.5/appium-desktop-1.0.0-beta.5.dmg)
+* Name the application Appium 2.
+
 ###Install Appium via NPM
 * Run `$ npm install -g appium-doctor`
 * Run `$ appium-doctor` (checks setup is correct on machine)

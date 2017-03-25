@@ -15,6 +15,6 @@ class Crash < Common
   end
 
   def crash_page_text
-    text CRASH_PAGE_TEXT
+    get_text CRASH_PAGE_TEXT
   end
 end
