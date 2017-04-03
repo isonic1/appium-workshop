@@ -1,13 +1,13 @@
 # Appium Workshop
 
-### Install Appium Dependencies
-* Follow instruction [here](https://github.com/isonic1/appium-workshop/blob/master/Appium%20Windows%20Installation%20Instructions.md) for Windows.
-* Follow instruction [here](https://github.com/isonic1/appium-workshop/blob/master/Appium%20Mac%20Installation%20Instructions.md) for mac.
-
 ### Clone or download this repo.
 * Unzip the repo if you downloaded it.
 * Move the project to `C:\Users\**your_user_name**\appium-workshop` for windows.
 * Move the project to `~/appium-workshop` for mac.
+
+### Install Appium Workshop Dependencies
+* Follow instruction [here](https://github.com/isonic1/appium-workshop/blob/master/Appium%20Windows%20Installation%20Instructions.md) for Windows.
+* Follow instruction [here](https://github.com/isonic1/appium-workshop/blob/master/Appium%20Mac%20Installation%20Instructions.md) for mac.
 
 ### Install Ruby Gems Dependencies
 * Open a terminal or shell window.
@@ -24,4 +24,4 @@
 * You should see "YAY! ALL LOOKS GOOD!!!!" if everything worked correctly.
 
 ### Workshop Slides
-* Open the interactive workshop slides [here](http://slides.com/justinison/deck)
+* Open the interactive workshop slides [here](http://slides.com/justinison/deck-2)
