@@ -1,5 +1,6 @@
 [caps]
 platformName = "ANDROID"
+deviceName = "android"
 
 [appium_lib]
 wait = 30
