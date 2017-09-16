@@ -74,10 +74,10 @@ PLATFORMS
 
 DEPENDENCIES
   allure-rspec
-  appium_console (= 1.0.4)
+  appium_console
   appium_lib
   os
   rspec
 
 BUNDLED WITH
-   1.13.1
+   1.15.4
