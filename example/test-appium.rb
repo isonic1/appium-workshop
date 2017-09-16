@@ -1,6 +1,6 @@
 require 'appium_lib'
 
-caps = Appium.load_appium_txt 'appium.txt'
+caps = Appium.load_appium_txt "#{Dir.pwd}/appium.txt"
 caps[:appium_lib] = {:sauce_username=>false, :sauce_access_key=>false, :wait=>30}
 caps[:caps][:app] = "#{Dir.pwd}/NotesList.apk"
 
