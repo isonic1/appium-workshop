@@ -1,5 +1,13 @@
 require 'appium_lib'
 require 'rspec'
+require 'allure-rspec'
+require 'pathname'
+
+AllureRSpec.configure do |config|
+  config.include AllureRSpec::Adaptor
+  config.output_dir = "output/allure"
+  config.clean_dir = true
+end
 
 describe 'Testing Applitools' do
   
