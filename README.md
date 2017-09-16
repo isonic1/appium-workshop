@@ -23,6 +23,11 @@
 * Open another CMD or terminal and goto `cd C:\Users\your_user_name\appium-workshop\example` or `cd ~/appium-workshop/example`.
 * Then run `$ rspec --format documentation test-appium.rb`
 * You should see "1 example, 0 failures" if everything worked correctly.
+* Validate Allure report:
+   * In the example dir, run: `$ allure report generate output/allure`
+   * `$ allure report open`
+   * A browser should open automatically with the Allure report of the last test run.
+   * Close the browser and CTRL-C to exit out of allure server.
 
 ### Workshop Slides
 * Open the interactive workshop slides [here](http://slides.com/justinison/deck-2)
