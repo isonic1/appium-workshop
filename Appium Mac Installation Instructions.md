@@ -2,7 +2,7 @@
 
 ***>>>>>> Never EVER EVER EVER sudo install anything!!! It will make all our lives easier, trust me! <<<<<<***
 
-### Install Xcode or Upgrade to 8.0 +
+### Install Xcode or Upgrade to 8.3.3
 * Goto the Mac Appstore and search for Xcode and click the Get button.
 * After installation, install the Commandline Tools.
 * Open a terminal and run `$ xcode-select --install`
@@ -10,99 +10,112 @@
 #### Install Homebrew
 * Open a terminal and run `$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 * See additional install instructions [here](https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Installation.md#installation) for further details.
-* Test install by running `$ brew --version`. You should see something like Homebrew 0.9.5 (git revision 39da; last commit 2016-03-22).
+* Test install by running `$ brew --version`. You should see something like Homebrew 1.3.2.
 
 #### Install Carthage
 * Open a terminal and run `$ brew install carthage`
-
+   * This is a dependency check for appium-doctor but not really needed for Android. Install it anyway as you may do iOS automation in the future.
+   
 ### Install JAVA
 * Open a terminal and check java version: `$ java -version`
 	* If the version is less than 1.8 or the command is not recognized you need to install java.
 	* If the version is 1.8 or greater then go to Ruby install.
 * Go [here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-* Download and install jdk-8u112-macosx-x64.dmg
+* Download and install jdk-8u144-macosx-x64.dmg
+* Open Downloads folder and double click the DMG file.
+* Double click the JDK 8 install icon.
+* Click the Continue button.
+* Click the Install button.
+* Enter your password to install software on your system.
 
 ### Install Ruby 
-***DO NOT use the base OSX Ruby. Install either RVM (below instructions) or RBENV.
+*** DO NOT use the default system OSX Ruby. Install a newer version with a Ruby package manager RVM (below instructions) or RBENV.
 
 * Open a terminal and check ruby version: `$ ruby -v`
-	* If the version is less than 2.2 or the command is not recognized you need to install ruby.
+	* If the version is less than 2.3 or the command is not recognized you need to install ruby.
 	* run `$ \curl -sSL https://get.rvm.io | bash -s stable --ruby` in terminal. This will install RVM (Ruby Version Manager) and install the latest Ruby version.
 	* Run `$ rvm list` and see which ruby version was installed. Note the version number for next step.
-	* Run `rvm --default use 2.2.?` to set the version as default. e.g. 2.2.4 instead of 2.2.?
+	* Run `rvm --default use 2.4.0` to set the version as default. e.g. 2.4.0 instead of 2.x.x...
 
 ### Install Node (We need this for parallelization)
 * Open a terminal and run `$ brew install node`.
-* Test install by running `$ npm --version`. Verify version 3.7.3 or greater is returned.
+* Test install by running `$ npm --version`. Verify version 5.3.X or greater is returned.
+* Test Node is installed by running `$ node -v`. Verify version 8.5.X or greater is returned.
 
-### Install Android SDK
-* Click [here](https://dl.google.com/android/android-sdk_r24.4.1-macosx.zip) to download and unzip.
-* Move the `android-sdk-macosx` from ~\Downloads to a better place. e.g. /Users/justin/android-sdk-macosx/sdk
-* Make note of where you moved it! You will need this later.
+### Install Android Studio
+* Click [here](https://developer.android.com/studio/index.html#mac-bundle) to download.
+* Open downloads folder and double click the Android Studio DMG file.
+* Drag and drop the Android Studio icon over to Applications folder. Close the install dialog.
+* Open Finder and goto Applications folder. Double click Android Studio.
+* Select "I do not have a previous version of studio or I do not want to import my settings" and click OK button.
+* Click Next.
+* Select Standard Installation and click the Next button.
+* Click the Finish button.
+* Enter password to allow HAXM to make changes to your system. HAXM is very import for emulator perforamce.
+* Click the Finish button.
+
+### Install Android 6.0 SDK
+* Click the Configure button. It's on the lower right side of the Android Studio welcome dialog.
+* Click SDK Manager in the configuration dropdown.
+* Select Android 6.0 (Marshmallow) SDK.
+   * Why Android 6.0? It's the most common SDK version used throughout the world and is a good starting point until you get more comfortable with mobile automation. See [here](https://www.appbrain.com/stats/top-android-sdk-versions)!
+* Click the "Show Package Details" checkbox on lower right.
+* Check the following SDK dependencies to install:
+   * Intel x86 Atom System Image.
+   * Intel x86 Atom_64 System Image.
+   * Google API's Intel x86 Atom System Image
+   * Google API's Intel X86 Atom_64 System Image
+* Click the Apply button.
+* On the next screen click the Accept radio button.
+* *** Take note of your SDK Path! It's at the top of the Component Installer dialog. e.g SDK Path: /Users/YourUser/Library/Android/sdk
+* Click the Next button to start the installation of SDK 23 dependencies. This will take a whie to complete...
+* When everything has completed downloading, click the Finish button.
+* Click the OK button to close the Component Installer dialog.
 
 ### Add Environment Variables
 * Determine which shell you use. Open a terminal and run `$ echo $SHELL`.
 * Based on your shell, you need to edit your profile. e.g. `$ vi ~/.bash_profile or ~/.profile or ~/.zshrc`.
 * Add the following variables.
-	* export ANDROID_HOME=/Users/**your-user-name**/android-sdk-macosx/sdk
+	* export ANDROID_HOME=//Users/YourUser/Library/Android/sdk
 	* export JAVA_HOME=$(/usr/libexec/java_home)
 	* Add the Android sdk paths to your existing PATH=$PATH variable. e.g. :/Users/**your-user-name**/android-sdk-macosx/sdk/tools:/Users/**your-user-name**/android-sdk-macosx/sdk/platform-tools:/Users/**your-user-name**/android-sdk-macosx/sdk/build-tools:
 * Save profile. `Press shift + :` type `wq!` and press enter.
-* Close all your terminals and open a new one.
+* Force close/quit all your terminal windows and open a new one.
 
 ### Test Environment Variables
-* Run `$ java -version` in CMD. You should see something close to this `java version "1.8.0_92"` returned.
-* Run `$ ruby -v` in CMD. You should see something close to this `ruby 2.2.4p230 (2015-12-16 revision 53155)`.
+* Run `$ java -version` in terminal. You should see something close to this `java version "1.8.0_144"` or greater is returned.
+* Run `$ ruby -v` in terminal. You should see something close to this `ruby 2.4.1` or greater.
 * Run `$ emulator -help`. You should see menu options for android emulator manager.
 * If any of the above is not working check to make sure the install locations are correct and reflected correctly in the path environment variable.
 
-### Update Android SDK
-* Run `$ android sdk` in terminal.
-* Install or update by selecting everything you see marked as installed [here](https://dl.dropboxusercontent.com/u/210767372/SDK%20Manager%201.PNG) and [here](https://dl.dropboxusercontent.com/u/210767372/SDK%20Manager%202.PNG) for API Level 23.
-* Note: We are using ***API Level 23*** for this workshop!
-* Click the Install .. packages...
-* Accept the license for each package and then click the Install button.
-
 ### Test ADB is installed.
-This was installed when you selected platform-tools during the sdk update.
-
-* Run `$ adb` in CMD. You should see this `Android Debug Bridge version 1.0.32` and additional menu options.
+* Run `$ adb` in CMD. You should see this `Android Debug Bridge version 1.0.39` or greater along wiht additional menu options.
 
 ### Create Android Emulator
-* Install the Intel HAXM Accellerator software [here](https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager-end-user-license-agreement-macosx)
-* Run `$ android avd` in terminal.
-* Click Create...
-* Set AVD Name: EM1
-* Select Device: Nexus S(4.0", 480 x 800:hdpi)
-* Select Target: Android 6.0 API Level 23
-* Select CPU/ABI: Intel Atom (x86)
-* Select Skin: Skin with dynamic hardware controls
-* Select Emulation Options: Use Host GPU
-* The setup should look like [this](https://dl.dropboxusercontent.com/u/210767372/emulator%20setup.PNG).
-* Click OK
-* Highlight EM1 in AVD menu and click Start and then Launch.
+* Run `$ create avd -n EM1 -k "system-images;android-23;google_apis;x86"` in terminal.
+* Run the emulator: `$ANDROID_HOME/tools/emulator -avd EM1`
 	* Verify avd output on startup includes:
 	* Hax is enabled
 	* HAX is working and emulator runs in fast virt mode.
 	* Verify emulator fully starts and you see the android home/desktop screen.
+* Note: Emulator can also be created via the AVD Manager IDE inside of Android Studio. However, you would need to create a new project or import one to see this menu option.
 
-### Install Appium IDE
-* Download and install Appium IDE [here](https://bitbucket.org/appium/appium.app/downloads/appium.dmg)
+### Install Appium Desktop
+* Download and install Appium Desktop [here](https://github.com/appium/appium-desktop/releases/download/v1.2.1/appium-desktop-1.2.1.dmg)
 
-### Install New Appium IDE (Beta)
-* Download and install New Appium IDE [here](https://github.com/appium/appium-desktop/releases/download/v1.0.0-beta.5/appium-desktop-1.0.0-beta.5.dmg)
-* Name the application Appium 2.
 
-### Install Appium via NPM
+### Install Appium Doctor via NPM
 * Run `$ npm install -g appium-doctor`
 * Run `$ appium-doctor` (checks setup is correct on machine)
 	*  	Verify "info AppiumDoctor Everything looks good, bye!" is displayed.
-	* If there are things missing please go back to the install instructions or environment variable setup.
+	* If there are things missing please go back to the install instructions above or environment variable setup.
+
+### Install Appium via NPM
 * Run `$ npm install -g appium`
 	* Verify appium installed correctly by doing `$ appium -v`
 
 ### Install Sublime (We should all use same editor)
-* Download and install [here](https://download.sublimetext.com/Sublime%20Text%20Build%203114.dmg)
+* Download and install [here](hhttps://download.sublimetext.com/Sublime%20Text%20Build%203143.dmg)
 
 ### Install Allure Report Framework
 * Open terminal and run:
