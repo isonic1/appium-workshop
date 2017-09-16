@@ -16,8 +16,8 @@
 * Run: `bundle install`
 
 ### Run the sample test
-* Double click the Appium icon on windows desktop or run from applications folder for mac.
-* Click the Play/Start button.
+* Double click the Appium Desktop icon on windows desktop or run from applications folder for mac.
+* Click the Start Server button. You should see a "The server is running" message in green. 
 * Start your EM1 android emulator you created in the setup.
    * In terminal, run: `$ $ANDROID_HOME/tools/emulator -avd EM1`
 * Open another CMD or terminal and goto `cd C:\Users\your_user_name\appium-workshop\example` or `cd ~/appium-workshop/example`.
