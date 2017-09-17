@@ -9,142 +9,148 @@
 * Follow the instructions [here](https://docs.genymotion.com/Content/01_Get_Started/Installation.htm) to install Genymotion emulator. Choose either 64-bit or 32-bit.
 * Or... bring your own android device to the workshop and a micro-usb cable.
 
-### Install JAVA
-* Open CMD and check java version: `c:\> java -version`
+### Powershell
+* Note: We will be using powershell running as an administrator exclusively.
+   * You can run it by searching for it in the apps or the search bar. 
+
+### Install Chocolatay
+* Open a Powershell terminal
+   * Search for powershell in windows.
+   * Right click powershell icon and select run as administrator.
+   * In powershell terminal, run: `Set-ExecutionPolicy AllSigned; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))`
+   * See [here](https://chocolatey.org/install) for more install instructions.
+* Or if chocolatay is already installed, update to the latest by running: `choco install chocolatey`
+* Close powershell terminal.
+
+### Install JAVA JDK8 
+* Open Powershell as Administrator and check java version: `c:\> java -version`
 	* If the version is less than 1.8 or the command is not recognized you need to install java.
-	* If the version is 1.8 or greater then go to Ruby install.
-* Download and install [64-bit](http://download.oracle.com/otn-pub/java/jdk/8u91-b15/jdk-8u91-windows-x64.exe) or [32-bit](http://download.oracle.com/otn-pub/java/jdk/8u91-b15/jdk-8u91-windows-i586.exe)
-* Make note of the installation/destination path! You will need this later. e.g. `C:\Program Files\Java\jdk1.8.0_92`
+	* Open a powershell terminal as administrator and run: `choco install jdk8 --force`
+   * Accept all prompts with Yes.
+* Close powershell terminal.
+* Note: You may need to remove `C:\ProgramData\Oracle\Java\javapath` from your PATH variable.
+* Note: The version of Java that is installed. The most recent as of today is jdk1.8.0_144. You will need this when adding the JAVA_HOME variable.
 
 ### Install Ruby
-* Open CMD and check ruby version: `c:\> ruby -v`
-	* If the version is less than 2.2 or the command is not recognized you need to install ruby.
-	* If the version is 2.2 or greater then go to Node install.
-* Download and install [64-bit](http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.2.4-x64.exe) or [32-bit](http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.2.4.exe)
-* Make note of the installation/destination path! You will need this later. e.g. `c:\Ruby22-x64\bin`
+* Open Powershell as administrator and check ruby version: `c:\> ruby -v`
+	* If the version is less than 2.3 or the command is not recognized you need to install ruby.
+	* If the version is 2.3 or greater then go to Node install.
+* Install Ruby with chocolatey, run: `choco install ruby`
+   * Accept all prompts with Yes.
+* Close powershell terminal.
+   
+### Install Ruby DevKit
+* Open Powershell as administrator.
+* In shell, run: `choco install ruby2.devkit`
+* Accept all prompts with Yes.
+* Close powershell terminal.
 
 ### Install Node (We need this for paralleization)
-* Download and install [64-bit](https://nodejs.org/dist/v4.4.5/node-v4.4.5-x64.msi) or [32-bit](https://nodejs.org/dist/v4.4.5/node-v4.4.5-x86.msi)
-* Make note of the **NPM** installation/destination path! You will need this later. e.g. C:\Users\justin\AppData\Roaming\npm
+* Open Powershell as administrator.
+* In shell, run: `choco install nodejs`
+* Accept all prompts with Yes.
+* Validate install by running: `node -v`. Should see v0.12.9 or greater.
+* Validate NPM is installed by running: `npm -v`. Should see 1.4.6 or greater.
+* Close powershell terminal.
 
-### Install Android SDK
-* Click [here](https://dl.google.com/android/installer_r24.4.1-windows.exe) to install SDK.
-* Make note of the installation/destination path! You will need this later. e.g. `C:\Users\justin\AppData\Local\Android\sdk`
+### Install Android Studio
+* Open Powershell as administrator.
+* In shell, run: `choco install androidstudio`
+* Close powershell terminal.
 
+### Finish Android Studio setup
+* Search for Android Studio in your apps and double click the icon.
+* Select "I do not have a previous version of studio or I do not want to import my settings" and click OK button.
+* Click Next.
+* Select Standard Installation and click the Next button.
+* Click the Finish button.
+   * This will start downloading remaining Android 8.0 components. This will take a while...
+* Accept popup dialog to allow changes to your device.
+* Click the Finish button.
+
+### Install Android 6.0 SDK 23
+* Click the Configure button. It's on the lower right side of the Android Studio welcome dialog.
+* click SDK Manager in the configuration dropdown.
+* Select Android 6.0 (Marshmallow) SDK.
+   * Why Android 6.0? It's the most common SDK version used throughout the world and is a good starting point until you get more comfortable with mobile automation. See [here](https://www.appbrain.com/stats/top-android-sdk-versions)!
+* Click the "Show Package Details" checkbox on lower right.
+* Check (or make sure they are checked) the following SDK dependencies to install:
+   * Android SDK Platform 23
+   * Sources for Android 23
+   * Intel x86 Atom System Image.
+   * Intel x86 Atom_64 System Image.
+   * Google API's Intel x86 Atom System Image
+   * Google API's Intel X86 Atom_64 System Image
+* Click the OK button
+* Click the OK button in Confirm Change dialog.
+* On the next screen click the Accept radio button on the License Agreement.
+* Click the Next button to install SDK 23 components. This will take a while...
+* Click the Finish button.
+   
 ### Add Environment Variables
 * Goto Control Panel\System and Security\System > Advanced system > Edit Variables...
 * Under "User variables for **your_user_name**"
-* Highlight the Path variable.
-	* Click Edit > New
-	* Add path for sdk\tools. e.g. C:\Users\justin\AppData\Local\Android\sdk\tools
-	* Click OK
-	* Add path for sdk\platform-tools. e.g. C:\Users\justin\AppData\Local\Android\sdk\platform-tools
-	* Click OK
-	* Add path for ruby location. e.g. c:\Ruby22-x64\bin
-	* Click OK
-	* App path for node NPM locaton. e.g. C:\Users\justin\AppData\Roaming\npm
-	* Click OK
 * Add ANDROID_HOME variable.
 	* Click the New... button.
 	* Set name: ANDROID_HOME
-	* Set value: C:\Users\justin\AppData\Local\Android\sdk (change this to your sdk path)
+	* Set value: C:\Android\android-sdk
 	* Click OK
 * Add JAVA_HOME variable.
 	* Click the New... button.
 	* Set name: JAVA_HOME
-	* Set value: C:\Program Files\Java\jdk1.8.0_92
+	* Set value: C:\Program Files\Java\jdk1.8.0_144
 	* Click OK
-* See example [here](https://dl.dropboxusercontent.com/u/210767372/Environment%20Variables.PNG) for environment variable.
-* See example [here](https://dl.dropboxusercontent.com/u/210767372/User%20Path%20Env%20Variables.PNG) for Path variables.
-* Close all CMD's and **RESTART PC!**
+* Close all shell windows and **RESTART PC!**
 
 ### Test Environment Variables
-* Run `C:\> java -version` in CMD. You should see something close to this `java version "1.8.0_92"` returned.
-* Run `C:\> ruby -v` in CMD. You should see something close to this `ruby 2.2.4p230 (2015-12-16 revision 53155)`.
-* Run `c:\> emulator -help`. You should see menu options for android emulator manager.
-* Run `c:\> npm`. You should see the npm menu options.
+* Open a powershell terminal as administrator.
+* Run `java -version` in CMD. You should see something close to this `java version "1.8.0_92"` returned.
+* Run `ruby -v` in CMD. You should see something close to this `ruby 2.4.1p111` or greater.
+* Run `emulator -help`. You should see menu options for android emulator manager.
+* Run `npm`. You should see the npm menu options.
+* Run `adb` in CMD. You should see this `Android Debug Bridge version 1.0.39` and additional menu options.
 * If any of the above is not working check to make sure the install locations are correct and reflected correctly in the path environment variable.
 
-### Install Ruby Development Kit
-* Download and install [32-bit](http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe) or [64-bit](http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe)
-* Extract the files to `c:\ruby-dev-kit`.
-* Open CMD and goto `cd c:\ruby-dev-kit`
-* Run `ruby dk.rb init`
-* Run `ruby dk.rb install`
-* Test the installation by running `gem install json --platform=ruby --source http://rubygems.org` in CMD. You should see "1 gem installed" if all goes well.
-* Find more Devkit installation information [here](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit).
-
-### Update Android SDK
-* Run `c:\> android sdk` in CMD.
-* Install or update by selecting everything you see marked as installed [here](https://dl.dropboxusercontent.com/u/210767372/SDK%20Manager%201.PNG) and [here](https://dl.dropboxusercontent.com/u/210767372/SDK%20Manager%202.PNG) for API Level 23.
-* Note: We are using ***API Level 23*** for this workshop!
-* Click the Install .. packages...
-* Accept the license for each package and then click the Install button.
-
-### Verify Platform-tools are installed
-* Run `c:\> adb` in CMD. You should see this `Android Debug Bridge version 1.0.32` and additional menu options.
-
 ### Create Android Emulator
-* For Intel PC's.
-	* Open File Explorer and Goto (path to sdk)\sdk\extras\intel\Hardware_Accelerated_Execution_Manager
-	* Double click the intelhaxm-android.exe file and install.
-* Run `c:\> android avd` in CMD.
-* Click Create...
-* Set AVD Name: EM1
-* Select Device: Nexus S(4.0", 480 x 800:hdpi)
-* Select Target: Android 6.0 API Level 23
-* For Intel PC's.
-	* Select CPU/ABI: Intel Atom (x86)
-* Select Skin: Skin with dynamic hardware controls
-* Select Emulation Options: Use Host GPU
-* The setup should look like [this](https://dl.dropboxusercontent.com/u/210767372/emulator%20setup.PNG) for Intel computers.
-* Click OK
-* Highlight EM1 in AVD menu and click Start and then Launch.
-* For Intel PC's.
+* Open a powershell window and run as administrator.
+* Run `android create avd -n EM1 -k "system-images;android-23;google_apis;x86"`
+* Enter NO to not create a custom hardware profile.
+* Run the emulator: `emulator -avd EM1`
 	* Verify avd output on startup includes:
 	* Hax is enabled
 	* HAX is working and emulator runs in fast virt mode.
 	* Verify emulator fully starts and you see the android home/desktop screen.
+* Note: Emulator can also be created via the AVD Manager IDE inside of Android Studio. However, you would need to create a new project or import one to see this menu option.
 
-### Install Appium IDE
-* Download, unzip and install [here](https://bitbucket.org/appium/appium.app/downloads/AppiumForWindows.zip)
+### Install Appium Desktop
+* Download, unzip and install [here](https://github.com/appium/appium-desktop/releases/download/v1.2.1/appium-desktop-Setup-1.2.1.exe)
 * Make note of the installation/destination path. e.g. C:\Program Files (x86)\Appium
 * Create desktop icon.
 
-### Install New Appium IDE (Beta)
-* Download and install New Appium IDE [here](https://github.com/appium/appium-desktop/releases/download/v1.0.0-beta.5/appium-desktop-Setup-1.0.0-beta.5.exe)
-* Make note of the installation/destination path. e.g. C:\Program Files (x86)\Appium2
-* Create desktop icon.
-
-### Install Appium via NPM
-* Run `C:\> npm install -g appium-doctor`
-* Run `C:\> appium-doctor` (checks setup is correct on machine)
+### Install Appium Doctor
+* Open a powershell terminal
+* Run `npm install -g appium-doctor`
+* Run `appium-doctor` (checks setup is correct on machine)
 	*  	Verify "info AppiumDoctor Everything looks good, bye!" is displayed.
 	* If there are things missing please go back to the install instructions or environment variable setup.
-* Run `C:\> npm install -g appium`
-	* Verify appium installed correctly by doing `C:\> appium -v`
 
+### Install Appium via NPM
+* Open a powershell terminal.
+* Run `npm install -g appium`
+	* Verify appium installed correctly by doing `appium -v`. You should see version 1.6.5 or greater.
 * Note: You might get an error when install appium with NPM. If so, open a powershell window as administrator. e.g. search for powershell in start menu, then right click powershell and select run as administrator.
 	* In powershell run: `Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force`
 	* Run: `npm install -g npm-windows-upgrade`
 	* Run: `npm-windows-upgrade`
 	* Run: `npm install -g appium`
+* Note: Your machine might complain that the PYTHON environment variable is missing. Not sure why this occurs but could be related to WinAppDriver addition to appium. However, Appium Node is still installed and should not intefer with our use.
 
 ### Install Sublime (We should all use same editor)
-* Download and install [64-bit](https://download.sublimetext.com/Sublime%20Text%20Build%203114%20x64%20Setup.exe) or [32-bit](https://download.sublimetext.com/Sublime%20Text%20Build%203114%20Setup.exe)
+* Download and install [64-bit](https://download.sublimetext.com/Sublime%20Text%20Build%203143%20x64%20Setup.exe) or [32-bit](https://download.sublimetext.com/Sublime%20Text%20Build%203143%20Setup.exe)
 
 ### Install Allure Report Framework
-* Download and unzip allure [here](https://github.com/allure-framework/allure-core/releases/download/allure-core-1.4.23/allure-commandline.zip)
-* Create a allure directory. Run `mkdir C:\allure`
-* Move all allure folders/files from Downloads to C:\allure.
-* Add environment variable for allure.
-	* Goto Control Panel\System and Security\System > Advanced system > Edit Variables...
-	* Under "User variables for **your_user_name**"
-	* Highlight the Path variable.
-	* Click Edit > New
-	* Add path for allure executables. e.g. C:\allure\bin
-	* Click OK
-* Close shell windows and open a new one.
-* Test allure works. Run `C:\ allure` in shell. You should get allure menu options returned.
+* Open a powershell terminal. 
+* Run: `npm install -g allure-commandline --save-dev`
+* Test allure works. Run: `allure` in shell. You should get allure menu options returned.
 * Click [here](http://wiki.qatools.ru/display/AL/Allure+Commandline) for more install information.
 

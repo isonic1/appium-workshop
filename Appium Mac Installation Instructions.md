@@ -54,13 +54,15 @@
 * Enter password to allow HAXM to make changes to your system. HAXM is very import for emulator perforamce.
 * Click the Finish button.
 
-### Install Android 6.0 SDK
+### Install Android 6.0 SDK 23
 * Click the Configure button. It's on the lower right side of the Android Studio welcome dialog.
 * Click SDK Manager in the configuration dropdown.
 * Select Android 6.0 (Marshmallow) SDK.
    * Why Android 6.0? It's the most common SDK version used throughout the world and is a good starting point until you get more comfortable with mobile automation. See [here](https://www.appbrain.com/stats/top-android-sdk-versions)!
 * Click the "Show Package Details" checkbox on lower right.
 * Check the following SDK dependencies to install:
+   * Android SDK Platform 23
+   * Sources for Android 23
    * Intel x86 Atom System Image.
    * Intel x86 Atom_64 System Image.
    * Google API's Intel x86 Atom System Image
@@ -71,6 +73,7 @@
 * Click the Next button to start the installation of SDK 23 dependencies. This will take a whie to complete...
 * When everything has completed downloading, click the Finish button.
 * Click the OK button to close the Component Installer dialog.
+* Close Android Studio
 
 ### Add Environment Variables
 * Determine which shell you use. Open a terminal and run `$ echo $SHELL`.
@@ -92,7 +95,8 @@
 * Run `$ adb` in CMD. You should see this `Android Debug Bridge version 1.0.39` or greater along wiht additional menu options.
 
 ### Create Android Emulator
-* Run `$ create avd -n EM1 -k "system-images;android-23;google_apis;x86"` in terminal.
+* Run `$ android create avd -n EM1 -k "system-images;android-23;google_apis;x86"` in terminal.
+* Enter NO to not create a custom hardware profile.
 * Run the emulator: `$ANDROID_HOME/tools/emulator -avd EM1`
 	* Verify avd output on startup includes:
 	* Hax is enabled
@@ -102,7 +106,6 @@
 
 ### Install Appium Desktop
 * Download and install Appium Desktop [here](https://github.com/appium/appium-desktop/releases/download/v1.2.1/appium-desktop-1.2.1.dmg)
-
 
 ### Install Appium Doctor via NPM
 * Run `$ npm install -g appium-doctor`
@@ -115,7 +118,7 @@
 	* Verify appium installed correctly by doing `$ appium -v`
 
 ### Install Sublime (We should all use same editor)
-* Download and install [here](hhttps://download.sublimetext.com/Sublime%20Text%20Build%203143.dmg)
+* Download and install [here](https://download.sublimetext.com/Sublime%20Text%20Build%203143.dmg)
 
 ### Install Allure Report Framework
 * Open terminal and run:
