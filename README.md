@@ -19,7 +19,8 @@
 * Double click the Appium Desktop icon on windows desktop or run from applications folder for mac.
 * Click the Start Server button. You should see a "The server is running" message in green. 
 * Start your EM1 android emulator you created in the setup.
-   * In terminal, run: `$ $ANDROID_HOME/tools/emulator -avd EM1`
+   * In OSX terminal, run: `$ $ANDROID_HOME/tools/emulator -avd EM1`
+   * In Windows, from PowerShell run: `emulator -avd EM1`
 * Open another CMD or terminal and goto `cd C:\Users\your_user_name\appium-workshop\example` or `cd ~/appium-workshop/example`.
 * Then run `$ rspec --format documentation test-appium.rb`
 * You should see "1 example, 0 failures" if everything worked correctly.
