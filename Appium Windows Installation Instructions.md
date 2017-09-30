@@ -108,13 +108,11 @@
 * Run `ruby dk.rb install`
 * Test the installation by running `gem install json --platform=ruby --source http://rubygems.org` in CMD. You should see "1 gem installed" if all goes well.
 * Find more Devkit installation information [here](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit).
-
-### Update Android SDK
-* Run `c:\> android sdk` in CMD.
-* Install or update by selecting everything you see marked as installed [here](https://dl.dropboxusercontent.com/u/210767372/SDK%20Manager%201.PNG) and [here](https://dl.dropboxusercontent.com/u/210767372/SDK%20Manager%202.PNG) for API Level 23.
-* Note: We are using ***API Level 23*** for this workshop!
-* Click the Install .. packages...
-* Accept the license for each package and then click the Install button.
+* Note: If you still get a SSL error, do the following:
+   * Open a PowerShell terminal
+   * Copy the cacert.pem file to your Ruby directory. e.g. copy C:\Users\**your_user_name**\appium-workshop\cacert.pem C:\Ruby22-x64
+   * Run: `set SSL_CERT_FILE=C:\Ruby22-x64`
+   * Try installing the gem again. Hopefully this resolve any SSL issues going forward.
 
 ### Verify Platform-tools are installed
 * Run `c:\> adb` in CMD. You should see this `Android Debug Bridge version 1.0.32` and additional menu options.

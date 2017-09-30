@@ -12,7 +12,7 @@
 ### Install Ruby Gems Dependencies
 * Open a terminal or shell window.
 * Goto `cd appium-workshop`
-* Install bundler `gem install bundler`
+* Install bundler `gem install bundler --source http://rubygems.org`
 * Run: `bundle install`
 
 ### Run the sample test
