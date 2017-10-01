@@ -1,20 +1,31 @@
+# This sample code uses the Appium ruby client
+# gem install appium_lib
+# Then you can paste this into a file and simply run with Ruby
+
 require 'rubygems'
 require 'appium_lib'
-capabilities = {
-	'platformName': 'Android',
-	'deviceName': 'android',
-	'app': '/Users/justin/repos/appium-workshop/playground/app-debug.apk',
+
+caps = {}
+caps["app"] = "/Users/<your-user-name>/repos/appium-workshop/playground/app-debug.apk"
+caps["platformName"] = "Android"
+caps["deviceName"] = "android"
+opts = {
+    sauce_username: nil,
+    server_url: "http://localhost:4723/wd/hub"
 }
+driver = Appium::Driver.new({caps: caps, appium_lib: opts}).start_driver
 
-server_url = "http://0.0.0.0:4723/wd/hub"
+el1 = driver.find_elements(:id, "ReferenceApp")
+el1.click
+el2 = driver.find_elements(:xpath, "(//android.widget.TextView[@content-desc=\"Row Category Name\"])[7]")
+el2.click
+el3 = driver.find_elements(:id, "com.amazonaws.devicefarm.android.referenceapp:id/notifications_alert_button")
+el3.click
+el4 = driver.find_elements(:id, "android:id/button1")
+el4.click
+el5 = driver.find_elements(:id, "ReferenceApp")
+el5.click
+el6 = driver.find_elements(:xpath, "(//android.widget.TextView[@content-desc=\"Row Category Name\"])[1]")
+el6.click
 
-Appium::Driver.new(caps: capabilities).start_driver
-Appium.promote_appium_methods Object #This loads the appium_lib helper methods. e.g. text, testfields, buttons etc...
-
-find_element(:xpath, "//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.view.ViewGroup[1]/android.widget.ImageButton[1]").click
-find_element(:xpath, "//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.RelativeLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.FrameLayout[7]").click
-find_element(:xpath, "//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.Button[2]").click
-find_element(:xpath, "//android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.Button[1]").click
-find_element(:xpath, "//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.view.ViewGroup[1]/android.widget.ImageButton[1]").click
-find_element(:xpath, "//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.RelativeLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.FrameLayout[1]").click
-driver_quit
+driver.quit

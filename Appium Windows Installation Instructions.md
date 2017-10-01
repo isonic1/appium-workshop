@@ -111,7 +111,7 @@
 * Note: If you still get a SSL error, do the following:
    * Open a PowerShell terminal
    * Copy the cacert.pem file to your Ruby directory. e.g. copy C:\Users\**your_user_name**\appium-workshop\cacert.pem C:\Ruby22-x64
-   * Run: `set SSL_CERT_FILE=C:\Ruby22-x64`
+   * Run: `set SSL_CERT_FILE=C:\Ruby22-x64\cacert.pem`
    * Try installing the gem again. Hopefully this resolve any SSL issues going forward.
 
 ### Verify Platform-tools are installed

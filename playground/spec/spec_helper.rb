@@ -15,7 +15,7 @@ RSpec.configure do |config|
   end
 
   config.after :each do |e|
-
+    
   end
 
   config.after :all do
