@@ -105,9 +105,9 @@ end
 
 def start_hub
   if OS.mac?
-    spawn("java -jar selenium-server-standalone-3.3.1.jar -role hub -log #{Dir.pwd}/output/hub.log &", :out=>"/dev/null")
+    spawn("java -jar selenium-server-standalone-3.6.0.jar -role hub -log #{Dir.pwd}/output/hub.log &", :out=>"/dev/null")
   elsif OS.windows?
-    spawn("java -jar selenium-server-standalone-3.3.1.jar -role hub -log #{Dir.pwd}/output/hub.log > NUL")
+    spawn("java -jar selenium-server-standalone-3.6.0.jar -role hub -log #{Dir.pwd}/output/hub.log > NUL")
   end
   sleep 3 #wait for hub to start...
 end

@@ -3,3 +3,5 @@ platformName = "ANDROID"
 
 [appium_lib]
 wait = 30
+sauce_username = ""
+sauce_access_key = ""
