@@ -25,8 +25,8 @@ def initialize_appium
   device = get_device_data
   caps = Appium.load_appium_txt file: File.join(File.dirname(__FILE__), "../appium.txt")
   if ENV['ENV'] == 'sauce'
-    caps[:caps][:appiumVersion] = '1.5.3'
-    caps[:caps][:platformVersion] = '5.1'
+    # caps[:caps][:appiumVersion] = '1.5.3'
+    # caps[:caps][:platformVersion] = '5.1'
     caps[:caps][:deviceName] = "Android Emulator"
     caps[:caps][:name] = self.class.metadata[:full_description].strip
   else

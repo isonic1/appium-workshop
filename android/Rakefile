@@ -1,6 +1,5 @@
 require_relative 'server_launcher'
 
-
 desc 'Running Android tests!'
 task :android, :type do |t, args|
   task_setup args
@@ -73,4 +72,8 @@ def upload_app_to_sauce app
   puts "Uploading #{app} to saucelabs...\n"
   storage.upload app
   ENV["APP_PATH"] = "sauce-storage:#{File.basename(app)}"
+end
+
+at_exit do
+  kill_processes
 end
