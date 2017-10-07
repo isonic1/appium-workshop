@@ -39,10 +39,16 @@ def task_setup args
   when "parallel"
     exec "parallel_test #{threads} -e 'rspec spec'"
   when "sauce"
-    ENV['ENV'] = "sauce"
-    ENV["SERVER_URL"] = "http://#{ENV['SAUCE_USERNAME']}:#{ENV['SAUCE_ACCESS_KEY']}@ondemand.saucelabs.com:80/wd/hub"
-    upload_app_to_sauce android_app
-    exec "parallel_rspec spec"
+    sauce_user = ""
+    sauce_access_key = ""
+    if sauce_user.empty? and ENV["SAUCE_USERNAME"].nil?
+      puts "Make sure you set your sauce_user and sauce_access_key in Rakefile or set sauce Env Variables...\n"
+      abort
+    else
+      ENV["SERVER_URL"] = "http://#{sauce_user}:#{sauce_access_key}@ondemand.saucelabs.com:80/wd/hub"
+      upload_app_to_sauce android_app
+      exec "parallel_rspec spec"
+    end
   end
 end
 
