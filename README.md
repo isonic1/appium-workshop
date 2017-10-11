@@ -31,4 +31,4 @@
    * Close the browser and CTRL-C to exit out of allure server.
 
 ### Workshop Slides
-* Open the interactive workshop slides [here](http://slides.com/justinison/deck-2)
+* Open the interactive workshop slides [here](http://slides.com/justinison/deck-3)
