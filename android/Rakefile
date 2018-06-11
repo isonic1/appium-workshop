@@ -75,5 +75,5 @@ def upload_app_to_sauce app
 end
 
 at_exit do
-  kill_processes
+  #kill_processes
 end

@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Berlin Deck</title>
+
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-montserrat theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="b336544365e07a5946ec4642aeb6f481"><div class="sl-block" style="width: 800px; left: 80px; top: 197px; height: auto;" data-block-type="text" data-block-id="c4cc5bd5531d06d706da25541e469434"><div class="sl-block-content" style="z-index: 10;" data-placeholder-text="Title Text" data-placeholder-tag="h1">
+<p><span style="font-size:3.0em">Appium Workshop </span></p>
+</div></div>
+<div class="sl-block" style="height: auto; min-width: 30px; min-height: 30px; width: 680px; left: 140px; top: 335px;" data-block-type="text" data-block-id="d48e045ae02be25cc1654591779f6341"><div class="sl-block-content" style="z-index: 12;" data-placeholder-text="Text" data-placeholder-tag="p">
+<p>Selenium Conference 2017 - Berlin, Germany</p>
+
+<p> </p>
+
+<p> </p>
+
+<p>@isonic1</p>
+
+<p>justin.ison@gmail.com</p>
+</div></div></section><section data-id="16bfb7a15a71e31c286a658456b235ad"><div class="sl-block" style="width: 800px; left: 80px; top: 103px; height: auto;" data-block-type="text" data-block-id="853ab097e8a9283e8bd78b9fc0ff2c86"><div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h1>Install Dependencies</h1>
+</div></div>
+<div class="sl-block" style="height: auto; min-width: 30px; min-height: 30px; width: 799px; left: 81px; top: 280px;" data-block-type="text" data-block-id="f2d4a4c8933d6ae355fb1cd244c7a66a"><div class="sl-block-content" style="z-index: 12; text-align: left;" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li>
+	<p><span style="font-size:0.7em">Install <a href="https://github.com/isonic1/appium-workshop/blob/master/Appium%20Windows%20Installation%20Instructions.md" target="_blank">Windows Dependencies</a>.</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.7em">Install <a href="https://github.com/isonic1/appium-workshop/blob/master/Appium%20Mac%20Installation%20Instructions.md" target="_blank">Mac Dependencies</a>. </span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.7em">Validate everything is installed correctly by running the test example listed these <a href="https://github.com/isonic1/appium-workshop" target="_blank">instructions</a>.</span></p>
+	</li>
+</ul>
+</div></div></section><section data-id="36661ba80d15681b9a13271e2d87bd8c">
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 163px;" data-block-type="text" data-block-id="dd5745844d4ec0912b64ced40dfc757c">
+    <div class="sl-block-content" style="z-index: 10; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<p><span style="font-size:0.7em"><span class="s1">Appium is an open-source tool for automating native, mobile web, and hybrid applications on iOS, Windows and Android platforms. </span></span></p>
+
+<p><span style="font-size:0.7em"><span class="s1">Importantly, Appium is "cross-platform": it allows you to write tests against multiple platforms (iOS, Android, Windows), using the same API. This enables code reuse between iOS, Windows and Android test suites.</span></span></p>
+
+<p> </p>
+
+<p><span style="font-size:0.7em"><span class="s1">Appium is at its heart a webserver that exposes a REST API. It receives connections from a client, listens for commands, executes those commands on a mobile device, and responds with an HTTP response representing the result of the command execution.</span></span></p>
+
+<p> </p>
+
+<p><span style="font-size:0.7em"><span class="s1">Source: <a href="http://appium.io/introduction.html" target="_blank"><span class="s2">http://appium.io/introduction.html</span></a></span></span></p>
+</div>
+</div>
+<div class="sl-block" style="width: 800px; left: 80px; top: 36px; height: auto;" data-block-type="text" data-block-id="4e11168d6bfe301331a4f5a3580985f7"><div class="sl-block-content" style="z-index: 12;" data-placeholder-text="Title Text" data-placeholder-tag="h1">
+<h1><span style="font-size:1.0em">What is Appium?</span></h1>
+</div></div></section><section class="stack" data-id="7cd0b84815572f57a8cff6d37ba9dcb6"><section data-id="5b099e67813ceea3b38a47068fdc278b">
+<div class="sl-block" style="height: auto; width: 879px; left: 62px; top: 127px;" data-block-type="text" data-block-id="7bb5a7db5ef19761ff6e4c055ce52f63">
+    <div class="sl-block-content" style="z-index: 11; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<p><span style="font-size:0.7em"><span class="s1">Dan Cuellar was the Test Manager at Zoosk in 2011, when he encountered a problem. The length of the test passes on the iOS product was getting out of hand. Less testing was an option, but would come with additional risk, especially with it taking several days to get patches through the iOS App Store Review process. He thought back to his days working on websites and realized automation was the answer.</span></span></p>
+
+<p><span class="s1"><span style="font-size:0.7em">Dan thought, what if I could get the UIAutomation framework to run in real time like an interpreter? He looked into it and he determined that all he would need to do is find a way to receive, execute, and reply to commands from within a UIAutomation javascript program. Using the utility Apple provided for executing shell commands he was able to cat sequentially ordered text files to receive commands, eval() the output to execute them, and write them back to disk with python. He then prepared code in C# that implemented the Selenium-style syntax to write the sequentially ordered javascript commands. iOSAuto is born.</span></span></p>
+</div>
+</div>
+<div class="sl-block" style="width: 800px; left: 80px; top: 36px; height: auto;" data-block-type="text" data-block-id="8459220aec998f60dc90b245a89a69be"><div class="sl-block-content" style="z-index: 12;" data-placeholder-text="Title Text" data-placeholder-tag="h1">
+<h1><span style="font-size:1.0em">History of Appium</span></h1>
+</div></div></section><section data-id="f06ef2e6c6917d488d1caa51107bea4e">
+<div class="sl-block" style="height: auto; width: 879px; left: 57px; top: 36px;" data-block-type="text" data-block-id="b42a543ec93e55074d799d08c17ac615">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<p><span style="font-size:0.7em"><span class="s1">Selenium Conference 2012: On the second day of the conference, Dan stepped up on stage to give the lightning talk. Jason Huggins, co-creator of Selenium, moderated the lightning talks. Dan experienced technical difficulties getting his presentation to load, and Jason nearly had to move on to the next lightning talk. At the last moment, the screen turned on and Dan jumped into his presentation. He explained the details of his implementation and how it worked, begged for contributors, and in five minutes it was over..</span></span></p>
+
+<p><span style="font-size:0.7em"><span class="s1">The Mobile Testing Summit: Jason decided that the project should be presented at the Mobile Testing Summit in November, but suggested that the project get a new name first. Many ideas were thrown out and they settled on AppleCart. A day later, while he was perusing some of Apple's guidance on copyright and trademarks, Jason noticed that under the section of examples for names Apple would defend its trademarks against, the first example was "AppleCart". He called Dan and informed him of the situation, and they brainstormed for a bit before Jason hit the jackpot. Appium... Selenium for Apps.</span></span></p>
+
+<p style="text-align:center"><span style="font-size:0.7em"><strong>&gt;&gt;&gt;&gt;&gt; <a href="https://www.dropbox.com/s/fokddoiaouahw76/AppiumMontage-1080p.mov?dl=0" target="_blank">Watch the Appium Intro Video</a> &lt;&lt;&lt;&lt;&lt;</strong></span></p>
+</div>
+</div>
+</section></section><section class="stack" data-id="05192c53926d83971e7d0646869cb7f2"><section data-id="8be125b918356442abf03c0f033cb393"><div class="sl-block" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-type="text" data-block-id="ac98f4b68dc799e95032d7c281573e97">
+    <div class="sl-block-content" style="z-index: 10;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+        <h2>Before We Start!</h2>
+    </div>
+</div>
+<div class="sl-block" style="width: 960px; left: 0px; top: 148px; height: auto;" data-block-type="text" data-block-id="564a37d0d9c03082f5a22faa28e95632">
+    <div class="sl-block-content" style="z-index: 11; border-width: 1px;" data-placeholder-text="Text" data-placeholder-tag="p" data-has-custom-html="">
+<p> </p>
+
+<ul>	<li>	<p><span style="font-size:0.7em;"><span style='font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal;  line-height: 19.5px; font-family: "Open Sans", sans-serif; text-align: left;'>Download, clone or pull the latest changes from the </span> <a style='font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal;  line-height: 19.5px; font-family: "Open Sans", sans-serif; text-align: left;' href="https://github.com/isonic1/appium-workshop" target="_blank">appium-workshop repo</a> <span style='font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal;  line-height: 19.5px; font-family: "Open Sans", sans-serif; text-align: left;'>.</span> </span></p>	</li>	<li>	<p><span style="font-size:0.7em;"><span style='font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal;  line-height: 19.5px; font-family: "Open Sans", sans-serif; text-align: left;'>Goto appium-workshop directory and run: bundle install</span></span></p>	</li>	<li>	<p><span style="font-size:0.7em;"><span style='font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal;  line-height: 19.5px; font-family: "Open Sans", sans-serif; text-align: left;'>This workshop is meant to accommodate all skill levels, so we are starting from the very basics. If you are comfortable working ahead of the workshop pace, please do so. However, please DO NOT ask questions on a topic until the workshop is caught up to that point.</span></span></p>	</li>	<li>	<p><span style="font-size:0.7em;">I will also try to answer all of your questions. If do not have an answer I will try my best to find it. I’ll follow up with the class later with an email to all unanswered questions.</span></p>	</li>	<li>	<p><span style="font-size:0.7em;">Please take notes!</span></p>	</li>
+</ul>
+</div>
+</div></section><section data-id="219f6b551ad2e4af3bf31a2792355910">
+<div class="sl-block" style="height: auto; width: 762px; left: 99px; top: 155px;" data-block-type="text" data-block-id="37cefe3c7d903a6d8e3a6a983d4c5958">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em">Feedback to about the workshop would be much appreciated!</span></li>
+	<li class="fragment" data-fragment-index="0"><span style="font-size:0.7em"><span>What I can improve upon.</span></span></li>
+	<li class="fragment" data-fragment-index="1"><span style="font-size:0.7em">Anything that didn't make sense to you.</span></li>
+	<li class="fragment" data-fragment-index="2"><span style="font-size:0.7em">What you thought I did well.</span></li>
+	<li class="fragment" data-fragment-index="3"><span style="font-size:0.7em">What you'd like me to go more in-depth into.</span></li>
+</ul>
+</div>
+</div>
+</section></section><section data-id="5d39c5303088d9afae9be0a6a1658076"><div class="sl-block" style="width: 800px; left: 80px; top: 270px; height: auto;" data-block-type="text" data-block-id="866ca50998b70778ed274b7f6ec9aa98"><div class="sl-block-content" data-placeholder-text="Title Text" data-placeholder-tag="h1">
+<h1>Lets Get Started!</h1>
+</div></div></section><section class="stack" data-id="2f0e7a8b894db4a66e5ab0eb1293173e"><section data-id="25a3b91265e773ab8a119fded6f84853"><div class="sl-block" style="width: 800px; left: 40px; top: 16px; height: auto;" data-block-type="text" data-block-id="9a6d712a65c530cf333a64255f85b012">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>The Appium Desktop</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 0px; top: 146px;" data-block-type="text" data-block-id="ef5e3cfd918c386168fd511dc09d2327">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li style="text-align:left"><span style="font-size:15px">Start the Appium Desktop client by double-clicking the Appium icon on your desktop.</span></li>
+	<li style="text-align:left"><span style="font-size:0.5em">Click the "Start Server" button.</span></li>
+	<li style="text-align:left"><span style="font-size:0.5em">You should see "The server is running" message.</span></li>
+	<li style="text-align:left"><span style="font-size:0.5em">Click the "Start Inspection Session" button. </span></li>
+</ul>
+</div>
+</div>
+<div class="sl-block" style="min-width: 30px; min-height: 30px; width: 425px; height: 257px; left: 19px; top: 350px;" data-block-type="image" data-block-id="8226cc49f42a8a4f067a34e1204bbcd8"><div class="sl-block-content" style="z-index: 13;"><img style="" data-lazy-loaded="" data-natural-height="396" data-natural-width="655" data-src="deck-3/69661ae2bd74f487ba3c12c4d3e2643f.png"></div></div>
+<div class="sl-block" style="min-width: 30px; min-height: 30px; width: 518px; height: 251px; left: 443px; top: 350px;" data-block-type="image" data-block-id="6f03e873aba39d489d4ca553a3ffe915"><div class="sl-block-content" style="z-index: 14;"><img style="" data-lazy-loaded="" data-natural-height="318" data-natural-width="656" data-src="deck-3/fadfe46d56688d22040fcd08bab3dd8b.png"></div></div></section><section data-id="15e05c107665eb6e5af74b36f0d455d7"><div class="sl-block" style="width: 800px; left: 80px; top: 14px; height: auto;" data-block-type="text" data-block-id="bccaffec28f04fc8bb7bf7f681841d30">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Lets add our Capabilities</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 34px; top: 85px;" data-block-type="text" data-block-id="c1b948cbfc9705836b451d84d20bcb94">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.5em">Go ahead and add the capabilities below.</span></li>
+	<li><span style="font-size:0.5em">Make sure to set the app path to your machine. </span></li>
+	<li><span style="font-size:0.5em">Mac: /Users/&lt;your-user-name/appium-workshop/playground/app-debug.apk</span></li>
+	<li><span style="font-size:0.5em">Windows: C:\Users\&lt;your-user-name&gt;\appium-workshop\playground\app-debug.apk</span></li>
+	<li><span style="font-size:0.5em">Click the "Start Session" button.</span></li>
+</ul>
+</div>
+</div>
+<div class="sl-block" style="min-width: 30px; min-height: 30px; width: 692px; height: 413px; left: 127px; top: 287px;" data-block-type="image" data-block-id="1c6f850f85edb71351f3017589b4d68e"><div class="sl-block-content" style="z-index: 13;"><img style="" data-lazy-loaded="" data-natural-height="551" data-natural-width="923" data-src="deck-3/893ea494c886531bdd69dd0de8068a11.png"></div></div></section><section data-id="ad55f29b52e234a4f6f359bc9d1a349e">
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 78px;" data-block-type="text" data-block-id="c85b4ce3e4a9f701def123814ee49b3a">
+    <div class="sl-block-content" style="z-index: 10; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<p> </p>
+
+<ul>
+	<li style="text-align:left">
+<span style="font-size:0.7em">What did the Appium Desktop just do?</span>
+
+	<ul>
+		<li style="text-align:left"><span style="font-size:0.7em">It started a new Appium session with the following server capabilities:</span></li>
+		<li style="text-align:left"><span style="font-size:0.7em">--platform-name "Android"</span></li>
+		<li style="text-align:left"><span style="font-size:0.7em">--app "/Users/&lt;your_username&gt;/appium-workshop/playground/app-debug.apk"</span></li>
+		<li style="text-align:left"><span style="font-size:0.7em">--device-name "android"</span></li>
+		<li style="text-align:left"><span style="font-size:0.7em">See full list of capabilities <a href="http://appium.io/slate/en/master/?ruby#appium-server-capabilities" target="_blank">here</a></span></li>
+	</ul>
+	</li>
+	<li style="text-align:left"><span style="font-size:0.7em">Go ahead and explore the inspector. Notice the hierarchy of the elements and elements are highlighted when clicked.</span></li>
+	<li style="text-align:left">
+	<p><span style="font-size:0.7em">See how the inspector breaks down the element hierarchy.</span></p>
+	</li>
+	<li style="text-align:left"><span style="font-size:0.7em">Interact with the test app by clicking buttons and sending keys.</span></li>
+	<li style="text-align:left"><span style="font-size:0.7em">You may need to Click the refresh button occasionally for the GUI to display what the app is displaying.</span></li>
+</ul>
+</div>
+</div>
+</section><section data-id="9e272df8917bedefab304e3217b9e1c4">
+
+<div class="sl-block" style="height: auto; width: 880px; left: 63px; top: 61px;" data-block-type="text" data-block-id="8e7ca76e0cfc7e056653a79d78de3787">
+    <div class="sl-block-content" style="z-index: 10; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>	<li style="text-align:left"><span style="font-size:0.7em">Click the Record button. You should see a new Recorder area appear in the middle of the app.</span></li>	<li style="text-align:left"><span style="font-size:0.7em">Switch the language to Ruby in the drop-down.</span></li>	<li style="text-align:left"><span style="font-size:0.7em">Click the Show/Hide boilerplate button to show the boilerplate.</span></li>	<li style="text-align:left"><span style="font-size:0.7em">Click the Refresh button to make sure it displays the current view.</span></li>	<li style="text-align:left">
+<span style="font-size:0.7em">Ok! Now let's create a test to trigger the Alert popup. Note: You may need to click the Refresh button after every step.</span> 	<ul>		<li style="text-align:left"><span style="font-size:0.7em">Tap the Hamburger button. (Note: This may not tap via the Inspector. )</span></li>		<li style="text-align:left"><span style="font-size:0.7em">Tap the Alerts menu button.</span></li>		<li style="text-align:left"><span style="font-size:0.7em">Tap the ALERT button.</span></li>		<li style="text-align:left"><span style="font-size:0.7em">Tap the OK button.</span></li>		<li style="text-align:left"><span style="font-size:0.7em">Tap the Hamburger button.</span></li>		<li style="text-align:left"><span style="font-size:0.7em">Tap the Home button.</span></li>	</ul>	</li>	<li style="text-align:left"><span style="font-size:0.7em">Click the "Copy code to clipboard" button.</span></li>	<li style="text-align:left"><span style="font-size:0.7em">Create a new file in the playground directory named "alert.rb" and paste the code inside of it. </span></li>
+</ul>
+</div>
+</div>
+<div class="sl-block" style="width: 800px; left: 93px; top: 0px; height: auto;" data-block-type="text" data-block-id="4c0b4da18d3b5f4cee9111a3bc0dd538">
+    <div class="sl-block-content" style="z-index: 12;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Let's record a test!</h2>
+</div>
+</div></section><section data-id="6072500176d48796bbbe9626aa87a8eb"><div class="sl-block" style="width: 806px; left: 77px; top: 13px; height: auto;" data-block-type="text" data-block-id="9b35ab3d38b1f433743720a7cc597a05"><div class="sl-block-content" style="z-index: 10;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>alert.rb</h2>
+</div></div>
+<div class="sl-block" style="min-width: 30px; min-height: 30px; width: 939px; height: 537px; left: 11px; top: 93px;" data-block-type="code" data-block-id="f14b07dca82f77771559806d4c2b154b"><div class="sl-block-content" style="z-index: 11; font-size: 90%;"><pre><code># This sample code uses the Appium ruby client
+# gem install appium_lib
+# Then you can paste this into a file and simply run with Ruby
+
+require 'rubygems'
+require 'appium_lib'
+
+caps = {}
+caps["app"] = "/Users/justin/repos/appium-workshop/playground/app-debug.apk"
+caps["platformName"] = "Android"
+caps["deviceName"] = "android"
+opts = {
+    sauce_username: nil,
+    server_url: "http://localhost:4723/wd/hub"
+}
+driver = Appium::Driver.new({caps: caps, appium_lib: opts}).start_driver
+
+el1 = driver.find_elements(:accessibility_id, "ReferenceApp")
+el1.click
+el2 = driver.find_elements(:xpath, "(//android.widget.TextView[@content-desc=\"Row Category Name\"])[7]")
+el2.click
+el3 = driver.find_elements(:id, "com.amazonaws.devicefarm.android.referenceapp:id/notifications_alert_button")
+el3.click
+el4 = driver.find_elements(:id, "android:id/button1")
+el4.click
+el5 = driver.find_elements(:accessibility_id, "ReferenceApp")
+el5.click
+el6 = driver.find_elements(:xpath, "(//android.widget.TextView[@content-desc=\"Row Category Name\"])[1]")
+el6.click
+
+driver.quit</code></pre></div></div>
+<div class="sl-block" style="height: auto; min-width: 30px; min-height: 30px; width: 528px; left: 217px; top: 642px;" data-block-type="text" data-block-id="2e34e24f6e9f4972ab7dfb6700e10ae8"><div class="sl-block-content" style="z-index: 13; text-align: left;" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li>Your test should look close to this.</li>
+</ul>
+</div></div></section><section data-id="7a4d8c16bb0d47464fa97a579338a81b"><div class="sl-block" style="width: 800px; left: 41px; top: 33px; height: auto;" data-block-type="text" data-block-id="b340801a351ba066d1b3e7263227d076">
+    <div class="sl-block-content" style="z-index: 10;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Let's try running it...</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 1px; top: 186px;" data-block-type="text" data-block-id="3ace0b082d8d81113d8bfe8275229da5">
+    <div class="sl-block-content" style="z-index: 11; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>	<li><span style="font-size:21px">Restart/Start the Appium Desktop server if it's not already.</span></li>	<li><span style="font-size:21px">Navigate to the playground directory in terminal (cd ~/appium-workshop/playground) or PowerShell (cd C:\Users\&lt;your-user-name&gt;\appium-workshop\playground). </span></li>	<li><span style="font-size:21px">Run: ruby alert.rb </span></li>	<li><span style="font-size:0.7em"><span class="s2">Did it run? Probably, not...</span></span></li>
+</ul>
+</div>
+</div>
+</section></section><section class="stack" data-id="1d12a87b42470b82c1aa1a7c2d2f99c3"><section data-id="7a82cee7b4b6bebc9c806d3ba02464e8"><div class="sl-block" style="width: 800px; left: 41px; top: 78px; height: auto;" data-block-type="text" data-block-id="fbcdb4d0faa18246a6d68cbba04224ac">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>UI Automator Viewer</h2>
+
+<p>Analyze the UI components of an android application</p>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 748px; left: 106px; top: 272px;" data-block-type="text" data-block-id="c776bb9e46321a223122ee3d50db83ce">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>	<li><span style="font-size:0.7em">Open a terminal or PowerShell window</span></li>	<li><span style="font-size:0.7em">Windows run: uiautomatorviewer</span></li>	<li>
+<span style="font-size:0.7em">Mac run: </span><span class="s1"><span style="font-size:0.7em">$ANDROID_HOME/tools/bin/</span><span style="font-size:0.7em">uiautomatorviewer</span> </span>
+</li>	<li><span style="font-size:0.7em">Open the test application (Reference App) on the emulator or mobile device.</span></li>	<li><span style="font-size:0.7em">Click the Compressed Hierarchy view button.</span></li>	<li><span style="font-size:0.7em">Now let's step through each action in alert.rb and get better locators. </span></li>	<li><span style="font-size:0.7em">Open alert.rb in Sublime.</span></li>
+</ul>
+</div>
+</div>
+</section><section data-id="98a843fbce695de8c052be57352319e4"><div class="sl-block" style="width: 800px; left: 41px; top: 18px; height: auto;" data-block-type="text" data-block-id="98f78d1ba5c275cb7d34c22624c817ac">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+        <h2>Bad Xpath, Bad!</h2>
+    </div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 148px;" data-block-type="text" data-block-id="39d0c018ef88e444bc32511326f08168">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>	<li style="text-align:left"><span style="font-size:0.7em">Xpath leads to flaky and unreliable tests. These are index based and your UI hierarchy will shift whenever a UI element is added or removed.</span></li>	<li style="text-align:left"><span style="font-size:0.7em">Use resource-id instead, which is :id in Selenium. These are much less likely to change in the future.</span></li>	<li style="text-align:left">
+<span style="font-size:0.7em">What to do if you don't have a resource-id ?</span> 	<ul>		<li style="text-align:left"><span style="font-size:0.7em">Ask a developer to add one for the object you need to interact with.</span></li>		<li style="text-align:left"><span style="font-size:0.7em">If available, use content-desc as :accessibility_id too. It's the Accessibility ID and an even better locator to use. However, in this workshop, we'll keep it as :id always.</span></li>	</ul>	</li>	<li style="text-align:left"><span style="font-size:0.7em">Notice Appium Desktop used find_elements. This is not correct and we need to change these to find_element. Go ahead and change all of them in alert.rb.</span></li>
+</ul>
+</div>
+</div>
+</section><section data-id="3224a21e6c189436a43e2c9d7c86423c">
+<div class="sl-block" style="height: auto; width: 960px; left: 0px; top: 101px;" data-block-type="text" data-block-id="17b65b2c5e9be715d1653932bfe694c4">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>	<li style="text-align:left"><span style="font-size:0.7em">Let's change all our xpath locators to :id's or :accessibility_id. Using the uiautomatorviewer select each element and get it's resource-id.  </span></li>	<li style="text-align:left"><span style="font-size:0.7em">On the Alert side menu step. Here is where I'll contradict myself a bit. I've told you to use resource-id when one is available. However, in this case, each menu option has the same resource-id locator. Take a look for yourself in the uiautomatorviewer.</span></li>	<li style="text-align:left">
+<span style="font-size:0.7em">We have options!</span> 	<ul>		<li style="text-align:left"><span style="font-size:0.7em">Since the only uniqueness is the element text, we can use that. Although, text is not ideal to use, especially if you're automating a multi-language application.</span></li>		<li style="text-align:left"><span style="font-size:0.7em">appium_lib has a very handy method to search for elements by text, and rightly named "text".</span></li>		<li style="text-align:left"><span style="font-size:0.7em">Remove the entire xpath line and change it to text("Alerts").click. We will go in-depth more on this later.</span></li>	</ul>	</li>
+</ul>
+</div>
+</div>
+</section><section data-id="2d30abf87cb323fdb2665262a559c0b0">
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 23px;" data-block-type="text" data-block-id="87647f988d9ec9a07c070e848ec65ede">
+    <div class="sl-block-content" style="z-index: 10; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li style="text-align:left"><span style="font-size:0.7em">Tapping the ALERT button should now be: (:id, "com.amazonaws.devicefarm.android.referenceapp:id/notifications_alert_button")</span></li>
+	<li style="text-align:left"><span style="font-size:0.7em">Tapping the OK button should now be: (:id, "android:id/button1") or text("OK")</span></li>
+	<li style="text-align:left"><span style="font-size:0.7em">Reuse the same Hamburger click above.  e.g.  (:id, "ReferenceApp")</span></li>
+	<li style="text-align:left"><span style="font-size:0.7em">Tapping the Home menu button should now be: text("Home").click</span></li>
+	<li style="text-align:left"><span style="font-size:0.7em">Save the alert.rb script.</span></li>
+</ul>
+</div>
+</div>
+<div class="sl-block" style="width: 939px; height: 374px; left: 11px; top: 280px;" data-block-type="code" data-block-id="3283fbd7c39ef6c26a5d6939edc7c382"><div class="sl-block-content" style="z-index: 12; font-size: 90%;"><pre><code>require 'rubygems'
+require 'appium_lib'
+
+capabilities = {
+	'platformName': 'Android',
+	'deviceName': 'android',
+	'app': '/Users/&lt;your name&gt;/appium-workshop/playground/app-debug.apk',
+}
+
+server_url = "http://0.0.0.0:4723/wd/hub"
+
+Appium::Driver.new(caps: capabilities).start_driver
+Appium.promote_appium_methods Object
+
+find_element(:id, "ReferenceApp").click
+scroll_to "Alerts"
+text("Alerts").click
+find_element(:id, "com.amazonaws.devicefarm.android.referenceapp:id/notifications_alert_button").click
+find_element(:id, "android:id/button1").click
+find_element(:id, "ReferenceApp").click
+text("Home").click
+driver_quit</code></pre></div></div></section></section><section class="stack" data-id="1ddb968658cf554a3e710797a340002f"><section data-id="73930c4e7b2b5c90d6eb336b6c795938"><div class="sl-block" style="width: 800px; left: 80px; top: 33px; height: auto;" data-block-type="text" data-block-id="76ad87d93a9f402b735a023bf8189fae">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Assertions!</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 80px; top: 202px;" data-block-type="text" data-block-id="0feb9946c91f924df1f931b0d3be0b78">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">Ok, Great! We have some things automated, but now we want to know if the app does what it should.</span> </span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">We need to add Rspec to do our assertions.</span> </span>
+	<ul>
+		<li style="text-align:left"><span style="font-size:0.7em">Copy the alert.rb file to the spec folder in playground.</span></li>
+	</ul>
+	</li>
+	<li style="text-align:left"><span style="font-size:0.7em">Rename alert.rb to alert_spec.rb.</span></li>
+	<li style="text-align:left"><span style="font-size:0.7em">Open alert_spec.rb in Sublime.</span></li>
+</ul>
+</div>
+</div>
+</section><section data-id="52edf22c939e653dd93e573c4861d8c1"><div class="sl-block" style="width: 800px; left: 80px; top: 103px; height: auto;" data-block-type="text" data-block-id="199c1f8b2f3ee226ff471cfe57a21ce7">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Lets setup RSpec!</h2>
+
+<p>Ruby Specification</p>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 58px; top: 280px;" data-block-type="text" data-block-id="ca04c04f316739144df8f59ec3f2f80f">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em">First we need to require rspec. Add require 'rspec' at the top of alert_spec.rb.</span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Next we need to define our Describe and Scenario blocks.</span> </span></li>
+	<li><span style="font-size:0.7em"><span class="s2">We need to add our setup methods. We will place these in our before(:each) block.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Next we need to add test steps and our assertion. This will be placed in the "it" block. </span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Finally, we need to add our teardown methods. We will place these in our after(:each) block.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">See next slide for example.</span></span></li>
+</ul>
+</div>
+</div>
+</section><section data-id="f2122cae5197a81c208188593e06d009"><div class="sl-block" style="width: 800px; left: 80px; top: 33px; height: auto;" data-block-type="text" data-block-id="baabfe9beb17f6f68ed739fe8088003a"><div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>alert_spec.rb</h2>
+</div></div>
+<div class="sl-block" style="width: 960px; height: 515px; left: 0px; top: 121px;" data-block-type="code" data-block-id="e0e35aad1aac1006378105deb7e81a2d"><div class="sl-block-content" style="z-index: 12; font-size: 90%;"><pre><code>require 'appium_lib'
+require 'rspec'
+
+describe 'Click Alert Popup' do
+
+  before(:each) do
+    capabilities = {
+        'platformName': 'Android',
+	'deviceName': 'android',
+	'app': '/Users/&lt;your name&gt;/appium-workshop/playground/app-debug.apk'
+    }
+    server_url = "http://0.0.0.0:4723/wd/hub"
+    Appium::Driver.new(caps: capabilities).start_driver
+    Appium.promote_appium_methods Object
+  end
+    
+  it 'Clicks popup and returns to Home view' do
+    find_element(:id, "ReferenceApp").click
+    scroll_to "Alerts"
+    text("Alerts").click
+    find_element(:id, "com.amazonaws.devicefarm.android.referenceapp:id/notifications_alert_button").click
+    find_element(:id, "android:id/button1").click
+    find_element(:id, "ReferenceApp").click
+    scroll_to "Home"
+    text("Home").click
+  end
+  
+  after(:each) do
+    driver_quit
+  end
+
+end</code></pre></div></div>
+</section><section data-id="b421f47355476136de0eb3a7a828635d"><div class="sl-block" style="width: 800px; left: 81px; top: 103px; height: auto;" data-block-type="text" data-block-id="c68c9a2fcdf27d9e9ff3af322a9d64ab">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Let's run again...</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 605px; left: 115px; top: 280px;" data-block-type="text" data-block-id="faf355c1036ed03f6c010a10da02a617">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>	<li><span style="font-size:0.7em"><span class="s2">Start the Appium server.</span></span></li>	<li><span style="font-size:0.7em"><span class="s2">Goto the spec directory in playground. We have a new runner command now, rightly named "rspec". </span></span></li>	<li><span style="font-size:0.7em"><span class="s2">From the command line, run: rspec alert_spec.rb</span></span></li>	<li><span style="font-size:0.7em"><span class="s2">You should see "1 example, 0 failures" returned.</span></span></li>	<li><span style="font-size:0.7em"><span class="s2">Raise your hand if you do not see this.</span></span></li>
+</ul>
+</div>
+</div>
+</section></section><section class="stack" data-id="bdb5d17740e89aaef7557addaa76c786"><section data-id="c245c15e047341895e3a3537d511e2b0"><div class="sl-block" style="width: 800px; left: 80px; top: 17px; height: auto;" data-block-type="text" data-block-id="d78536bbfbac42d847c73b2f369dc1b0">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>That's great! but... What's wrong with this?</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 42px; top: 183px;" data-block-type="text" data-block-id="959cec7d66c1c308e7b3a4676bd0f10a">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li>
+<span style="font-size:0.7em"><span class="s2">For one, we need to add an assertion. Basically, rspec ran and completed because it didn’t encounter a assertion failure, or an error. </span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">An error can be anything that occurs between steps that prevents another step.</span></span></li>
+	</ul>
+	</li>
+	<li><span style="font-size:0.7em"><span class="s2">Lets add the assertion. We want to validate the app returns to the home screen and displays text "Homepage". We will use the ".text" method to accomplish this.</span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Open uiautomatorviewer again. Lets get the resource-id for the Homepage title.</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">The :id is 'com.amazonaws.devicefarm.android.referenceapp:id/toolbar_title'</span></span></li>
+	</ul>
+	</li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Add the following below text("Home").click</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">home_page_text = find_element(:id, "com.amazonaws.devicefarm.android.referenceapp:id/toolbar_title").text</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">expect(home_page_text).to eq "Homepage"</span></span></li>
+	</ul>
+	</li>
+</ul>
+</div>
+</div>
+</section><section data-id="2cebb0af5ad3f2b49c10d402a011ec22"><div class="sl-block" style="width: 800px; left: 80px; top: 33px; height: auto;" data-block-type="text" data-block-id="7436f1676783531f1f66ec254e083256"><div class="sl-block-content" style="z-index: 10;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>alert_spec.rb</h2>
+</div></div>
+<div class="sl-block" style="width: 960px; height: 549px; left: 0px; top: 107px;" data-block-type="code" data-block-id="b618c30639cfd4e8dadad30c311a6ba1"><div class="sl-block-content" style="z-index: 13; font-size: 90%;"><pre><code>require 'appium_lib'
+require 'rspec'
+
+describe 'Click Alert Popup' do
+
+  before(:each) do
+    capabilities = {
+        'platformName': 'Android',
+	'deviceName': 'android',
+	'app': '/Users/&lt;your name&gt;/appium-workshop/playground/app-debug.apk'
+    }
+    server_url = "http://0.0.0.0:4723/wd/hub"
+    Appium::Driver.new(caps: capabilities).start_driver
+    Appium.promote_appium_methods Object
+  end
+    
+  it 'Clicks popup and returns to Home view' do
+    find_element(:id, "ReferenceApp").click
+    text("Alerts").click
+    find_element(:id, "com.amazonaws.devicefarm.android.referenceapp:id/notifications_alert_button").click
+    find_element(:id, "android:id/button1").click
+    find_element(:id, "ReferenceApp").click
+    text("Home").click
+    home_page_text = find_element(:id, "com.amazonaws.devicefarm.android.referenceapp:id/toolbar_title").text
+    expect(home_page_text).to eq "Homepage"
+  end
+  
+  after(:each) do
+    driver_quit
+  end
+
+end</code></pre></div></div></section></section><section class="stack" data-id="2a930d6121f079da90a2b4e1dfc8e288"><section data-id="f19edbd7599a95c6f1fe21409db5794c"><div class="sl-block" style="width: 800px; left: 80px; top: 33px; height: auto;" data-block-type="text" data-block-id="849b2e7b2288c6ce4dc4172045f0a67e">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Lets run it again...</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 960px; left: 0px; top: 125px;" data-block-type="text" data-block-id="d7552278e57b16a491f2d233c8c038a0">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p" data-gramm_id="90dccba5-7da1-8a90-e26a-5213a4efda70" data-gramm="true" data-gramm_editor="true" data-has-custom-html="">
+<ul>
+	<li style="text-align:left"><span style="font-size:0.7em">Start the Appium Desktop server</span></li>
+	<li><span style="font-size:0.7em">Goto the spec directory in playground.</span></li>
+	<li><span style="font-size:0.7em"><span class="s2">From the command line, run: rspec alert_spec.rb</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">You should see "1 example, 0 failures" returned.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Ok, same as before but this time it actually validated something. But… we still don't really know it did.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">In the alert_spec.rb, change the expected text from "Homepage" to "OMG WHERE AM I”.</span></span></li>
+	<ul>
+	    <li><span style="font-size:0.7em"><span class="s2">This is good practice. Always test your tests!</span></span></li>
+	</ul>
+	
+	<li><span style="font-size:0.7em"><span class="s2">From the command line, run: rspec alert_spec.rb</span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">This time we should get: </span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">Failure/Error: expect(home_page_text).to eq "OMG WHERE AM I" got: "Homepage"</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">1 example, 1 failure</span></span></li>
+	</ul>
+	</li>
+	<li><span style="font-size:0.7em"><span class="s2">Raise your hand if you did not get this.</span></span></li>
+</ul>
+</div>
+</div>
+</section><section data-id="e588fc357232b1e9b23816aabb5fb1df"><div class="sl-block" style="width: 800px; left: 81px; top: 66px; height: auto;" data-block-type="text" data-block-id="6039758c593320aabf84be8df4b9df06">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Awesome! What else is wrong with this?</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 303px;" data-block-type="text" data-block-id="9fb4ce4012fe201764d6aa0074eb5156">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li style="text-align:left"><span style="font-size:0.7em">We are doing actions outside of the scope of the test.</span></li>
+	<li><span style="font-size:0.7em"><span class="s2">The scenario is to "Click Alert Popup" so we really shouldn’t do any more steps after we click the popup. </span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Also, we should change the describe to be more specific to the Alert and Dialogs page.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">We should split these into two tests!</span></span></li>
+</ul>
+</div>
+</div>
+</section></section><section class="stack" data-id="3b4dcabe41241b3b8058e075af0d395e"><section data-id="bc90f8256d77d375418570b7ee746d1e"><div class="sl-block" style="width: 800px; left: 40px; top: 42px; height: auto;" data-block-type="text" data-block-id="0b2b27102355d8f217d8d6de4f561e87">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Test Refactor</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 960px; left: 0px; top: 162px;" data-block-type="text" data-block-id="369cce6a7e051a65b8891620affa653c">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li style="text-align:left"><span style="font-size:0.7em"><span class="s2">Create a new file named home_spec.rb in the playground spec folder.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Copy and paste the contents from alert_spec.rb into home_spec.rb.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Lets change the describe to: "Home Page".</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Change the "it" block to: "Should Display Correct Text"</span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Remove all test steps up to where we get the home title text. </span></span><span style="font-size:0.7em"><span class="s2">e.g. leave the last two steps inside the “it” block.</span></span>
+</li>
+	<li><span style="font-size:0.7em"><span class="s2">Change the expect text back to "Homepage"</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">In the alert_spec.rb. </span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Change the describe to: "Alerts Page"</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Change the "it" block to: "Should Display Alert Popup"</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Remove everything after: find_element(:id,"com.amazonaws.devicefarm.android.referenceapp:id/notifications_alert_button").click</span></span></li>
+</ul>
+</div>
+</div>
+</section><section data-id="c93609f0e273814ef980165c6523ed38">
+<div class="sl-block" style="height: auto; width: 960px; left: 0px; top: 179px;" data-block-type="text" data-block-id="47510b3fe6c8a018b3c506419e540ea9">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li style="text-align:left"><span style="font-size:0.7em"><span class="s2">Now we need to add an assertion for the alerts_spec.</span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Open uiautomatorviewer again. Lets get the resource-id’s for the Alert popup title and message.</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">The title :id is "android:id/alertTitle"</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">The message :id is "android:id/message"</span></span></li>
+	</ul>
+	</li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Lets add the expects for these:</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">expect(find_element(:id, "android:id/alertTitle").text).to eq "Alert Title"</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">expect(find_element(:id, "android:id/message").text).to eq "This is the alert message"</span></span></li>
+	</ul>
+	</li>
+</ul>
+</div>
+</div>
+</section><section data-id="803765060c28cf126ff69e9e317f5d9d"><div class="sl-block" style="width: 800px; left: 80px; top: 7px; height: auto;" data-block-type="text" data-block-id="2d94bd95d72612ab3c0b0dd20b53546b"><div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>alert_spec.rb</h2>
+</div></div>
+<div class="sl-block" style="width: 960px; height: 530px; left: 0px; top: 85px;" data-block-type="code" data-block-id="60f5ded60d7303945d16a0adeac1574d"><div class="sl-block-content" style="z-index: 12; font-size: 90%;"><pre><code>require 'appium_lib'
+require 'rspec'
+
+describe 'Alerts Page' do
+
+  before(:each) do
+    capabilities = {
+        'platformName': 'Android',
+	'deviceName': 'android',
+	'app': '/Users/&lt;your name&gt;/appium-workshop/playground/app-debug.apk'
+    }
+    server_url = "http://0.0.0.0:4723/wd/hub"
+    Appium::Driver.new(caps: capabilities).start_driver
+    Appium.promote_appium_methods Object
+  end
+    
+  it 'Should Display Popup' do
+    find_element(:id, "ReferenceApp").click
+    scroll_to "Alerts"
+    text("Alerts").click
+    find_element(:id, "com.amazonaws.devicefarm.android.referenceapp:id/notifications_alert_button").click
+    expect(find_element(:id, "android:id/alertTitle").text).to eq "Alert Title"
+    expect(find_element(:id, "android:id/message").text).to eq "This is the alert message"
+  end
+  
+  after(:each) do
+    driver_quit
+  end
+
+end</code></pre></div></div>
+<div class="sl-block" style="height: auto; width: 487px; left: 237px; top: 611px;" data-block-type="text" data-block-id="94b412acc770140e6b454118c6f684a6"><div class="sl-block-content" style="z-index: 13; text-align: left;" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li>alert_spec should look like this.</li>
+</ul>
+</div></div></section><section data-id="ce6c922485c5035abe407f7aaeb7650c"><div class="sl-block" style="width: 800px; left: 80px; top: 7px; height: auto;" data-block-type="text" data-block-id="efe2bf912c73f4692009572297a44ae7"><div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>home_spec.rb</h2>
+</div></div>
+<div class="sl-block" style="width: 960px; height: 476px; left: 0px; top: 123px;" data-block-type="code" data-block-id="11e4eccec6a9e77923b7ea769d824ba5"><div class="sl-block-content" style="z-index: 12; font-size: 90%;"><pre><code>require 'appium_lib'
+require 'rspec'
+
+describe 'Home Page' do
+
+  before(:each) do
+    capabilities = {
+        'platformName': 'Android',
+	'deviceName': 'android',
+	'app': '/Users/&lt;your name&gt;/appium-workshop/playground/app-debug.apk'
+    }
+    server_url = "http://0.0.0.0:4723/wd/hub"
+    Appium::Driver.new(caps: capabilities).start_driver
+    Appium.promote_appium_methods Object
+  end
+    
+  it 'Should Display Correct Text' do
+    home_page_text = find_element(:id, "com.amazonaws.devicefarm.android.referenceapp:id/toolbar_title").text
+    expect(home_page_text).to eq "Homepage"
+  end
+  
+  after(:each) do
+    driver_quit
+  end
+
+end</code></pre></div></div>
+<div class="sl-block" style="height: auto; width: 600px; left: 160px; top: 611px;" data-block-type="text" data-block-id="2de5e2e6e592bf7e09a26497de357f57"><div class="sl-block-content" style="z-index: 13; text-align: left;" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li>home_spec should look like this.</li>
+</ul>
+</div></div></section></section><section data-id="045ba6282ff47c8526d3f5d4ab825dbe"><div class="sl-block" style="width: 800px; left: 40px; top: 52px; height: auto;" data-block-type="text" data-block-id="d325a12560545e2e59895f376ac115e8">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>We have two specs now!</h2>
+
+<p>Lets run them!</p>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 51px; top: 253px;" data-block-type="text" data-block-id="8139d23b1e2c34fdbd065d3309e86925">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li style="text-align:left"><span style="font-size:0.7em">Start your Appium server. (if it’s not already)</span></li>
+	<li><span style="font-size:0.7em"><span class="s2">On the command line, go back/up one directory to the playground dir.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Run: rspec spec</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">This should have ran both specs. You should see: 2 examples, 0 failures</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Raise your hand if you didn’t get this.</span></span></li>
+</ul>
+</div>
+</div>
+</section><section class="stack" data-id="238a2ea4bb3efc8973b2b4f613363cb1"><section data-id="45edde818913a5c04f1629f80f1c40fd"><div class="sl-block" style="width: 888px; left: 36px; top: 47px; height: auto;" data-block-type="text" data-block-id="88c43d0be62ccc044e5fa84cec55582e">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+        <h2>What else is wrong with this?</h2>
+        <p>We have some code duplication!</p>
+    </div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 80px; top: 245px;" data-block-type="text" data-block-id="6bfc2b3d931a20afef9e5da06a18772c">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li style="text-align:left"><span style="font-size:0.7em"><span class="s2">Thankfully, rspec has something for this called spec_helper.</span> </span></li>
+	<li style="text-align:left"><span style="font-size:0.7em"><span class="s2">Create a new file in playground/spec named spec_helper.rb.</span> </span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Lets take our before(:each) from the home and alert specs and put these in a "config.before :each do" block of the spec_helper.rb.</span> </span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Lets put the driver.quit in the "config.after :each do" block on the spec_helper.</span> </span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Then remove these before and after blocks from each spec.</span> </span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Add require "spec_helper" to the top of each spec. </span> </span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">This should be the only require for each spec.</span> </span></li>
+	</ul>
+	</li>
+	<li><span style="font-size:0.7em"><span class="s2">See next slides for examples.</span></span></li>
+</ul>
+</div>
+</div>
+</section><section data-id="332774812bfff29dcd937e1bd63df05d"><div class="sl-block" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-type="text" data-block-id="6282e476df330840dc8d18a0c17ef628"><div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>spec_helper.rb</h2>
+</div></div>
+<div class="sl-block" style="width: 960px; height: 539px; left: 1px; top: 85px;" data-block-type="code" data-block-id="8de1cd6699458cb44d888791563dc04a"><div class="sl-block-content" style="z-index: 12; font-size: 90%;"><pre><code>require 'appium_lib'
+require 'rspec'
+
+RSpec.configure do |config|
+  config.color = true
+  config.tty = true
+  config.formatter = :documentation
+
+  config.before :all do
+   
+  end
+
+  config.before :each do
+    capabilities = {
+	'platformName': 'Android',
+	'deviceName': 'android',
+	'app': '/Users/&lt;your user&gt;/appium-workshop/playground/app-debug.apk',
+    }
+    server_url = "http://0.0.0.0:4723/wd/hub"
+    Appium::Driver.new(caps: capabilities).start_driver
+    Appium.promote_appium_methods Object
+  end
+
+  config.after :each do |e|
+    driver_quit
+  end
+
+  config.after :all do
+   
+  end
+end</code></pre></div></div>
+<div class="sl-block" style="height: auto; width: 551px; left: 205px; top: 630px;" data-block-type="text" data-block-id="e7fb971cfaf28bdae2aabc8d3988a50d"><div class="sl-block-content" style="z-index: 13; text-align: left;" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li>spec_helper.rb should look like this.</li>
+</ul>
+</div></div></section><section data-id="d54e4c8e8f43f8edd1c6ff0c3fd190eb"><div class="sl-block" style="width: 800px; left: 80px; top: 43px; height: auto;" data-block-type="text" data-block-id="bf655eab0d3702d4ca2ff9819fac1fa1"><div class="sl-block-content" style="z-index: 10;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>home_spec.rb</h2>
+</div></div>
+<div class="sl-block" style="width: 960px; height: 207px; left: 0px; top: 117px;" data-block-type="code" data-block-id="e33fab26f77ab9210a02d83b68952fad"><div class="sl-block-content" style="z-index: 11; font-size: 90%;"><pre><code>require 'spec_helper'
+
+describe 'Home Page' do
+  
+  it 'Should Display Correct Text' do
+    home_page_text = find_element(:id, 'com.amazonaws.devicefarm.android.referenceapp:id/toolbar_title').text
+    expect(home_page_text).to eq "Homepage"
+  end
+  
+end</code></pre></div></div>
+<div class="sl-block" style="width: 800px; left: 71px; top: 313px; height: auto;" data-block-type="text" data-block-id="cc34b5af66406ab43d440faa0180c525"><div class="sl-block-content" style="z-index: 13;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>alert_spec.rb</h2>
+</div></div>
+<div class="sl-block" style="width: 960px; height: 263px; left: 0px; top: 381px;" data-block-type="code" data-block-id="6af44a755077c3a918ffb2518f8fcd67"><div class="sl-block-content" style="z-index: 14; font-size: 90%;"><pre><code>require 'spec_helper'
+
+describe 'Alerts Page' do
+  
+  it 'Should Display Alert Popup' do
+    find_element(:id, 'ReferenceApp').click
+    scroll_to "Alerts"
+    text("Alerts").click
+    find_element(:id, 'com.amazonaws.devicefarm.android.referenceapp:id/notifications_alert_button').click
+    expect(find_element(:id, 'android:id/alertTitle').text).to eq "Alert Title"
+    expect(find_element(:id, 'android:id/message').text).to eq "This is the alert message"
+  end
+
+end</code></pre></div></div></section></section><section class="stack" data-id="4267f03afde308f04ab66cd546514a07"><section data-id="a2ffbd656f449796d0aae11c79972075"><div class="sl-block" style="width: 800px; left: 41px; top: 0px; height: auto;" data-block-type="text" data-block-id="a6eacad928f9569c3679791a985f7280">
+    <div class="sl-block-content" style="z-index: 10;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Appium.txt</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 99px;" data-block-type="text" data-block-id="344442a497e9d222b20d4399b463636d">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">There is one more thing we can do to clean things up a bit. We can create a appium.txt file to store our capabilities.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">In the playground directory, run: arc setup android &lt;- This creates a appium.txt file.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Open appium.txt in sublime.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Set the capabilities in appium.txt like below: </span></span></li>
+</ul>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<ul>
+	<li> </li>
+	<li><span style="font-size:0.7em"><span class="s2">In the spec_helper.rb remove the capabilities hash.</span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Replace the capabilities hash with the below in the before(:each) block:</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">caps = Appium.load_appium_txt file: "appium.txt"</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Remove the server_url line as well. By default appium will point to this url.</span></span></li>
+	</ul>
+	</li>
+	<li><span style="font-size:0.7em"><span class="s2">See example in next slides.</span></span></li>
+</ul>
+</div>
+</div>
+<div class="sl-block" style="left: 55px; top: 305px; width: 653px; height: 172px;" data-block-type="code" data-block-id="55436bd519aeb624bae25029167a5c36"><div class="sl-block-content" style="z-index: 13; font-size: 90%;"><pre><code>[caps]
+platformName = "ANDROID"
+deviceName = "android"
+app = "/Users/&lt;your name&gt;/appium-workshop/playground/app-debug.apk"
+
+[appium_lib]
+sauce_username = false
+sauce_access_key = false</code></pre></div></div></section><section data-id="7da75737550e0d7e3158ab530175a211"><div class="sl-block" style="width: 800px; left: 80px; top: 15px; height: auto;" data-block-type="text" data-block-id="4be5b7d9494a16694e7028f1fdf0b026"><div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>spec_helper.rb</h2>
+</div></div>
+<div class="sl-block" style="width: 939px; height: 467px; left: 11px; top: 117px;" data-block-type="code" data-block-id="66660f90f4fc4a0061e2060ce4b9084a"><div class="sl-block-content" style="z-index: 12; font-size: 90%;"><pre><code>require 'appium_lib'
+require 'rspec'
+
+
+RSpec.configure do |config|
+  config.color = true
+  config.tty = true
+  config.formatter = :documentation
+  
+  config.before :all do
+
+  end
+
+  config.before :each do
+    caps = Appium.load_appium_txt file: 'appium.txt'
+    Appium::Driver.new(caps).start_driver
+    Appium.promote_appium_methods Object
+  end
+
+  config.after :each do |e|
+    driver_quit
+  end
+
+  config.after :all do
+   
+  end
+end</code></pre></div></div></section></section><section data-id="b4cc456e32dc77be94ac4bec5d1835bb"><div class="sl-block" style="width: 800px; left: 80px; top: 66px; height: auto;" data-block-type="text" data-block-id="450cd8be0abb391e1273ad2114409657">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Lets Run The Specs</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 801px; left: 80px; top: 265px;" data-block-type="text" data-block-id="c1d5ed86f318fcb2ffe9a8bfa4731b60">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>	<li><span style="font-size:0.7em">Start the appium Desktop server if not already.</span></li>	<li><span style="font-size:0.7em"><span class="s2">From the playground directory, run: rspec spec</span></span></li>	<li>
+<span style="font-size:0.7em"><span class="s2">You should now see a much nicer output detailing what was tested.</span></span> 	<ul>		<li><span style="font-size:0.7em"><span class="s2">This is set from the config.color and config.formatter in spec_helper.rb.</span></span></li>	</ul>	</li>	<li><span style="font-size:0.7em"><span class="s2">Raise your hand if you didn’t see this.</span></span></li>
+</ul>
+</div>
+</div>
+</section><section class="stack" data-id="eb8218e0b84bb4f3227c53d4e86282bd"><section data-id="5ddb8dde8adb6ed9a1a9a998a214aec4"><div class="sl-block" style="width: 800px; left: 40px; top: 52px; height: auto;" data-block-type="text" data-block-id="93c73f783fd1b3f1cb38699beaaefe38">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Metadata</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 679px; left: 101px; top: 249px;" data-block-type="text" data-block-id="25b7d0621cfe459c59f2ca1d7ee619b4">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em">Tests aren't a lot of help unless you capture good metadata! </span></li>
+	<li>
+<span style="font-size:0.7em">Lets capture some for our tests.</span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">Screenshots</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Logs</span></span></li>
+	</ul>
+	</li>
+</ul>
+</div>
+</div>
+</section><section data-id="af0ac71b77b2c833979bf1c353dcbbf8"><div class="sl-block" style="width: 800px; left: 80px; top: 33px; height: auto;" data-block-type="text" data-block-id="7fdba326ca770ff07e3dcaa3056fa035">
+    <div class="sl-block-content" style="z-index: 10;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Screenshots!</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 63px; top: 109px;" data-block-type="text" data-block-id="68edec6ab5d4db8f23b6dff309351818">
+    <div class="sl-block-content" style="z-index: 11; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">Lets add the command to capture a screenshot at the end of each test. </span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">The best place to put this is in the spec_helper.rb and inside the after(:each) block.</span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">First we need to figure the name of the screenshot. </span></span><span style="font-size:0.7em"><span class="s2">The test name makes the most sense!</span></span>
+</li>
+	<li><span style="font-size:0.7em">Update your config.after :each block to look like the below.</span></li>
+</ul>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">This will take a screenshot after each test regardless of pass or fail. </span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">FYI - If you only want a screenshot on failure you can use a "unless".</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">e.g. screenshot "./output/#{test}.png" unless e.exception.nil?</span></span></li>
+	</ul>
+	</li>
+</ul>
+</div>
+</div>
+<div class="sl-block" style="width: 603px; height: 92px; left: 99px; top: 334px;" data-block-type="code" data-block-id="4c36f1aac1aae89464cae717416e5a78"><div class="sl-block-content" style="z-index: 13; font-size: 90%;"><pre><code>  config.after :each do |e|
+    test = e.description.gsub(" ","_")
+    screenshot "./output/#{test}.png"
+    driver_quit
+  end</code></pre></div></div></section></section><section data-id="f3d94fafa2186616ab9201bff2083813"><div class="sl-block" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-type="text" data-block-id="a79f4c18417a12a811762ef010ec4a11">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Lets Run the Specs</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 859px; left: 52px; top: 202px;" data-block-type="text" data-block-id="24788b05a2b252cfb379c310c2c9e17b">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>	<li><span style="font-size:0.7em">Start the appium Desktop server.</span></li>	<li><span style="font-size:0.7em"><span class="s2">From the playground directory, run: rspec spec</span></span></li>	<li><span style="font-size:0.7em"><span class="s2">After the tests are finished you should see two screenshots named after each test in the output folder.</span></span></li>	<li><span style="font-size:0.7em"><span class="s2">Raise your hand if you don't see this.</span></span></li>
+</ul>
+</div>
+</div>
+</section><section class="stack" data-id="cceb947cdfadaab4c439832db6649b18"><section data-id="6c5cb1a7e81d7769070dc34faca623d7"><div class="sl-block" style="width: 800px; left: 80px; top: 33px; height: auto;" data-block-type="text" data-block-id="18f3913327571219ea23df4f06414882">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+        <h2>Logs</h2>
+    </div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 163px;" data-block-type="text" data-block-id="9c9e22259f6b243af6e527081bde74e2">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>	<li><span style="font-size:0.7em">In a shell or terminal, run: adb logcat -v long</span></li>	<li><span style="font-size:0.7em">That will print out the log output of your android devices. the "-v long" makes it a bit nicer and easier to read. </span></li>	<li style="text-align:left">	<p><span style="font-size:0.7em">This is great information to capture for your tests! Especially, since sometimes errors occur that aren't seen in the UI. </span></p>	</li>	<li style="text-align:left">	<p><span style="font-size:0.7em">So lets add some methods to start capturing the log output at test start and stopping at test end.</span></p>	</li>	<li style="text-align:left">	<p><span style="font-size:0.7em">Add the methods below (<strong>for your specific platform</strong>). You should put these below the last end in the spec_helper.rb:</span></p>	</li>
+</ul>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left"> </p>
+</div>
+</div>
+</section><section data-id="418080c2fdd81f2588731771f896942a">
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 420px;" data-block-type="text" data-block-id="ad2b55a93d424777458633772e1e18bf">
+    <div class="sl-block-content" style="z-index: 10; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li style="text-align:left"><span style="font-size:0.7em">Update your spec_helper.rb to look like it is on the next slide. For windows systems make sure you replace it with the method above and same for mac.</span></li>
+	<li style="text-align:left"><span style="font-size:0.7em">Note: The Appium server can capture logcat for you. However, I think it's good knowledge to know to do this yourself. You might also want to filter or exclude captured content.</span></li>
+</ul>
+</div>
+</div>
+<div class="sl-block" style="min-width: 30px; min-height: 30px; width: 730px; height: 298px; left: 115px; top: 89px;" data-block-type="code" data-block-id="80ececdf41a914000f523aa3f63ed6c2"><div class="sl-block-content" style="z-index: 12;"><pre class="sql"><code>def start_logcat test
+  pid = spawn("adb logcat -v long", :out=&gt;"./output/logcat-#{test}.log")
+  ENV["LOGCAT"] = pid.to_s 
+end
+
+#for mac
+def stop_logcat
+  `kill #{ENV["LOGCAT"]} &gt;&gt; /dev/null 2&gt;&amp;1`
+end
+
+#for windows
+def stop_logcat
+  system("taskkill /f /pid #{ENV["LOGCAT"]} &gt; NUL")
+end</code></pre></div></div></section><section data-id="143c1f462c7c134d6f85c5905b6f6f20"><div class="sl-block" style="width: 681px; height: 653px; left: 140px; top: 24px;" data-block-type="code" data-block-id="129f1f5f32bbe335527786fdc6dc02cb"><div class="sl-block-content" style="z-index: 10; font-size: 90%;"><pre><code>require 'appium_lib'
+require 'rspec'
+
+RSpec.configure do |config|
+  config.color = true
+  config.tty = true
+  config.formatter = :documentation
+  
+  config.before :all do
+  end
+
+  config.before :each do |e|
+    caps = Appium.load_appium_txt file: 'appium.txt'
+    Appium::Driver.new(caps).start_driver
+    Appium.promote_appium_methods Object
+    test = e.description.gsub(" ","_")
+    start_logcat test
+  end
+
+  config.after :each do |e|
+    test = e.description.gsub(" ","_")
+    screenshot "./output/#{test}.png"
+    stop_logcat
+    driver_quit
+  end
+
+  config.after :all do
+  end
+end
+
+def start_logcat test
+  pid = spawn("adb logcat -v long", :out=&gt;"./output/logcat-#{test}.log")
+  ENV["LOGCAT"] = pid.to_s 
+end
+
+def stop_logcat
+  `kill #{ENV["LOGCAT"]} &gt;&gt; /dev/null 2&gt;&amp;1`
+end</code></pre></div></div></section></section><section data-id="5b227d328da83451d478fa1506484249"><div class="sl-block" style="width: 800px; left: 40px; top: 52px; height: auto;" data-block-type="text" data-block-id="2b349da0d294b6a33c9bea902329c830">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Lets Run the Specs</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 40px; top: 210px;" data-block-type="text" data-block-id="609583aa2325971118ebe85d740b0864">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">From the playground directory, run: rspec spec</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">After the tests are finished you should see two logs named for each test in the output folder.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Raise you hand if you don't see this.</span></span></li>
+</ul>
+</div>
+</div>
+</section><section class="stack" data-id="a3576dcffaf7072159d4660494376c3b"><section data-id="0adf40dc6f75b8de35a18511637dcb73"><div class="sl-block" style="width: 800px; left: 81px; top: 14px; height: auto;" data-block-type="text" data-block-id="31fecc5b4d480ec67b352ba693cb71ed">
+    <div class="sl-block-content" style="z-index: 10;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Reporting</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 128px;" data-block-type="text" data-block-id="57e299da144e9f70e3d0bf362c8274f5">
+    <div class="sl-block-content" style="z-index: 11; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">Tests are worthless without good reporting! That is why we are going to use Allure.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Allure is a cross-platform reporting framework that lets you attach files (metadata).</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Lets go ahead and (require "allure-rspec") at the top of spec_helper.rb. Then we will add the appropriate allure hooks. This should should be added below our logcat methods.</span></span></li>
+</ul>
+</div>
+</div>
+<div class="sl-block" style="min-width: 30px; min-height: 30px; width: 730px; height: 300px; left: 116px; top: 350px;" data-block-type="code" data-block-id="2ed4fa7e322ba878bc7065fced08cfe7"><div class="sl-block-content" style="z-index: 13;"><pre class="sql"><code>def start_logcat test
+  pid = spawn("adb logcat -v long", :out=&gt;"./output/logcat-#{test}.log")
+  ENV["LOGCAT"] = pid.to_s 
+end
+
+def stop_logcat
+  `kill #{ENV["LOGCAT"]} &gt;&gt; /dev/null 2&gt;&amp;1`
+end
+#Add below these methods...
+
+AllureRSpec.configure do |config|
+  config.include AllureRSpec::Adaptor
+  config.output_dir = "./output/allure"
+  config.clean_dir = true
+end</code></pre></div></div></section><section data-id="8e8faa9981d096d52e7c23f84fe6eb46"><div class="sl-block" style="width: 681px; height: 142px; left: 140px; top: 152px;" data-block-type="code" data-block-id="42558f13f1660db2d692e11a5d1a375b"><div class="sl-block-content" style="z-index: 10; font-size: 90%;"><pre><code>require 'appium_lib'
+require 'rspec'
+require 'pathname'
+require 'allure-rspec'
+
+RSpec.configure do |config|
+  config.color = true ...
+</code></pre></div></div>
+<div class="sl-block" style="width: 681px; height: 224px; left: 140px; top: 378px;" data-block-type="code" data-block-id="c4258d5320400f8aca882a3bd9d7e31e"><div class="sl-block-content" style="z-index: 11; font-size: 90%;"><pre><code>...  ENV["LOGCAT"] = pid.to_s 
+end
+
+def stop_logcat
+  `kill #{ENV["LOGCAT"]} &gt;&gt; /dev/null 2&gt;&amp;1`
+end
+
+AllureRSpec.configure do |config|
+  config.include AllureRSpec::Adaptor
+  config.output_dir = "./output/allure"
+  config.clean_dir = true
+end</code></pre></div></div>
+<div class="sl-block" style="width: 800px; left: 80px; top: 52px; height: auto;" data-block-type="text" data-block-id="76153a5f2b2708d2c1c1c9ed63fd05e0">
+    <div class="sl-block-content" style="z-index: 12;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>spec_helper.rb top</h2>
+</div>
+</div>
+<div class="sl-block" style="width: 800px; left: 80px; top: 294px; height: auto;" data-block-type="text" data-block-id="89395a33f5f57c710168de6d73b0fe63">
+    <div class="sl-block-content" style="z-index: 14;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>spec_helper.rb bottom</h2>
+</div>
+</div></section></section><section data-id="97c10ac8ae0d066006a269bb1555db67"><div class="sl-block" style="width: 800px; left: 80px; top: 41px; height: auto;" data-block-type="text" data-block-id="e7e34725ea6c7de480ce209d7ccc895d">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Lets Run the Specs</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 80px; top: 140px;" data-block-type="text" data-block-id="93ac3018f0fb08d11e0f592337c12aa9">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">From the playground directory, run: rspec spec</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">After the tests are finished you should see a new folder in the output directory named allure with some xml files in it.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Raise you hand if you don't see this.</span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Lets generate the report!</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">From the command line, run: allure report generate output/allure</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Then run: allure report open</span></span></li>
+	</ul>
+	</li>
+	<li><span style="font-size:0.7em"><span class="s2">Raise you hand if the report did not open.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Go ahead and click the menu buttons on the left side and see the report details.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">On the XUnit screen you can see your tests here. By default it shows only the failed tests. You can , however, change this by clicking the Passed tab.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Something is missing, though. The test data we generated! </span></span></li>
+</ul>
+</div>
+</div>
+</section><section data-id="587b950cce0d7f71b5deb078c136dbbc"><div class="sl-block" style="width: 800px; left: 41px; top: 33px; height: auto;" data-block-type="text" data-block-id="081f5acaff4363b2738b5fc110b60098">
+    <div class="sl-block-content" style="z-index: 10;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Attaching Files to Allure</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 155px;" data-block-type="text" data-block-id="9327d161be0e6850eec0a23c246ee056">
+    <div class="sl-block-content" style="z-index: 11; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">Now we need to attach the files to the report.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">First we need to get the files to attach.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Update your config.after :each block in spec_helper.rb to look like the below.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">As you can see the spec_helper.rb is becoming large and messy. We’ll fix this later.</span></span></li>
+</ul>
+</div>
+</div>
+<div class="sl-block" style="min-width: 30px; min-height: 30px; width: 952px; height: 183px; left: 0px; top: 399px;" data-block-type="code" data-block-id="aecce0466d5a38b7f6976cc49722d1f8"><div class="sl-block-content" style="z-index: 13;"><pre class="sql"><code>  config.after :each do |e|
+    test = e.description.gsub(" ","_")
+    screenshot "./output/#{test}.png"
+    stop_logcat
+    files = Dir.entries("./output/").grep(/#{test}/)
+    files.each { |file| e.attach_file("File:", File.new("./output/#{file}")) } unless files.empty?
+    driver_quit
+  end</code></pre></div></div></section><section data-id="4f5cb051b065d7624760414a4848f581"><div class="sl-block" style="width: 800px; left: 80px; top: 33px; height: auto;" data-block-type="text" data-block-id="c725c2e250a558c6f4fa1edddb7b7cd5">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Let's run the Specs</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 67px; top: 210px;" data-block-type="text" data-block-id="0ab48d68c1123fb5250cfe9f7505e30a">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">From the playground directory, run: rspec spec</span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Lets generate the report!</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">From the command line, run: allure report generate output/allure</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Then run: allure report open</span></span></li>
+	</ul>
+	</li>
+	<li><span style="font-size:0.7em"><span class="s2">Click the XUnit button (left side) and then the Passed tab (right side).</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Then click any of the tests to view the results. Notice the screenshot and log files that are now attached to the report.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Raise you hand if you don't see this.</span></span></li>
+</ul>
+</div>
+</div>
+</section><section class="stack" data-id="6747b45d883784b50e40fb7e7262c8d9"><section data-id="0b36702c9425657b36eb3a9fd889b101"><div class="sl-block" style="width: 800px; left: 40px; top: 52px; height: auto;" data-block-type="text" data-block-id="a9edbf26ede97642efa812d1cc047965">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Interactive Ruby (IRB)</h2>
+
+<p><span style="color:rgb(34, 34, 34); text-align:left">REPL (read–eval–print loop)</span></p>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 48px; top: 272px;" data-block-type="text" data-block-id="7f1b4104cf87502c46f1ff5bb706aba7">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>	<li><span style="font-size:0.7em"><span class="s2">We are going to see a new way of finding elements without having to use the Appium Desktop Inspector or the uiautomatorviewer.</span></span></li>	<li>
+<span style="font-size:0.7em"><span class="s2">From the command line in playground directory, run: arc</span></span> 	<ul>		<li><span style="font-size:0.7em"><span class="s2">This should put you into the appium console and start the app on the emulator/device.</span></span></li>		<li><span style="font-size:0.7em"><span class="s2">Make sure appium server and android device/emulator are connected first.</span></span></li>	</ul>	</li>	<li><span style="font-size:0.7em"><span class="s2">Raise your hand if you don't see this.</span></span></li>
+</ul>
+</div>
+</div>
+</section><section data-id="cb5e2a975b2c5f2554c4d67299ebb37b"><div class="sl-block" style="width: 800px; left: 80px; top: 66px; height: auto;" data-block-type="text" data-block-id="377c037dcd37466fab66dce8e93c0fd4">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Finding Elements</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 140px;" data-block-type="text" data-block-id="15367e1831352fbf236a0b51717af68d">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">Thankfully, appium_lib has a lot of really nice helper methods baked into it.</span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">To name a few:</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">get_source  &lt;- This returns you xml of page elements. Hard to read, though.</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">page &lt;- parses the get_source xml and returns a nice printout of the elements.</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">buttons &lt;- returns an array of "android.widget.ImageButton" class type.</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">texts &lt;- returns an array of "android.widget.TextView" class type.</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">textfields &lt;- returns an array of "android.widget.EditText" class type.</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">back &lt;- This will tap the android back button. Use this carefully.</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">find_element &lt;- A method to get a single element.</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">find_elements &lt;- Like find_element except it gets all elements with the same locators and returns an array.</span></span></li>
+	</ul>
+	</li>
+</ul>
+</div>
+</div>
+</section><section data-id="cb85d97d4e5d07eeb7fc1768138683f0">
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 128px;" data-block-type="text" data-block-id="79bee986c2d5fe4e55ac8104842ba496">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>	<li><span style="font-size:0.7em"><span class="s2">There are many more helper methods that can be found <a href="https://github.com/appium/ruby_lib/blob/master/docs/android_docs.md" target="_blank">here</a>. </span> </span></li>	<li>
+<span style="font-size:0.7em"><span class="s2">Go ahead and play around with them and interact with the app in realtime.</span> </span> 	<ul>		<li>
+<span style="font-size:0.7em"><span class="s2">Get the name of a element by doing: texts.first.text or </span> </span> <span style="font-size:0.7em"> <span class="s2">buttons.first.text</span> </span>
+</li>		<li><span style="font-size:0.7em"><span class="s2">texts.each { |e| puts e.text } &lt;- prints all </span>"android.widget.TextView" types. </span></li>		<li><span style="font-size:0.7em"><span class="s2">buttons.each { |e| puts e.text } &lt;- prints all </span>"android.widget.ImageButton" types. </span></li>	</ul>	</li>	<li><span style="font-size:0.7em"><span class="s2">Run: page</span> </span></li>	<li><span style="font-size:0.7em"><span class="s2">Get the :id of an element, then do a find_element(:id, "&lt;the locator&gt;").click or .text</span></span></li>	<li><span style="font-size:0.7em"><span class="s2">You can also do a .methods to see whats available for the selenium object. e.g. </span>find_element(:id, "&lt;the locator&gt;").methods.</span></li>	<li>
+<span class="s2"><span style="font-size:0.7em">If you are getting a method by the :id locator. You can also use a helper method named "id". e.g. id("</span></span><span style="font-size:0.7em"><span class="s1">android:id/content"</span></span><span class="s2"><span style="font-size:0.7em">).click instead of find_element(:id, "&lt;the locator&gt;").click</span> </span>
+</li>
+</ul>
+</div>
+</div>
+</section></section><section class="stack" data-id="74a7d062fdf7b743bc24f1fad5e5445f"><section data-id="afce84307fca6577bfb594f9d810a8ee"><div class="sl-block" style="width: 800px; left: 40px; top: 52px; height: auto;" data-block-type="text" data-block-id="02c33aabc5f89dbcbf6ace49e120cf14">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Lets Create Another Test</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 40px; top: 133px;" data-block-type="text" data-block-id="315fb6952bf509f1f9608ad19ec36f16">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">Create a new file in the spec folder and name it "crash_spec.rb".</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Copy the contents of alert_spec.rb file and put it into the crash_spec.rb and save.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Rename describe to "Crash Page and the <span class="s2">"it" block to "</span>Click Crash Button".</span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Using the "</span>page" method, get the elements for below steps.</span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">You need the hamburger button :id, which we already have.</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Click the "Crash/Bug" menu button.</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Click the CRASH button.</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Now set an assertion. e.g. expect(texts.last.text).to eq "Pressing this button will crash the app"</span></span></li>
+	</ul>
+	</li>
+	<li><span style="font-size:0.7em"><span class="s2">The app of course is going to crash, but this good! We’ll then have the logcat output included in our test report to help debug the issue!</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Exit out of appium_console by typing: driver.quit and exit.</span></span></li>
+</ul>
+</div>
+</div>
+</section><section data-id="341af875a54e6505684b7a6b8a457df6"><div class="sl-block" style="width: 800px; left: 80px; top: 50px; height: auto;" data-block-type="text" data-block-id="4d0e89c94e2692b3b8fee37f4047c540"><div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>crash_spec.rb</h2>
+</div></div>
+<div class="sl-block" style="width: 830px; height: 228px; left: 65px; top: 166px;" data-block-type="code" data-block-id="83da3e196090f3f6cb66aad238e8ff6d"><div class="sl-block-content" style="z-index: 12; font-size: 90%;"><pre><code>require 'spec_helper'
+
+describe 'Crash Page' do
+
+  it 'Click Crash Button' do
+    find_element(:id, 'ReferenceApp').click
+    text("Crash/Bug").click
+    find_element(:id, 'com.amazonaws.devicefarm.android.referenceapp:id/crash_button').click
+    expect(texts.last.text).to eq "Pressing this button will crash the app"
+  end
+
+end</code></pre></div></div>
+<div class="sl-block" style="height: auto; width: 540px; left: 210px; top: 451px;" data-block-type="text" data-block-id="305f720bb95cb1317106814be2eef354"><div class="sl-block-content" style="z-index: 13; text-align: left;" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li>crash_spec.rb should look like this.</li>
+</ul>
+</div></div></section></section><section data-id="0d022ab3b1108b7a1e53d09170b1ee1f"><div class="sl-block" style="width: 800px; left: 40px; top: 51px; height: auto;" data-block-type="text" data-block-id="9dfbf9a28e99240f081d9cdb069c8155">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Lets Run the Specs</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 40px; top: 186px;" data-block-type="text" data-block-id="8d6410257ec6515177a79b51929b0c13">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">From the playground directory, run: rspec spec/crash_spec.rb</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Only the crash_spec test should have run and thus the app crashed.</span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Lets generate the report!</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">From the command line, run: allure report generate output/allure</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Then run: allure report open</span></span></li>
+	</ul>
+	</li>
+	<li><span style="font-size:0.7em"><span class="s2">Click the XUnit button (left side) and then the Passed tab (right side).</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Click the test to view the results. The screenshot and log files should be attached.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Raise your hand if you don't see this.</span></span></li>
+</ul>
+</div>
+</div>
+</section><section class="stack" data-id="e3d8a1b3c34f51b6076ca3d53bdd8325"><section data-id="d93995e86b39ee446b229dee2ec2f59b"><div class="sl-block" style="width: 800px; left: 40px; top: 52px; height: auto;" data-block-type="text" data-block-id="7765527c952feeab51b98d2771f2810d">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Gestures</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 210px;" data-block-type="text" data-block-id="6fca528761796f831d465b96009a6cbd">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">A lot of apps use gestures to enable/disable or perform specific actions.</span></span></li>
+	<li><span style="font-size:0.7em">From the command line in playground directory, run: arc</span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Navigate the app to the Input Controls page. Then scroll to the right until your reach the Gesture tab.</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">Extra credit if you can do this using IRB!</span></span></li>
+	</ul>
+	</li>
+	<li><span style="font-size:0.7em"><span class="s2">There are a ton of different gestures we can do, but we’ll only go through a few.</span></span></li>
+</ul>
+</div>
+</div>
+</section><section data-id="5b2de5c00015e24907d6974b4bb31f06"><div class="sl-block" style="width: 800px; left: 45px; top: 33px; height: auto;" data-block-type="text" data-block-id="1357a67eb42bdeb065c8965a89f92c9e">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Common Gestures</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 45px; top: 140px;" data-block-type="text" data-block-id="7aef21abac019eb47e2a186a143dd978">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>	<li>
+<span style="font-size:0.7em"><span class="s2">Lets get the element :id for the Swipe Here box.</span></span> 	<ul>		<li><span style="font-size:0.7em"><span class="s2">run: page</span></span></li>		<li><span style="font-size:0.7em"><span class="s2">Looks like we can use: id("Gesture Action Pad")</span></span></li>	</ul>	</li>	<li>
+<span style="font-size:0.7em"><span class="s2">A Tap: A basic tap/click</span></span> 	<ul>		<li><span style="font-size:0.7em"><span class="s2">id("Gesture Action Pad").click</span></span></li>		<li><span style="font-size:0.7em"><span class="s2">Notice the output on the screen tells you what actions were just made. You should see Down, Show Press, Single Tap Up, Single tap confirm.</span></span></li>	</ul>	</li>	<li>
+<span style="font-size:0.7em">This is the same as:</span> 	<ul>		<li><span style="font-size:0.7em"><span class="s2"><span class="s2">button = id("Gesture Action Pad").location.to_h &lt;- Creates a location hash.</span></span></span></li>		<li><span style="font-size:0.7em"><span class="s2"><span class="s2"><span class="s2">button.merge!(fingers: 1) &lt;- the "!" writes it to the button hash.</span></span></span></span></li>		<li><span style="font-size:0.7em"><span class="s2"><span class="s2"><span class="s2"><span class="s2">Appium::TouchAction.new.tap(button).release.perform</span></span></span></span></span></li>	</ul>	</li>
+</ul>
+</div>
+</div>
+</section><section data-id="171654dc4a4566517e45ff91f1e78642">
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 94px;" data-block-type="text" data-block-id="5fa09e0b54e7aedeca8fd4d3b7cf28e5">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Long Press: Tap and hold an element for 2 seconds</span></span>
+	<ul>
+		<li style="text-align:left"><span style="font-size:0.7em"><span class="s2">button = id("Gesture Action Pad").location.to_h</span></span></li>
+		<li style="text-align:left"><span style="font-size:0.7em"><span class="s2"><span class="s2">button.merge!(fingers: 1, duration: 2000)</span></span></span></li>
+		<li style="text-align:left"><span style="font-size:0.7em"><span class="s2"><span class="s2"><span class="s2">Appium::TouchAction.new.long_press(button).release.perform</span> </span> </span> </span></li>
+	</ul>
+	</li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Swipe Up:</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">start = id("Gesture Action Pad").location.to_h</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">finish = text("Gestures").location.to_h</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Appium::TouchAction.new.press(start).wait(200).move_to(finish).release.perform</span></span></li>
+	</ul>
+	</li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Swipe Left:</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">start = text("Submit Button").location.to_h</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">finish = text("Gestures").location.to_h</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Appium::TouchAction.new.press(start).wait(200).move_to(finish).release.perform</span></span></li>
+	</ul>
+	</li>
+</ul>
+</div>
+</div>
+</section><section data-id="6c360d584a5b8ef0877ac25b8e27d549">
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 16px;" data-block-type="text" data-block-id="81f331ba75e4e6f98da84546956323a0">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Swipe Down: Pull to Refresh</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">Navigate to the Pull to Refresh tab.</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">start = text("Pull To Refresh").location.to_h</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">start[:y] = start[:y] + 100 </span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">finish = id("com.amazonaws.devicefarm.android.referenceapp:id/input_refresh_display").location.to_h</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Appium::TouchAction.new.press(start).wait(2000).move_to(finish).release.perform</span></span></li>
+	</ul>
+	</li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Swipe Up:</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">start = id("Gesture Action Pad").location.to_h</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">finish = text("Gestures").location.to_h</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Appium::TouchAction.new.press(start).wait(200).move_to(finish).release.perform</span></span></li>
+	</ul>
+	</li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Scroll To:</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">Tap the Hamburger/menu button.</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Make sure the menu is at the top. e.g. You see the Home menu option.</span></span></li>
+		<li><span class="s2"><span style="font-size:0.7em">scroll_to "Fixtures"  &lt;- Appium will scroll until it finds the text "Fixtures"</span></span></li>
+	</ul>
+	</li>
+</ul>
+</div>
+</div>
+</section><section data-id="8406bfeeaae5ad3040fcb113a728c94d">
+<div class="sl-block" style="height: auto; width: 960px; left: 0px; top: 97px;" data-block-type="text" data-block-id="5b7747b8f67225c8986430719b9cd7a2">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>	<li><span style="font-size:0.7em"><span class="s2">Lets play around with some common controls you will most likely have to use.</span></span></li>	<li>
+<span style="font-size:0.7em"><span class="s2">Text Input:</span></span> 	<ul>		<li><span style="font-size:0.7em"><span class="s2">Move app to the Input Controls &gt; Text Field view.</span></span></li>		<li><span style="font-size:0.7em"><span class="s2">type "page" to get the page elements. </span></span></li>		<li>
+<span style="font-size:0.7em"><span class="s2">Look for a class name of "android.widget.EditText".</span></span> 		<ul>			<li><span style="font-size:0.7em"><span class="s2">Get the :id for this field. e.g.  "com.amazonaws.devicefarm.android.referenceapp:id/input_edit_text"</span></span></li>		</ul>		</li>		<li>
+<span style="font-size:0.7em"><span class="s2">Now lets type in the text field. </span></span> 		<ul>			<li><span style="font-size:0.7em"><span class="s2">id("com.amazonaws.devicefarm.android.referenceapp:id/input_edit_text").send_keys "HELLO\n" &lt;- The \n creates a new line.<span style="font-size:0.7em"><span class="s2"> </span></span></span></span></li>		</ul>		</li>	</ul>	</li>	<li><span style="font-size:0.7em"><span class="s2">Go ahead and play around with this control. </span></span></li>	<li><span style="font-size:0.7em"><span class="s2">Raise your hand if you have any questions or issues.</span></span></li>
+</ul>
+</div>
+</div>
+</section><section data-id="36902a42d7c67f40c3c28cc85b6beb40">
+<div class="sl-block" style="height: auto; width: 960px; left: 0px; top: 140px;" data-block-type="text" data-block-id="610fea7f56486a47f6ce04ce52d6b9f5">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">Checkboxes:</span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2"><span class="s2">Move app to the Input Controls &gt; Checkbox view.</span></span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">run: page</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Look for the class name of "android.widget.CheckBox".</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Get the :id for the checkbox. e.g. "com.amazonaws.devicefarm.android.referenceapp:id/input_checkbox".</span></span></li>
+		<li>
+<span style="font-size:0.7em"><span class="s2">Now lets check it!</span></span>
+		<ul>
+			<li><span style="font-size:0.7em"><span class="s2">id("com.amazonaws.devicefarm.android.referenceapp:id/input_checkbox").click</span></span></li>
+		</ul>
+		</li>
+		<li><span style="font-size:0.7em"><span class="s2">Test if it's checked, run: id("com.amazonaws.devicefarm.android.referenceapp:id/input_checkbox").attribute("checked") &lt;- Should return true.<span style="font-size:0.7em"><span class="s2">​</span></span></span></span></li>
+	</ul>
+	</li>
+</ul>
+</div>
+</div>
+</section><section data-id="f4a6b7312699359fc93aebfa88a7aad2">
+<div class="sl-block" style="height: auto; width: 959px; left: 1px; top: 140px;" data-block-type="text" data-block-id="2faf2b0d66458296e125d00f33cccf43">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">Radio Buttons:</span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Move app to the Input Controls &gt; Radion Buttons view.</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">Run: page </span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Look for the class name of "android.widget.RadioButton"</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Get the :id for one of the Web Radio button. e.g. "com.amazonaws.devicefarm.android.referenceapp:id/radio_button_2"</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Now lets select it!</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">id("com.amazonaws.devicefarm.android.referenceapp:id/radio_button_2").click</span></span></li>
+	</ul>
+	</li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Lets verify it’s selected!</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">id("com.amazonaws.devicefarm.android.referenceapp:id/radio_button_2").attribute("checked") &lt;- this should return true</span></span></li>
+	</ul>
+	</li>
+</ul>
+</div>
+</div>
+</section></section><section class="stack" data-id="124070e4155c33908e875d4949c26819"><section data-id="8139847bca34d9734f12832047fc239a"><div class="sl-block" style="width: 800px; left: 40px; top: 33px; height: auto;" data-block-type="text" data-block-id="e23f9901e845630f4a58878a9a26414f">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Waits</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 40px; top: 206px;" data-block-type="text" data-block-id="b795a8d98341451c43d4e8d1add64196">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">appium_lib has a nice helper method to wrap a wait on locator finders.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Lets test this out!</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">In appium_console/arc terminal run: id(<strong>"</strong></span><span class="s2">DOES NOT EXIST<strong>"</strong></span><span class="s2">) &lt;- Notice it returns an error right away saying it cannot find the element. This would be pretty annoying if it did exist but just hadn’t loaded yet.</span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">The wait method. </span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">wait(5) { id(<strong>"</strong></span><span class="s2">DOES NOT EXIST<strong>"</strong></span><span class="s2">) } &lt;- Notice this now waits for 5 seconds.</span></span></li>
+	</ul>
+	</li>
+</ul>
+</div>
+</div>
+</section><section data-id="b4c3bff479e7d332beed1eea080d2f8d">
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 167px;" data-block-type="text" data-block-id="de73ccde631c499d35e63bb99c94d47d">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Lets try this with an element on another page.</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">Start on the Homepage of the app.</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Type wait(60) { id("com.amazonaws.devicefarm.android.referenceapp:id/notifications_alert_button") } &lt;- this is the alert popup button locator on the Alerts and Dialog page.</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">The Appium session is now waiting 60 seconds until it can find that element. </span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Navigate the app the Alerts and Dialog page. Notice Appium returns the element once you navigate to the Alerts and Dialog page.</span></span></li>
+	</ul>
+	</li>
+	<li><span style="font-size:0.7em"><span class="s2">Raise your hand if you don't see this.</span></span></li>
+</ul>
+</div>
+</div>
+</section><section data-id="256eafe28d801d7d971b86a6fca3990c"><div class="sl-block" style="width: 800px; left: 40px; top: 52px; height: auto;" data-block-type="text" data-block-id="9a1294fcf0d4c954b19e07053a7f6ca6">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Global Implicit Wait</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 202px;" data-block-type="text" data-block-id="9e85e0fb626a4418ca544b71ffe9da09">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">Open appium.txt file in sublime.</span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Under the [appium_lib] section. Set the below:</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">wait = 30</span></span></li>
+	</ul>
+	</li>
+	<li><span style="font-size:0.7em"><span class="s2">Now when Appium starts it gets this value and sets a global implicit wait on finding locators.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">30 seconds it quite long, but as you get more comfortable with waits and finding elements, you can remove the global implicit wait and set only explicit ones.</span></span></li>
+</ul>
+</div>
+</div>
+</section><section data-id="141fe0424d6bf3e7e324f3a13d37797e"><div class="sl-block" style="width: 800px; left: 80px; top: 39px; height: auto;" data-block-type="text" data-block-id="7a6439bf10811db325afa43ce5ee97ef"><div class="sl-block-content" style="z-index: 10;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>appium.txt</h2>
+</div></div>
+<div class="sl-block" style="height: auto; width: 496px; left: 232px; top: 509px;" data-block-type="text" data-block-id="462567b25b9e3ee1d36ca231d36c21a5"><div class="sl-block-content" style="z-index: 11; text-align: left;" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li>appium.txt should look like this.</li>
+</ul>
+</div></div>
+<div class="sl-block" style="min-width: 30px; min-height: 30px; width: 688px; height: 200px; left: 136px; top: 210px;" data-block-type="code" data-block-id="6567dd9643a5e2360b191632f8901b9f"><div class="sl-block-content" style="z-index: 13;"><pre class="sql"><code>[caps]
+platformName = "ANDROID"
+deviceName = "android"
+app = "/Users/&lt;your name&gt;/appium-workshop/playground/app-debug.apk"
+appPackage = ""
+
+[appium_lib]
+wait = 30
+sauce_username = false
+sauce_access_key = false</code></pre></div></div></section></section><section class="stack" data-id="685d0a117e5cf6ae4ee8c99997628048"><section data-id="9606f9cb05213479438c59739ab1d861"><div class="sl-block" style="width: 800px; left: 98px; top: -4px; height: auto;" data-block-type="text" data-block-id="260e3b674b20ec4fbdc2aeb49b9ff137">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Mobile Web</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 9px; top: 55px;" data-block-type="text" data-block-id="476425a2f84415b56880f6d4f379ec71">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>	<li style="text-align:left"><span style="font-size:0.5em">Stop the Appium Desktop Server</span></li>	<li style="text-align:left"><span style="font-size:0.5em">Click the Advanced menu tab.</span></li>	<li style="text-align:left"><span style="font-size:15px">Scroll down until you see the "Chromedriver Binary Path" field. Set the chromedriver binary for your platform.</span></li>	<li style="text-align:left"><span style="font-size:0.5em">Windows: C:\Users\&lt;your_username&gt;\appium-workshop\playground\chromedriver\windows\2.20-chromedriver.exe</span></li>	<li style="text-align:left"><span style="font-size:0.5em">Mac: Users/&lt;your_username&gt;/appium-workshop/playground/chromedriver/osx/2.20-chromedriver</span></li>	<li style="text-align:left"><span style="font-size:15px">Click the Start Server button. </span></li>
+</ul>
+</div>
+</div>
+<div class="sl-block" style="min-width: 30px; min-height: 30px; width: 457px; height: 403px; left: 305px; top: 280px;" data-block-type="image" data-block-id="93e6f3670704c0e399b6691fb80ea53a"><div class="sl-block-content" style="z-index: 13;"><img style="" data-lazy-loaded="" data-natural-height="579" data-natural-width="657" data-src="deck-3/e9aa6422f4731c63c6b7baa34f164494.png"></div></div></section><section data-id="93267fba08d5f8a690ae545625036f71"><div class="sl-block" style="width: 800px; left: 41px; top: 33px; height: auto;" data-block-type="text" data-block-id="365227a69bce396ff8c732041342999c">
+    <div class="sl-block-content" style="z-index: 10;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Update the appium.txt file</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 16px; top: 155px;" data-block-type="text" data-block-id="99287133f1c5bd9b84459c7cc9564cb5">
+    <div class="sl-block-content" style="z-index: 11; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li style="font-size: 21px;">We need to tell Appium to launch a browser instead of an application.</li>
+	<li style="font-size: 21px;">Cut and paste the below into the appium.txt file.</li>
+</ul>
+</div>
+</div>
+<div class="sl-block" style="width: 952px; height: 183px; left: 4px; top: 259px;" data-block-type="code" data-block-id="7f666cce97ad5a061d87e67b2e5f3025"><div class="sl-block-content" style="z-index: 13;"><pre class="sql"><code>[caps]
+platformName = "ANDROID"
+deviceName = "android"
+app = ""
+browserName = "browser"
+
+[appium_lib]
+sauce_username = false
+sauce_access_key = false</code></pre></div></div>
+<div class="sl-block" style="height: auto; width: 879px; left: 16px; top: 490px;" data-block-type="text" data-block-id="9f1faf67e2373b6b53fa63afab0d2c39">
+    <div class="sl-block-content" style="z-index: 14; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p" data-gramm_editor="true" data-gramm="true" data-gramm_id="2fdc740b-5397-3690-a01a-1885febc854d">
+<ul>
+	<li style="font-size:21px">Open your mac terminal or PowerShell window and run: arc</li>
+	<li style="font-size:21px">Raise your hand if you do not see google loaded on your emulator or device.</li>
+</ul>
+</div>
+</div></section><section data-id="9eeddb0d5539cae388d29c771226b710"><div class="sl-block" style="width: 800px; left: 41px; top: 33px; height: auto;" data-block-type="text" data-block-id="2fcb024adb329fa8182c75e4ea6e24af">
+    <div class="sl-block-content" style="z-index: 10;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Let's explore a bit...</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 125px;" data-block-type="text" data-block-id="8da7f030e4bc69d2fd3c73b2d4e0f853">
+    <div class="sl-block-content" style="z-index: 11; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li>
+	<p><span style="font-size:0.7em"><span class="s2">Click inside of the search field: </span><span class="s1">id("sb_ifc0").click</span></span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.7em">Let's search for "Selenium Conference Berlin": driver.action.send_keys("Selenium Conference Berlin\n").perform</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.7em">Click the first link: driver.find_element(:css, "div.ad_cclk").click</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.7em">You should now be on the Selenium Conf Berlin home page. Raise your hand if you don't see this.</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.7em">Let's click the Hamburger menu button: <span class="s1">driver.find_element(:css, "button.navbar-toggle.collapsed").click</span></span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.7em"><span class="s1">Click the WORKSHOP link: driver.find_element(:link, "WORKSHOPS").click</span></span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.7em"><span class="s1">You should now be on the Appium Workshop page!</span></span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.7em"><span class="s1">The best way to find web elements is using the chrome device emulator toolbar option in the console. I will demo this for you.</span></span></p>
+	</li>
+	<li>
+	<p><span style="font-size:0.7em"><span class="s1">Let's exit out of our web session. Type driver.quit and quit the Appium server.</span></span></p>
+	</li>
+</ul>
+</div>
+</div>
+</section></section><section class="stack" data-id="6b483ac13140afc084c74eb57b733213"><section data-id="9b2d3abad84b033861fcf277fd34ed61"><div class="sl-block" style="width: 800px; left: 40px; top: 27px; height: auto;" data-block-type="text" data-block-id="e13b9a70c84f58c6480ec981ecdae7f2">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Eliminating Duplication</h2>
+
+<p>Cleanup Time!</p>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 792px; left: 84px; top: 179px;" data-block-type="text" data-block-id="bc6afb264e5726295a6ea0021df518fd">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">Ok, so now our test suite is starting to grow a bit. We should start cleaning things up.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Move your specs (alert and crash) from the spec folder in the playground directory to the spec folder in the android directory. I’ve created an example for the home_spec.rb already so no need to move that.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">I’ve also already setup the whole framework of our new test suite to run in a single process, parallel and distributed.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Lets go over everything… It’s a lot!</span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">How is this done?</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">We already did it using the spec_helper.</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Lets now create common methods and functions.</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Lets also create page objects.</span></span></li>
+	</ul>
+	</li>
+</ul>
+</div>
+</div>
+</section><section data-id="948c09eb90b18f23bbbb53e86c4f8901"><div class="sl-block" style="width: 800px; left: 40px; top: 52px; height: auto;" data-block-type="text" data-block-id="15a24d1376506e56c43b35ec904028cb">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2><span class="s1">Locator Methods</span></h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 210px;" data-block-type="text" data-block-id="aaa42e974a1d662de7e5f4980a46814c">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">Using Sublime, open the locators.rb in the android &gt; spec &gt; pages directory. </span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">This is where we can create our own custom methods or wrap more logic around the global appium_lib and selenium ones.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">I’ve shortened the find_element to fe and find_elements to fa (find all).</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">This eliminates duplication because we now have one source containing this logic. So in the future, for example, if the appium project changes the .click function to .tap we would only need to change it in one place.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">The is_displayed? Will return true or false if the element is displayed.</span></span></li>
+</ul>
+</div>
+</div>
+</section><section data-id="52450f03b65886c98b765c5d8c8278aa"><div class="sl-block" style="width: 800px; left: 61px; top: 12px; height: auto;" data-block-type="text" data-block-id="d6304392668ee4f37e1462dabd602af0">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Page Objects</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 52px; top: 86px;" data-block-type="text" data-block-id="1e42e202bad5640267198d3e9f0c4392">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">Open the home.rb in the android &gt; spec &gt; pages directory.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">home.rb is where we will put the page objects for the home/landing page.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">We create a Home class which will contain our objects for this page.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">We assign each object/id to a constant.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">The page_displayed? now shows an example of where we can extend the default implicit wait we set in the appium.txt. Some apps rely on a web service and if the service is slow, we are giving Appium an extra 30 seconds (60 total) to wait.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">A good practice to do is then include the page_displayed? of your page class, so if you’re performing an action on that page, it will first check (and wait if necessary) for the page to exist before it does anything else.</span></span></li>
+	<li><span class="s2"><span style="font-size:0.7em">Also notice how we now get the text for the the home page title. Instead of doing find_element(:id, "com.amazonaws.devicefarm.android.referenceapp:id/toolbar_title").text, we just do "get_text HOME_PAGE_TITLE_ID". So if  .text later becomes something else we just change it on the locator.rb page.</span></span></li>
+</ul>
+</div>
+</div>
+</section><section data-id="b15fe9bed97af9136d673390a16ab4ec"><div class="sl-block" style="width: 800px; left: 40px; top: 22px; height: auto;" data-block-type="text" data-block-id="27cf30355e5b350b69d032a0d9a40750">
+    <div class="sl-block-content" style="z-index: 10;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Common Objects</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 40px; top: 175px;" data-block-type="text" data-block-id="bfbe74dcae89812d59a39866867f4639">
+    <div class="sl-block-content" style="z-index: 11; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">Some apps (including this one) share a lot of the same elements across views.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Instead of duplicating the page objects for every page, we can instead create a common page class, and each page then inherits that class.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">The Hamburger button! This is displayed on every page so it’s a good one to add! same for the page title object.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Open the common.rb in the android &gt; spec &gt; pages directory.</span></span></li>
+	<li><span class="s2"><span style="font-size:0.7em">I’ve gone ahead and created the click_hamburger and page_title_text methods for you as an example. See how it inherits the Locators class. Now from here on, every new page inherits the Common class.</span></span></li>
+</ul>
+</div>
+</div>
+</section><section data-id="654f210d97ca9b7630851d46ae8ce15f"><div class="sl-block" style="width: 800px; left: 80px; top: 33px; height: auto;" data-block-type="text" data-block-id="2c414c97ad5c167c5b188a95371d0e78">
+    <div class="sl-block-content" style="z-index: 10;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>common.rb</h2>
+</div>
+</div>
+
+<div class="sl-block" style="width: 812px; height: 440px; left: 74px; top: 170px;" data-block-type="code" data-block-id="602631061150057ee82d2721d61ec006"><div class="sl-block-content" style="z-index: 13; font-size: 90%;"><pre><code>require_relative 'locators'
+
+class Common &lt; Locators
+
+  TOOLBAR_TITLE = { id: 'com.amazonaws.devicefarm.android.referenceapp:id/toolbar_title' }
+  HAMBURGER_BUTTON = { id: 'ReferenceApp' }
+  POPUP_ALERT_TITLE = { id: "android:id/alertTitle" }
+  POPUP_ALERT_MESSAGE = { id: "android:id/message" }
+
+  def click_hamburger
+    click HAMBURGER_BUTTON
+  end
+
+  def page_title_text
+    get_text TOOLBAR_TITLE
+  end
+
+  def popup_title
+    get_text POPUP_ALERT_TITLE
+  end
+
+  def popup_message
+    get_text POPUP_ALERT_MESSAGE
+  end
+end</code></pre></div></div></section><section data-id="9451333d945b55928b735c54ef4a8fb4"><div class="sl-block" style="width: 800px; left: 51px; top: 40px; height: auto;" data-block-type="text" data-block-id="9987b880604c739824369c72c0403982">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Lets Add Pages</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 245px;" data-block-type="text" data-block-id="ad0403fc80d5ac85b0de4b4e83ca0d1c">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">Go ahead and create new files named alert.rb and crash.rb in the pages directory.</span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Use the home.rb as an example of how the the boiler plate code should look.</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">Name the class for each page the same as the page filename.</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Add the objects each spec uses to execute the validations. Note: you should not add objects you don’t use. This would add clutter and make things messy.</span></span></li>
+	</ul>
+	</li>
+	<li><span style="font-size:0.7em"><span class="s2">If you’re stuck. Take a look at each example I’ve create in the pages directory. e.g. alert.rb.example and crash.rb.example.</span></span></li>
+</ul>
+
+<p>   </p>
+</div>
+</div>
+</section><section data-id="1ae21a3bc1e6f9f8093b818d308a88a3"><div class="sl-block" style="width: 960px; height: 272px; left: 0px; top: 25px;" data-block-type="code" data-block-id="62af6bd9c70483232bd9e65467b4884f"><div class="sl-block-content" style="z-index: 12; font-size: 90%;"><pre><code>require_relative 'common'
+
+class Alert &lt; Common
+
+  POPUP_ID = { id: "com.amazonaws.devicefarm.android.referenceapp:id/notifications_alert_button" }
+
+  def page_displayed?
+    wait_true(60) { page_title_text == "Alerts and Dialogs" } #we override the implicit appium_lib wait (30).
+  end
+
+  def click_alert_button
+    page_displayed?
+    click POPUP_ID
+  end
+end</code></pre></div></div>
+<div class="sl-block" style="width: 960px; height: 346px; left: 0px; top: 327px;" data-block-type="code" data-block-id="43fd75c97facc795da6e358079d008b4"><div class="sl-block-content" style="z-index: 13; font-size: 90%;"><pre><code>require_relative 'common'
+
+class Crash &lt; Common
+
+  CRASH_BUTTON_ID = { id: "com.amazonaws.devicefarm.android.referenceapp:id/crash_button" }
+  CRASH_PAGE_TEXT = { id: "com.amazonaws.devicefarm.android.referenceapp:id/bug_fragment_message" }
+
+  def page_displayed?
+    wait_true(60) { page_title_text == "Crash/Bug Simulator" } #we override the implicit appium_lib wait (30).
+  end
+
+  def click_crash_button
+    page_displayed?
+    click CRASH_BUTTON_ID
+  end
+
+  def crash_page_text
+    get_text CRASH_PAGE_TEXT
+  end
+end</code></pre></div></div></section></section><section class="stack" data-id="b0643ce599c092f6beceb415db00edd5"><section data-id="d002020d6f8ac0d60a78ae5e19ce80c2"><div class="sl-block" style="width: 800px; left: 80px; top: 18px; height: auto;" data-block-type="text" data-block-id="21355b8b509c307c6e8d96c5310d2570">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Getting Device Data</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 194px;" data-block-type="text" data-block-id="f728f9e58df890430746dfd32cd36238">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">With Sublime, open the server_launcher.rb in the android directory.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">The methods at the top of the file will capture the information we want.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Why is this important information to have?  Well, you need to know everything about the platform your tests are running on. A test might run on OS: 6.0 but will fail on 4.4. Also the manufacture makes a difference. I’ve had Samsung and LG phones just act completely different from other manufactures with the same OS version.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Notice we put the device data into an environment variable "DEVICES". We will touch on this a bit later.</span></span></li>
+</ul>
+</div>
+</div>
+</section><section data-id="7f56bdd6c2537b466331c61d73e0f35a">
+
+<div class="sl-block" style="height: auto; min-width: 30px; min-height: 30px; width: 845px; left: 58px; top: 167px;" data-block-type="text" data-block-id="a33d7882f87d61cc1103ce698f15b276"><div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li>
+<span style="font-size:0.7em"><span class="s2">You can get your device data yourself by running the following in a shell:</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">OS: adb shell getprop ro.build.version.release</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Manufacturer: adb shell getprop ro.product.manufacturer</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Model:  adb shell getprop ro.product.model</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">SDK: adb shell getprop ro.build.version.sdk<span style="font-size:0.7em"><span class="s2"><span style="font-size:0.7em"><span class="s2">​</span></span></span></span></span></span></li>
+	</ul>
+	</li>
+	<li><span style="font-size:0.7em"><span class="s2">Lastly, the save_device_data method. We use this to save the data to a file which we will later attach to our Allure report so we know all about the device the test ran on.</span></span></li>
+</ul>
+</div></div></section></section><section data-id="5185b1a64fb6bc0f79d2ceac8b2dd152"><div class="sl-block" style="width: 800px; left: 40px; top: 22px; height: auto;" data-block-type="text" data-block-id="e4a9d6918258f1b50de5995d40eb3d8e">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Starting Appium</h2>
+
+<p>The Programmatic Way!</p>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 187px;" data-block-type="text" data-block-id="81eba7f31a19bea40bf934adbcc9939c">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>	<li><span style="font-size:0.7em"><span class="s2">There comes a time when you cannot use the Appium Desktop anymore. That time is now! </span></span></li>	<li><span style="font-size:0.7em"><span class="s2">But why? If you ever want to scale your tests you have to launch the server pragmatically.</span></span></li>	<li>
+<span style="font-size:0.7em"><span class="s2">In sublime, open the server_launcher.rb file located in appium-workshop &gt; android directory. You will see a method name appium_server_start.</span></span> 	<ul>		<li><span style="font-size:0.7em"><span class="s2">Basically, what it does is launch an Appium server in the background with passed arguments.</span></span></li>	</ul>	</li>
+</ul>
+</div>
+</div>
+</section><section class="stack" data-id="573e754a4978d1ce70b66113ace268a8"><section data-id="6af503c7782ad781ef74ffa72d910219"><div class="sl-block" style="width: 800px; left: 90px; top: 33px; height: auto;" data-block-type="text" data-block-id="1debd0239e98964476f9fb5f09f77bcf">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Generating Node Configs</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 171px;" data-block-type="text" data-block-id="dc8bc6a6b2eb575910a0da30c596e0e7">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">What is a node? A node is what connects to a selenium hub (grid). The hub then distributes tests to it. So in our case, it’s a device (emulator or physical phone).</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">So we need to create node configs to tell the node server (Appium) what information to pass to the selenium hub. </span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">We will do this programmatically using the generate_node_config method in the server_launcher.rb file.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">However, I separated this into it’s own file to demo in the playground directory.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">On the command line, navigate to the appium-workshop playground directory.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Open another shell/terminal window and navigate to the same directory.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">In one shell/terminal run: java -jar selenium-server-standalone-3.6.0.jar -role hub</span></span></li>
+	<li><span style="font-size:0.7em">Open a browser and goto: <a href="http://localhost:4444/grid/console" target="_blank"><span class="s4">http://localhost:4444/grid/console</span></a> </span></li>
+</ul>
+</div>
+</div>
+</section><section data-id="8793c25a0c16fa190b51b6e337ea272f">
+<div class="sl-block" style="height: auto; width: 879px; left: 57px; top: 43px;" data-block-type="text" data-block-id="51daa4dc3c94b6b860e83cc4e685cc08">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<p> </p>
+
+<ul>
+	<li>
+<span style="font-size:0.7em"><span class="s2">In the other shell/terminal run: adb devices </span></span>
+
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">Get a UDID of a connected device. e.g. emulator-5554</span></span></li>
+	</ul>
+	</li>
+	<li><span style="font-size:0.7em"><span class="s2">Run: ruby gen_node_config.rb emulator-5554 4755 &lt;-The first argument is the filename, the second the port number. This will then place a file names emulator-5554.json in the node_configs directory.</span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Now lets start a Appium session using this config!</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">From the playground directory run: appium --nodeconfig ./node_configs/emulator-5554.json </span></span></li>
+		<li><span class="s2"><span style="font-size:0.7em">Open a browser and goto: <a href="http://localhost:4444/grid/console" target="_blank"><span class="s4">http://localhost:4444/grid/console</span></a></span></span></li>
+		<li><span class="s2"><span style="font-size:0.7em">You would create one of these for every device</span> <span style="font-size:0.7em">you have connected to your machine.</span></span></li>
+	</ul>
+	</li>
+	<li><span style="font-size:0.7em"><span class="s2">Go ahead and kill the selenium hub and Appium node servers.</span></span></li>
+</ul>
+</div>
+</div>
+</section></section><section data-id="16b55ef474e980e4d48349f02f51a0c8"><div class="sl-block" style="width: 800px; left: 80px; top: 33px; height: auto;" data-block-type="text" data-block-id="5e139c751c1004d7196e965274b10add">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Helpers</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 167px;" data-block-type="text" data-block-id="30721cbd8c7d033a68b3a45f9db179e6">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">In sublime, open the helpers.rb file located in appium-workshop &gt; android &gt; spec directory.</span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">So as part of our code cleanup we want to split out our methods that are helpers functions. </span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">In our case, these will be the video and logcat.</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Note: we didn’t cover video earlier because we are using emulators. However, this will work for those of you using a real device.</span></span></li>
+	</ul>
+	</li>
+	<li><span style="font-size:0.7em"><span class="s2">Here we are creating a module named Helpers. This will be promoted after we start the appium driver and included as methods we can use globally. </span></span></li>
+</ul>
+</div>
+</div>
+</section><section class="stack" data-id="e972e631857dbd9d4d19ddfc35b75341"><section data-id="030b4418a9261d763295f9e3302885da"><div class="sl-block" style="width: 800px; left: 40px; top: 14px; height: auto;" data-block-type="text" data-block-id="8f95339a993f30597a9a4514271c1266">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Setup</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 121px;" data-block-type="text" data-block-id="275342a32ef890f4a64511f40358d0c4">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">In sublime, open the setup.rb file located in appium-workshop &gt; android &gt; spec directory.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">This is more cleanup. We’ve moved some functions from the spec_helper.rb file to keep it clean and easier to read. Some of these functions you should recognize from earlier.</span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Now you will see where the "DEVICE" environment variable and thread value come into play. <span class="s2">When we run in parallel, the library splits the tests into separate processes and we need a way to connect a device to each one. </span></span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">Thankfully the library we use creates a "TEST_ENV_NUMBER" environment variable we then match to the thread value we assigned to the device. </span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">We then get the UDID from the get_device_data it matches it in the "DEVICE" variable.</span></span></li>
+	</ul>
+	</li>
+</ul>
+</div>
+</div>
+</section><section data-id="6ec6af057a599fc49814fcc468490808">
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 144px;" data-block-type="text" data-block-id="0fc6e4547d4902d4222568309d263a42">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Why is the UDID important? There are couple reasons.</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">Most importantly, we pass it in as a capability so when the appium driver is initialize it knows which device to run the test on.</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">When you have multiple devices connected to one machine you need the UDID to tell adb which device to do the command against. e.g. adb -s emulator-5554 shell</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">We use them to add to filenames and test descriptions.  e.g. describe "Home Page #{ENV['Device UDID']}" do...</span></span></li>
+	</ul>
+	</li>
+	<li><span style="font-size:0.7em"><span class="s2">Take a look at the remaining file and raise your hand if you have any questions.</span></span></li>
+</ul>
+
+<p>   </p>
+</div>
+</div>
+</section></section><section data-id="4a6070a69868a54f7d9709951ff25ace"><div class="sl-block" style="width: 800px; left: 40px; top: 52px; height: auto;" data-block-type="text" data-block-id="7b213c33584e8d989bef539f323dc3b9">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Spec_helper</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 847px; left: 57px; top: 210px;" data-block-type="text" data-block-id="5645854e4c7c4a3875af8e2f24c9eca7">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">In sublime, open the spec_helper.rb file located in appium-workshop &gt; android &gt; spec directory.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Notice how much cleaner it is now. You can see the helper and setup methods.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">This is basically everything we did before in the playground, but now it is more organized and easier to read. </span></span></li>
+</ul>
+</div>
+</div>
+</section><section class="stack" data-id="39039d651e4b909d16aa45504846a0e3"><section data-id="bbca6541a6ba0f9e99c812342f85a89b"><div class="sl-block" style="width: 800px; left: 40px; top: 25px; height: auto;" data-block-type="text" data-block-id="c1a47edf7a7dcceefe26bff8269065a2">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Rake</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 40px; top: 128px;" data-block-type="text" data-block-id="55afac7c3890d651066394664d009e80">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">Ruby’s version of Make is Rake!</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">In sublime, open the Rakefile file located in appium-workshop &gt; android directory.</span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">This file contains the tasks to run our entire automaton suite easily. So instead of running several individual commands or scripts, we can run one command to start everything. </span></span></li>
+	<li><span style="font-size:0.7em"><span class="s2">Run rake -T from the command line to see all available tasks. There is only one for this demo but you could add one later for iOS. See <a href="https://github.com/isonic1/appium-mobile-grid" target="_blank">here</a> for an example.</span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Run single process:</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">rake android[single]</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Starts a Appium server.</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Runs the specs in a single process. It executed "rspec spec" for us.</span></span></li>
+	</ul>
+	</li>
+</ul>
+</div>
+</div>
+</section><section data-id="4f6a2cad771ea123dc4300356f2cf22e">
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 28px;" data-block-type="text" data-block-id="34bffe20865aefcdc61aaf4dff2ab7d5">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>	<li>
+<span style="font-size:0.7em"><span class="s2">Run in parallel:</span></span> 	<ul>		<li>
+<span style="font-size:0.7em"><span class="s2">rake android[parallel]</span></span> 		<ul>			<li><span style="font-size:0.7em"><span class="s2">Creates an Appium node and Appium session for each device.</span></span></li>			<li><span style="font-size:0.7em"><span class="s2">Splits the "test suite" into separate processes based on how many devices are connected to your machine, which is defined by the THREADS variable.</span></span></li>			<li><span style="font-size:0.7em"><span class="s2">Parallel in the case means it will run all tests on every device.</span></span></li>			<li><span style="font-size:0.7em"><span class="s2">This runs: parallel_test #{threads} -e 'rspec spec'</span></span></li>		</ul>		</li>	</ul>	</li>	<li>
+<span style="font-size:0.7em"><span class="s2">Run distributed:</span></span> 	<ul>		<li>
+<span style="font-size:0.7em"><span class="s2">rake android[dist]</span></span> 		<ul>			<li><span style="font-size:0.7em"><span class="s2">Creates an Appium node for each device.</span></span></li>			<li><span style="font-size:0.7em"><span class="s2">Splits the "specs" into separate processes based on how many devices are connected to your machine, which is defined by the THREADS variable.</span></span></li>		</ul>		</li>		<li><span style="font-size:0.7em"><span class="s2">Distributed means it distributes the tests to each available process/device thus reducing the total run time.</span></span></li>	</ul>	</li>
+</ul>
+
+<p>   </p>
+</div>
+</div>
+</section></section><section class="stack" data-id="7cef960ddf0892e992707020bb2aa976"><section data-id="9ca1699ce1a98f3ca720bbabc80ebf8d"><div class="sl-block" style="width: 800px; left: 54px; top: 33px; height: auto;" data-block-type="text" data-block-id="111043e7c758beaa2a5c2e37be22fddc">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Lets Run the Specs</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 72px; top: 224px;" data-block-type="text" data-block-id="1f48b98b0a06e045690a779872b46a0d">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>	<li>
+<span style="font-size:0.7em"><span class="s2">But… before we do, lets create another emulator.</span></span> 	<ul>		<li><span style="font-size:0.7em"><span class="s2">On the command line, run: android avd</span></span></li>		<li><span style="font-size:0.7em"><span class="s2">Create another emulator like the EM1 you created before. </span></span></li>		<li><span style="font-size:0.7em"><span class="s2">Name it EM2.</span></span></li>		<li><span style="font-size:0.7em"><span class="s2">The directions for mac are <a href="https://github.com/isonic1/appium-workshop/blob/master/Appium%20Mac%20Installation%20Instructions.md" target="_blank">here</a>.</span></span></li>		<li><span style="font-size:0.7em"><span class="s2">The directions for windows are <a href="https://github.com/isonic1/appium-workshop/blob/master/Appium%20Windows%20Installation%20Instructions.md" target="_blank">here</a>.</span></span></li>	</ul>	</li>	<li><span style="font-size:0.7em"><span class="s2">Make sure both the EM1 and EM2 emulators are started.</span></span></li>	<li><span style="font-size:0.7em"><span class="s2">On the command line navigate to the appium-workshop &gt; android directory.</span></span></li>	<li><span style="font-size:0.7em"><span class="s2">Run: bundle install </span></span></li>
+</ul>
+</div>
+</div>
+</section><section data-id="ea1f671f7f46358ba17b52721ea1f4d3">
+<div class="sl-block" style="height: auto; width: 787px; left: 87px; top: 88px;" data-block-type="text" data-block-id="71e9c75c99588d85c80c483891f09517">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<ul>
+	<li><span style="font-size:0.7em"><span class="s2">Run rake android[single]</span></span></li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Lets generate the Allure report!</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">Run: allure report generate output/allure/*</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Run: allure report open</span></span></li>
+	</ul>
+	</li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Run rake android[parallel]</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">Run: allure report generate output/allure/*</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Run: allure report open</span></span></li>
+	</ul>
+	</li>
+	<li>
+<span style="font-size:0.7em"><span class="s2">Run rake android[dist]</span></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span class="s2">Run: allure report generate output/allure/*</span></span></li>
+		<li><span style="font-size:0.7em"><span class="s2">Run: allure report open</span></span></li>
+	</ul>
+	</li>
+</ul>
+</div>
+</div>
+</section></section><section data-id="9987a1f32be34df43271f98ef2de0950"><div class="sl-block" style="width: 800px; left: 81px; top: 0px; height: auto;" data-block-type="text" data-block-id="b9be445ef9f36cf962f7ba71eba06587">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h2>Running in the Cloud</h2>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 90px;" data-block-type="text" data-block-id="382d40a9ac897490d0d4c4f8b807cfab">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p" data-gramm_editor="true" data-gramm="true" data-gramm_id="80161670-35d5-1b07-b4a2-b708c56c0f2f">
+<ul>
+	<li style="text-align:left"><span style="font-size:0.7em">There comes a time when you need to scale your tests even more. The best way to do this is by running your tests on a cloud server. In our case, it's Sauce Labs!</span></li>
+	<li style="text-align:left"><span style="font-size:0.7em">First, let's go to <a href="https://saucelabs.com" target="_blank">sauce labs website</a> and register a new account. We need to get a access_key in order to connect to Sauce Labs.</span></li>
+	<li style="text-align:left"><span style="font-size:0.7em">Once you've registered your account and obtained your access key, you need to add them to the Rakefile in the appium-workshop/android directory.</span></li>
+	<li style="text-align:left">
+<span style="font-size:0.7em">Open the Rakefile with Sublime:</span>
+	<ul>
+		<li><span style="font-size:0.7em">Set the sauce_user = "your-sauce-user"</span></li>
+		<li><span style="font-size:0.7em">Set the sauce_access_key = "your access key"</span></li>
+	</ul>
+	</li>
+	<li><span style="font-size:0.7em">Navigate to appium-workshop &gt; android directory.</span></li>
+	<li><span style="font-size:21px">Let's go ahead and run on Sauce! run the following: rake android[sauce]</span></li>
+	<li><span style="font-size:0.7em">Open your browser and goto Sauce Labs website dashboard. Notice our tests are now running in parallel (distributed) on Sauce! </span></li>
+	<li><span style="font-size:0.7em">Raise your hand if you are not seeing this.</span></li>
+</ul>
+</div>
+</div>
+</section><section data-id="d63ac5096c08a9286aa5fa066ce4a0ba"><div class="sl-block" style="width: 800px; left: 81px; top: 43px; height: auto;" data-block-type="text" data-block-id="52085dfce495a5cb43a8585566e2f9b7">
+    <div class="sl-block-content" style="z-index: 11;" data-placeholder-text="Title Text" data-placeholder-tag="h2">
+<h1>THANK YOU!</h1>
+</div>
+</div>
+<div class="sl-block" style="height: auto; width: 879px; left: 41px; top: 250px;" data-block-type="text" data-block-id="cdf32558f36542ba9fd72de87fe7e53a">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; transition-duration: 0.6s; transition-delay: 0.6s; text-align: left;" dir="ui" data-animation-type="fade-in" data-placeholder-text="Text" data-placeholder-tag="p">
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"><span style="font-size:1.6em">@isonic1</span></p>
+
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"><span style="font-size:1.6em">justin.ison@gmail.com</span></p>
+
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"><span style="font-size:1.6em"><a href="https://github.com/isonic1/appium-workshop" target="_blank">Workshop</a> - <span class="s2"><a href="https://github.com/isonic1/appium-mobile-grid" target="_blank">Appium Mobile Grid</a> - </span><a href="https://github.com/isonic1/flick" target="_blank"><span class="s2">Flick</span></a></span></p>
+</div>
+</div>
+</section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1083933,"slug":"deck-3","title":"Berlin Deck","description":"","width":960,"height":700,"visibility":"all","published_at":"2017-10-11T05:32:49.190Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/8a763aa148f2e4916cf6e38fcdbfc78e/thumb.jpg?1506789462","view_count":410,"user":{"id":585113,"username":"justinison","name":"Justin Ison","description":"","thumbnail_url":"https://www.gravatar.com/avatar/c21117762af008ea2f65e0a7895809fa?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":false,"lite":true,"team_id":null,"settings":{"id":430428,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":null,"should_loop":false,"share_notes":null,"slide_number":null,"slide_count":115,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":1,"data_updated_at":1507727275355,"font_typekit":null,"font_google":null,"notes":{}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/head.min.js"></script>
+		<script src="lib/reveal.min.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+
+				controls: true,
+				progress: true,
+				history: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: false,
+
+				autoSlide: 0 || 0,
+				autoSlideStoppable: true,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlighting(); hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+
+		
+
+	</body>
+</html>
